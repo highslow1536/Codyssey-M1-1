@@ -1,0 +1,62 @@
+[
+  {
+    "document": "data/analysis/2026-10-22/REPORT.md",
+    "omitted_reference": "aligned_weekly.csv"
+  },
+  {
+    "document": "data/analysis/2026-10-22/REPORT.md",
+    "omitted_reference": "figures/01_indexed_trends.png"
+  },
+  {
+    "document": "data/analysis/2026-10-22/REPORT.md",
+    "omitted_reference": "figures/03_return_scatter.png"
+  },
+  {
+    "document": "data/analysis/2026-10-22/REPORT.md",
+    "omitted_reference": "aligned_weekly.csv"
+  },
+  {
+    "document": "data/analysis/2026-10-22/REPORT.md",
+    "omitted_reference": "analysis_metadata.json"
+  },
+  {
+    "document": "data/analysis/2026-10-22/gpu_mining/REPORT.md",
+    "omitted_reference": "figures/01_gpu_eth_timeline.png"
+  },
+  {
+    "document": "data/analysis/2026-10-22/gpu_mining/REPORT.md",
+    "omitted_reference": "figures/03_merge_monthly_prices.png"
+  },
+  {
+    "document": "data/analysis/2026-10-22/gpu_mining/REPORT.md",
+    "omitted_reference": "figures/02_matched_observations.png"
+  },
+  {
+    "document": "data/analysis/2026-10-22/gpu_mining/REPORT.md",
+    "omitted_reference": "aligned_snapshots.csv"
+  },
+  {
+    "document": "data/analysis/2026-10-22/gpu_mining/REPORT.md",
+    "omitted_reference": "aligned_monthly.csv"
+  },
+  {
+    "document": "data/analysis/2026-10-22/gpu_mining/REPORT.md",
+    "omitted_reference": "aligned_weekly.csv"
+  },
+  {
+    "document": "data/analysis/2026-10-22/gpu_mining/REPORT.md",
+    "omitted_reference": "crypto_monthly.csv"
+  },
+  {
+    "document": "data/analysis/2026-10-22/gpu_mining/REPORT.md",
+    "omitted_reference": "price_changes.csv"
+  },
+  {
+    "document": "data/analysis/2026-10-22/gpu_mining/REPORT.md",
+    "omitted_reference": "period_summary.csv"
+  },
+  {
+    "document": "data/analysis/2026-10-22/gpu_mining/REPORT.md",
+    "omitted_reference": "analysis_metadata.json"
+  }
+]

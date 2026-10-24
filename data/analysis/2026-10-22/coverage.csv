@@ -1,0 +1,11 @@
+﻿series,kind,total_weeks,available,missing,first_boundary_week,missing_after_first_week
+B07STGGQ18,price,156,148,8,,
+B07STGGQ18,return,156,140,,1,15
+B07MFZY2F2,price,156,135,21,,
+B07MFZY2F2,return,156,122,,1,33
+AMD,stock_return,156,155,,1,0
+INTC,stock_return,156,155,,1,0
+NVDA,stock_return,156,155,,1,0
+005930,stock_return,156,155,,1,0
+000660,stock_return,156,155,,1,0
+MU,stock_return,156,155,,1,0

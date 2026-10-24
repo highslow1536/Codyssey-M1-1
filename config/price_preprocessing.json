@@ -1,0 +1,25 @@
+{
+  "snapshot_date": "2026-10-21",
+  "analysis_start": "2020-01-01",
+  "analysis_end": "2022-12-31",
+  "neighbor_days": 30,
+  "minimum_neighbors": 5,
+  "flag_ratio_below": 0.5,
+  "flag_ratio_above": 2.0,
+  "quarantine": [
+    {
+      "asin": "B07STGGQ18",
+      "timestamp": "2020-05-08 04:40:00",
+      "price": 5.39,
+      "reason": "unverified_extreme_quote",
+      "note": "직전 171.99달러, 직후 171.99달러. 주변 30일 중앙값의 약 3.1%. 실제 판매 조건을 확인하지 못해 기본 분석에서 격리. 오류로 확정한 것은 아님."
+    },
+    {
+      "asin": "B07STGGQ18",
+      "timestamp": "2023-04-24 23:04:00",
+      "price": 1.47,
+      "reason": "unverified_extreme_quote",
+      "note": "직전 107달러, 직후 104.99달러. 주변 30일 중앙값의 약 1.3%. 실제 판매 조건을 확인하지 못해 기본 분석에서 격리. 오류로 확정한 것은 아님."
+    }
+  ]
+}

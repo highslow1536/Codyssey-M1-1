@@ -1,0 +1,15 @@
+> 공개판 안내: 작성 당시 연구 기록입니다. 원가격·주가·벤치마크 원본과 복원 가능한 파일은 제외했습니다. 현재 공개 범위·실행법은 루트 README와 데이터 이용 안내를 따릅니다.
+
+# 대시보드 소스와 공개 실행판
+
+공개 자료로 바로 실행하는 화면은 **public/** 이다. 루트에서 HTTP 서버를 실행하고 `/dashboard/public/`을 연다. ETH 일별 1,096점과 별도 부품 모형의 집계 점수만 읽는다. [루트 README](../README.md) · [REPORT](../REPORT.md)
+
+`dist/`에는 원래 전체 대시보드의 HTML·CSS·JavaScript를 보존했다. `index.full.html`은 부품 가격·주가·벤치마크·예측 JSON이 필요한 원래 진입점이다. 데이터 재배포 조건으로 그 JSON·CSV·ZIP은 공개하지 않았다. `dist/index.html`은 설명 없이 오류를 내는 대신 공개 화면으로 안내한다.
+
+원래 `tests/*.test.mjs` 5개 파일도 유지했다. 그중 `forecast-view.test.mjs`는 가상 시험 입력만 사용하므로 공개본에서 실행할 수 있다. 나머지는 공개하지 않은 스냅샷을 읽어 확인하는 검사이므로 허가된 입력 복원이 필요하다. 검사를 완화하거나 가짜 가격 파일로 통과시키지 않았다.
+
+```bash
+node --test tests/forecast-view.test.mjs
+```
+
+`public/`은 외부 CDN·실시간 API·인증을 사용하지 않는다. 선택한 연도와 지표의 단위·유효 n을 함께 표시하며 머지 이후 해당 없는 대용을 0으로 채우지 않는다. 시계열 출처는 [Coin Metrics Community Data](https://github.com/coinmetrics/data), [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/)이다.

@@ -1,0 +1,16 @@
+{
+  "analysis_date_kst": "2026-10-22",
+  "first_week_end": "2020-01-10",
+  "last_week_end": "2022-12-30",
+  "max_lag_weeks": 8,
+  "bootstrap_repetitions": 3000,
+  "bootstrap_block_weeks": 4,
+  "bootstrap_sensitivity_block_weeks": 8,
+  "random_seed": 20261022,
+  "stock_order": ["AMD", "INTC", "NVDA", "005930", "000660", "MU"],
+  "product_order": ["B07STGGQ18", "B07MFZY2F2"],
+  "primary_pairs": {
+    "B07STGGQ18": ["AMD", "INTC", "NVDA"],
+    "B07MFZY2F2": ["005930", "000660", "MU"]
+  }
+}

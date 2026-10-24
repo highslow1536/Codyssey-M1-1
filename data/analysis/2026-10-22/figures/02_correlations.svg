@@ -1,0 +1,459 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="936pt" height="489.6pt" viewBox="0 0 936 489.6" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-10-22T01:31:46.508718</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.10.7, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 489.6 
+L 936 489.6 
+L 936 0 
+L 0 0 
+z
+" style="fill: #fafbfe"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 187.2 213.761208 
+L 823.68 213.761208 
+L 823.68 88.128 
+L 187.2 88.128 
+z
+" style="fill: #ffffff"/>
+   </g>
+   <g clip-path="url(#p28b3ee24db)">
+    <image xlink:href="data:image/png;base64,
+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gSBwGAAAAAAgShwEAAAAAgsRhAAAAAIAgcRgAAAAAIEgcBgAAAAAIEocBAAAAAILEYQAAAACAIHEYAAAAACBIHAYAAAAACBKHAQAAAACCxGEAAAAAgCBxGAAAAAAgSBwGAAAAAAgShwEAAAAAgsRhAAAAAIAgcRgAAAAAIEgcBgAAAAAIEocBAAAAAILEYQAAAACAIHEYAAAAACBIHAYAAAAACBKHAQAAAACCxGEAAAAAgCBxGAAAAAAgSBwGAAAAAAgShwEAAAAAgsRhAAAAAIAgcRgAAAAAIEgcBgAAAAAIEocBAAAAAILEYQAAAACAIHEYAAAAACBIHAYAAAAACBKHAQAAAACCxGEAAAAAgCBxGAAAAAAgSBwGAAAAAAgShwEAAAAAgsRhAAAAAIAgcRgAAAAAIEgcBgAAAAAIEocBAAAAAILEYQAAAACAIHEYAAAAACBIHAYAAAAACBKHAQAAAACCxGEAAAAAgCBxGAAAAAAgSBwGAAAAAAgShwEAAAAAgsRhAAAAAIAgcRgAAAAAIEgcBgAAAAAIEocBAAAAAILEYQAAAACAIHEYAAAAACBIHAYAAAAACBKHAQAAAACCxGEAAAAAgCBxGAAAAAAgSBwGAAAAAAgShwEAAAAAgsRhAAAAAIAgcRgAAAAAIEgcBgAAAAAIEocBAAAAAILEYQAAAACAIHEYAAAAACBIHAYAAAAAWPX8AH9TFCaej41MAAAAAElFTkSuQmCC" id="imaged1cb97c7bf" transform="scale(1 -1) translate(0 -126)" x="187.2" y="-87.761208" width="636.75" height="126"/>
+   </g>
+   <g id="matplotlib.axis_1">
+    <g id="xtick_1">
+     <g id="line2d_1">
+      <defs>
+       <path id="maaee99dca1" d="M 0 0 
+L 0 3.5 
+" style="stroke: #516176; stroke-width: 0.8"/>
+      </defs>
+      <g>
+       <use xlink:href="#maaee99dca1" x="240.24" y="213.761208" style="fill: #516176; stroke: #516176; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_1">
+      <text style="font-size: 11px; font-family: 'AppleGothic'; text-anchor: middle; fill: #516176" x="240.24" y="229.385895" transform="rotate(-0 240.24 229.385895)">AMD</text>
+     </g>
+    </g>
+    <g id="xtick_2">
+     <g id="line2d_2">
+      <g>
+       <use xlink:href="#maaee99dca1" x="346.32" y="213.761208" style="fill: #516176; stroke: #516176; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_2">
+      <text style="font-size: 11px; font-family: 'AppleGothic'; text-anchor: middle; fill: #516176" x="346.32" y="229.385895" transform="rotate(-0 346.32 229.385895)">Intel</text>
+     </g>
+    </g>
+    <g id="xtick_3">
+     <g id="line2d_3">
+      <g>
+       <use xlink:href="#maaee99dca1" x="452.4" y="213.761208" style="fill: #516176; stroke: #516176; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_3">
+      <text style="font-size: 11px; font-family: 'AppleGothic'; text-anchor: middle; fill: #516176" x="452.4" y="229.385895" transform="rotate(-0 452.4 229.385895)">NVIDIA</text>
+     </g>
+    </g>
+    <g id="xtick_4">
+     <g id="line2d_4">
+      <g>
+       <use xlink:href="#maaee99dca1" x="558.48" y="213.761208" style="fill: #516176; stroke: #516176; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_4">
+      <text style="font-size: 11px; font-family: 'AppleGothic'; text-anchor: middle; fill: #516176" x="558.48" y="229.385895" transform="rotate(-0 558.48 229.385895)">삼성전자</text>
+     </g>
+    </g>
+    <g id="xtick_5">
+     <g id="line2d_5">
+      <g>
+       <use xlink:href="#maaee99dca1" x="664.56" y="213.761208" style="fill: #516176; stroke: #516176; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_5">
+      <text style="font-size: 11px; font-family: 'AppleGothic'; text-anchor: middle; fill: #516176" x="664.56" y="229.385895" transform="rotate(-0 664.56 229.385895)">SK하이닉스</text>
+     </g>
+    </g>
+    <g id="xtick_6">
+     <g id="line2d_6">
+      <g>
+       <use xlink:href="#maaee99dca1" x="770.64" y="213.761208" style="fill: #516176; stroke: #516176; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_6">
+      <text style="font-size: 11px; font-family: 'AppleGothic'; text-anchor: middle; fill: #516176" x="770.64" y="229.385895" transform="rotate(-0 770.64 229.385895)">Micron</text>
+     </g>
+    </g>
+   </g>
+   <g id="matplotlib.axis_2">
+    <g id="ytick_1">
+     <g id="line2d_7">
+      <defs>
+       <path id="m99ed7c5798" d="M 0 0 
+L -3.5 0 
+" style="stroke: #516176; stroke-width: 0.8"/>
+      </defs>
+      <g>
+       <use xlink:href="#m99ed7c5798" x="187.2" y="119.536302" style="fill: #516176; stroke: #516176; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_7">
+      <text style="font-size: 11px; font-family: 'AppleGothic'; text-anchor: end; fill: #516176" x="180.2" y="123.919974" transform="rotate(-0 180.2 123.919974)">CPU · Ryzen 3600</text>
+     </g>
+    </g>
+    <g id="ytick_2">
+     <g id="line2d_8">
+      <g>
+       <use xlink:href="#m99ed7c5798" x="187.2" y="182.352906" style="fill: #516176; stroke: #516176; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_8">
+      <text style="font-size: 11px; font-family: 'AppleGothic'; text-anchor: end; fill: #516176" x="180.2" y="186.665249" transform="rotate(-0 180.2 186.665249)">SSD · 970 EVO Plus</text>
+     </g>
+    </g>
+   </g>
+   <g id="patch_3">
+    <path d="M 187.2 213.761208 
+L 187.2 88.128 
+" style="fill: none; stroke: #d3dae5; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 187.2 213.761208 
+L 823.68 213.761208 
+" style="fill: none; stroke: #d3dae5; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="text_9">
+    <text style="font-size: 11px; font-family: 'AppleGothic'; fill: #18283d" transform="translate(219.620156 116.781489)">+0.538</text>
+    <text style="font-size: 11px; font-family: 'AppleGothic'; fill: #18283d" transform="translate(221.721328 129.023458)">n=148</text>
+   </g>
+   <g id="text_10">
+    <text style="font-size: 11px; font-family: 'AppleGothic'; fill: #18283d" transform="translate(325.700156 116.781489)">+0.462</text>
+    <text style="font-size: 11px; font-family: 'AppleGothic'; fill: #18283d" transform="translate(327.801328 129.023458)">n=148</text>
+   </g>
+   <g id="text_11">
+    <text style="font-size: 11px; font-family: 'AppleGothic'; fill: #18283d" transform="translate(431.780156 116.781489)">+0.430</text>
+    <text style="font-size: 11px; font-family: 'AppleGothic'; fill: #18283d" transform="translate(433.881328 129.023458)">n=148</text>
+   </g>
+   <g id="text_12">
+    <text style="font-size: 11px; font-family: 'AppleGothic'; fill: #18283d" transform="translate(537.860156 116.781489)">+0.490</text>
+    <text style="font-size: 11px; font-family: 'AppleGothic'; fill: #18283d" transform="translate(539.961328 129.023458)">n=148</text>
+   </g>
+   <g id="text_13">
+    <text style="font-size: 11px; font-family: 'AppleGothic'; fill: #18283d" transform="translate(643.940156 116.781489)">+0.483</text>
+    <text style="font-size: 11px; font-family: 'AppleGothic'; fill: #18283d" transform="translate(646.041328 129.023458)">n=148</text>
+   </g>
+   <g id="text_14">
+    <text style="font-size: 11px; font-family: 'AppleGothic'; fill: #18283d" transform="translate(750.020156 116.781489)">+0.532</text>
+    <text style="font-size: 11px; font-family: 'AppleGothic'; fill: #18283d" transform="translate(752.121328 129.023458)">n=148</text>
+   </g>
+   <g id="text_15">
+    <text style="font-size: 11px; font-family: 'AppleGothic'; fill: #18283d" transform="translate(220.6325 179.598093)">-0.463</text>
+    <text style="font-size: 11px; font-family: 'AppleGothic'; fill: #18283d" transform="translate(221.721328 191.840062)">n=135</text>
+   </g>
+   <g id="text_16">
+    <text style="font-size: 11px; font-family: 'AppleGothic'; fill: #ffffff" transform="translate(325.700156 179.598093)">+0.624</text>
+    <text style="font-size: 11px; font-family: 'AppleGothic'; fill: #ffffff" transform="translate(327.801328 191.840062)">n=135</text>
+   </g>
+   <g id="text_17">
+    <text style="font-size: 11px; font-family: 'AppleGothic'; fill: #18283d" transform="translate(432.7925 179.598093)">-0.588</text>
+    <text style="font-size: 11px; font-family: 'AppleGothic'; fill: #18283d" transform="translate(433.881328 191.840062)">n=135</text>
+   </g>
+   <g id="text_18">
+    <text style="font-size: 11px; font-family: 'AppleGothic'; fill: #18283d" transform="translate(538.8725 179.598093)">-0.374</text>
+    <text style="font-size: 11px; font-family: 'AppleGothic'; fill: #18283d" transform="translate(539.961328 191.840062)">n=135</text>
+   </g>
+   <g id="text_19">
+    <text style="font-size: 11px; font-family: 'AppleGothic'; fill: #18283d" transform="translate(644.9525 179.598093)">-0.294</text>
+    <text style="font-size: 11px; font-family: 'AppleGothic'; fill: #18283d" transform="translate(646.041328 191.840062)">n=135</text>
+   </g>
+   <g id="text_20">
+    <text style="font-size: 11px; font-family: 'AppleGothic'; fill: #18283d" transform="translate(751.0325 179.598093)">-0.360</text>
+    <text style="font-size: 11px; font-family: 'AppleGothic'; fill: #18283d" transform="translate(752.121328 191.840062)">n=135</text>
+   </g>
+   <g id="text_21">
+    <text style="font-size: 14px; font-family: 'AppleGothic'; text-anchor: start; fill: #18283d" x="187.2" y="75.128" transform="rotate(-0 187.2 75.128)">가격 수준의 Pearson r · 장기 추세의 영향 포함</text>
+   </g>
+  </g>
+  <g id="axes_2">
+   <g id="patch_5">
+    <path d="M 187.2 421.056 
+L 823.68 421.056 
+L 823.68 295.422792 
+L 187.2 295.422792 
+z
+" style="fill: #ffffff"/>
+   </g>
+   <g clip-path="url(#p86f4572566)">
+    <image xlink:href="data:image/png;base64,
+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AQeIwAAAAAECQOAwAAAAAECQOAwAAAAAEicMAAAAAAEHiMAAAAABAkDgMAAAAABAkDgMAAAAABInDAAAAAABB4jAAAAAAQJA4DAAAAAAQJA4DAAAAAASJwwAAAAAAQeIwAAAAAECQOAwAAAAAECQOAwAAAAAEicMAAAAAAEHiMAAAAABAkDgMAAAAABAkDgMAAAAABInDAAAAAABB4jAAAAAAQJA4DAAAAAAQJA4DAAAAAASJwwAAAAAAQeIwAAAAAECQOAwAAAAAECQOAwAAAAAEicMAAAAAAEHiMAAAAABAkDgMAAAAABAkDgMAAAAABInDAAAAAABB4jAAAAAAQJA4DAAAAAAQJA4DAAAAAASJwwAAAAAAQeIwAAAAAECQOAwAAAAAECQOAwAAAAAEicMAAAAAAEHiMAAAAABAkDgMAAAAABAkDgMAAAAABInDAAAAAABB4jAAAAAAQJA4DAAAAAAQJA4DAAAAAASJwwAAAAAAQeIwAAAAAECQOAwAAAAAECQOAwAAAAAEicMAAAAAAEHiMAAAAABAkDgMAAAAABAkDgMAAAAABInDAAAAAABB4jAAAAAAQJA4DAAAAAAQJA4DAAAAAASJwwAAAAAAQeIwAAAAAECQOAwAAAAAECQOAwAAAAAEicMAAAAAAEHiMAAAAABAkDgMAAAAABAkDgMAAAAA7Hp+AA1DGNRPsqgnAAAAAElFTkSuQmCC" id="imageb056c3be52" transform="scale(1 -1) translate(0 -126)" x="187.2" y="-295.056" width="636.75" height="126"/>
+   </g>
+   <g id="matplotlib.axis_3">
+    <g id="xtick_7">
+     <g id="line2d_9">
+      <g>
+       <use xlink:href="#maaee99dca1" x="240.24" y="421.056" style="fill: #516176; stroke: #516176; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_22">
+      <text style="font-size: 11px; font-family: 'AppleGothic'; text-anchor: middle; fill: #516176" x="240.24" y="436.680687" transform="rotate(-0 240.24 436.680687)">AMD</text>
+     </g>
+    </g>
+    <g id="xtick_8">
+     <g id="line2d_10">
+      <g>
+       <use xlink:href="#maaee99dca1" x="346.32" y="421.056" style="fill: #516176; stroke: #516176; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_23">
+      <text style="font-size: 11px; font-family: 'AppleGothic'; text-anchor: middle; fill: #516176" x="346.32" y="436.680687" transform="rotate(-0 346.32 436.680687)">Intel</text>
+     </g>
+    </g>
+    <g id="xtick_9">
+     <g id="line2d_11">
+      <g>
+       <use xlink:href="#maaee99dca1" x="452.4" y="421.056" style="fill: #516176; stroke: #516176; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_24">
+      <text style="font-size: 11px; font-family: 'AppleGothic'; text-anchor: middle; fill: #516176" x="452.4" y="436.680687" transform="rotate(-0 452.4 436.680687)">NVIDIA</text>
+     </g>
+    </g>
+    <g id="xtick_10">
+     <g id="line2d_12">
+      <g>
+       <use xlink:href="#maaee99dca1" x="558.48" y="421.056" style="fill: #516176; stroke: #516176; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_25">
+      <text style="font-size: 11px; font-family: 'AppleGothic'; text-anchor: middle; fill: #516176" x="558.48" y="436.680687" transform="rotate(-0 558.48 436.680687)">삼성전자</text>
+     </g>
+    </g>
+    <g id="xtick_11">
+     <g id="line2d_13">
+      <g>
+       <use xlink:href="#maaee99dca1" x="664.56" y="421.056" style="fill: #516176; stroke: #516176; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_26">
+      <text style="font-size: 11px; font-family: 'AppleGothic'; text-anchor: middle; fill: #516176" x="664.56" y="436.680687" transform="rotate(-0 664.56 436.680687)">SK하이닉스</text>
+     </g>
+    </g>
+    <g id="xtick_12">
+     <g id="line2d_14">
+      <g>
+       <use xlink:href="#maaee99dca1" x="770.64" y="421.056" style="fill: #516176; stroke: #516176; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_27">
+      <text style="font-size: 11px; font-family: 'AppleGothic'; text-anchor: middle; fill: #516176" x="770.64" y="436.680687" transform="rotate(-0 770.64 436.680687)">Micron</text>
+     </g>
+    </g>
+   </g>
+   <g id="matplotlib.axis_4">
+    <g id="ytick_3">
+     <g id="line2d_15">
+      <g>
+       <use xlink:href="#m99ed7c5798" x="187.2" y="326.831094" style="fill: #516176; stroke: #516176; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_28">
+      <text style="font-size: 11px; font-family: 'AppleGothic'; text-anchor: end; fill: #516176" x="180.2" y="331.214766" transform="rotate(-0 180.2 331.214766)">CPU · Ryzen 3600</text>
+     </g>
+    </g>
+    <g id="ytick_4">
+     <g id="line2d_16">
+      <g>
+       <use xlink:href="#m99ed7c5798" x="187.2" y="389.647698" style="fill: #516176; stroke: #516176; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_29">
+      <text style="font-size: 11px; font-family: 'AppleGothic'; text-anchor: end; fill: #516176" x="180.2" y="393.960042" transform="rotate(-0 180.2 393.960042)">SSD · 970 EVO Plus</text>
+     </g>
+    </g>
+   </g>
+   <g id="patch_6">
+    <path d="M 187.2 421.056 
+L 187.2 295.422792 
+" style="fill: none; stroke: #d3dae5; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_7">
+    <path d="M 187.2 421.056 
+L 823.68 421.056 
+" style="fill: none; stroke: #d3dae5; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="text_30">
+    <text style="font-size: 11px; font-family: 'AppleGothic'; fill: #18283d" transform="translate(220.6325 324.076282)">-0.046</text>
+    <text style="font-size: 11px; font-family: 'AppleGothic'; fill: #18283d" transform="translate(221.721328 336.318251)">n=140</text>
+   </g>
+   <g id="text_31">
+    <text style="font-size: 11px; font-family: 'AppleGothic'; fill: #18283d" transform="translate(325.700156 324.076282)">+0.091</text>
+    <text style="font-size: 11px; font-family: 'AppleGothic'; fill: #18283d" transform="translate(327.801328 336.318251)">n=140</text>
+   </g>
+   <g id="text_32">
+    <text style="font-size: 11px; font-family: 'AppleGothic'; fill: #18283d" transform="translate(432.7925 324.076282)">-0.034</text>
+    <text style="font-size: 11px; font-family: 'AppleGothic'; fill: #18283d" transform="translate(433.881328 336.318251)">n=140</text>
+   </g>
+   <g id="text_33">
+    <text style="font-size: 11px; font-family: 'AppleGothic'; fill: #18283d" transform="translate(537.860156 324.076282)">+0.006</text>
+    <text style="font-size: 11px; font-family: 'AppleGothic'; fill: #18283d" transform="translate(539.961328 336.318251)">n=140</text>
+   </g>
+   <g id="text_34">
+    <text style="font-size: 11px; font-family: 'AppleGothic'; fill: #18283d" transform="translate(643.940156 324.076282)">+0.020</text>
+    <text style="font-size: 11px; font-family: 'AppleGothic'; fill: #18283d" transform="translate(646.041328 336.318251)">n=140</text>
+   </g>
+   <g id="text_35">
+    <text style="font-size: 11px; font-family: 'AppleGothic'; fill: #18283d" transform="translate(751.0325 324.076282)">-0.042</text>
+    <text style="font-size: 11px; font-family: 'AppleGothic'; fill: #18283d" transform="translate(752.121328 336.318251)">n=140</text>
+   </g>
+   <g id="text_36">
+    <text style="font-size: 11px; font-family: 'AppleGothic'; fill: #18283d" transform="translate(219.620156 386.892886)">+0.132</text>
+    <text style="font-size: 11px; font-family: 'AppleGothic'; fill: #18283d" transform="translate(221.721328 399.134854)">n=122</text>
+   </g>
+   <g id="text_37">
+    <text style="font-size: 11px; font-family: 'AppleGothic'; fill: #18283d" transform="translate(325.700156 386.892886)">+0.241</text>
+    <text style="font-size: 11px; font-family: 'AppleGothic'; fill: #18283d" transform="translate(327.801328 399.134854)">n=122</text>
+   </g>
+   <g id="text_38">
+    <text style="font-size: 11px; font-family: 'AppleGothic'; fill: #18283d" transform="translate(431.780156 386.892886)">+0.136</text>
+    <text style="font-size: 11px; font-family: 'AppleGothic'; fill: #18283d" transform="translate(433.881328 399.134854)">n=122</text>
+   </g>
+   <g id="text_39">
+    <text style="font-size: 11px; font-family: 'AppleGothic'; fill: #18283d" transform="translate(538.8725 386.892886)">-0.023</text>
+    <text style="font-size: 11px; font-family: 'AppleGothic'; fill: #18283d" transform="translate(539.961328 399.134854)">n=122</text>
+   </g>
+   <g id="text_40">
+    <text style="font-size: 11px; font-family: 'AppleGothic'; fill: #18283d" transform="translate(644.9525 386.892886)">-0.051</text>
+    <text style="font-size: 11px; font-family: 'AppleGothic'; fill: #18283d" transform="translate(646.041328 399.134854)">n=122</text>
+   </g>
+   <g id="text_41">
+    <text style="font-size: 11px; font-family: 'AppleGothic'; fill: #18283d" transform="translate(750.020156 386.892886)">+0.053</text>
+    <text style="font-size: 11px; font-family: 'AppleGothic'; fill: #18283d" transform="translate(752.121328 399.134854)">n=122</text>
+   </g>
+   <g id="text_42">
+    <text style="font-size: 14px; font-family: 'AppleGothic'; text-anchor: start; fill: #18283d" x="187.2" y="282.422792" transform="rotate(-0 187.2 282.422792)">주별 로그 변화율의 Pearson r · 동시 상관</text>
+   </g>
+  </g>
+  <g id="axes_3">
+   <g id="patch_8">
+    <path d="M 856.44 391.68 
+L 873.288 391.68 
+L 873.288 112.608 
+L 856.44 112.608 
+z
+" style="fill: #ffffff"/>
+   </g>
+   <image xlink:href="data:image/png;base64,
+iVBORw0KGgoAAAANSUhEUgAAACYAAAJsCAYAAACRYdGNAAAENElEQVR4nO3dy7EkNxBDUTAr5c+4JP9taFIWaIHVIBD3WPAChFC/lnT++fPvU6BRqD3zKdEo1JKYiaN0kVhNYqNQez6W37LDtbKm/EP5LSTm2jOZ/R+FGoVa5sJEYi7KX5TYx91Fy1EOR2khMRfPlS7mwkViNYmNQi3XShOJuUisaC4+bq0tlL+o/EP5LSTWU/6Zo0SjUHtIzLPn0LGS8g/l9zAXPeU/lN+zw/J7KL+LxHoSGwa25ShP6J82CrU8JdUc5bBjHm6te8p/KL+HpyQXHXMxFz2JDQPbcpSH92MenitdzEXRXAwfUi0MbE/5h/J7mIue8n+U30NiLhJzMRcuEqtJbBRql2ulh+XvKf9H+T378d+G8tAxF3PhIrGaxEah9uPrm4fld5FYz1wst9Yeyt9T/o/ye0jMRfldJOYisZrERqGWa6WJxFyU30ViNYmNQi1vFE38u2+u/TJ/A67YfypHoZafNJsY2KLyn8whG4Valr/mKIfX6R7mwsVcFM3F4Vpp4Y2ii/L3JPZlroVyExsGtuUoP26tPam/a1Nsx0ahlg8QJpa/qPyjSKNQy22PiYF1Uf6exL7QP20UahRqWX7Thr4hUGzHRqF2lHmWo1BL+U28VHFR/p7EhoFtOcqTealUbmJDYp4NDUyxHRuFWp4rTQxsUfmVaRRq+R+g1BzlhF7FR6GWW2sTA9tU/qNEo1DLwNYc5VGmUail/DVHeVh+D+V3MbA9czHMhYfnyp7yn/eUaBRq9a4SjUKNQu3hKD2U37ViYFvmQsyFh4F1UX4XiblIrCaxUajV5SnJwrWyqPyP8lt4SnJR/p7EDnPhYWB7yi/K7yGxnvIfyu/hubKn/OLLiIfldzGwTXNxlWgUakms5yjvT4lGofbxAaLlKEX5PSTm2vdjYGvm4irRKNQysDVH+bhWepgLFx3rmQsxFx7moqf8j3t+D3PRU36x/B7eKLromIu56Ens8Rqq5SjFtdJDYj3lfzwleXhF4GIuiubi8iHVwo1iUfl/fHq2kJiLuXAxFy4Sq0lsFGovz5Uelr+n/I8bRQ+JuZiLnrm4zIWHuegp/6P8HpbfRfldJNaT2OWXKi1H+bhWevh5Q1H5L1/fLMxFUfl/lN/CSxUXA+tiLpoSe0o0CjUKtbxON+27lN+yl7lomYvHrbWHa2VP+S875mEuisp/ue2xsPwuHkZ65uJxrfSQWE/5L09JHl6qNJX/KdEo1PJSxcS1sqf8l7nw8OnZRfl7EnvMRc9RXiUahVqulSbmoqj8j+dKy/5IrKX8v8zuKzmxp0SjUEvHio7yKdEo1FL+oqN8SjQKtZTfxFE2JfaUaBRqmYuio3xKNAq1lL/oKJ8SjUIt5S86yqdEo1Cb+bVSwYn96FjPUSrSKNRS/qKjVKRRqKX8JjrmovxNiSnSKNT87T/g//wHzOBQahQVlqkAAAAASUVORK5CYII=" id="image15e07c92b7" transform="scale(1 -1) translate(0 -279)" x="856.35" y="-112.5" width="17.1" height="279"/>
+   <g id="matplotlib.axis_5"/>
+   <g id="matplotlib.axis_6">
+    <g id="ytick_5">
+     <g id="line2d_17">
+      <defs>
+       <path id="mda19ecf194" d="M 0 0 
+L 3.5 0 
+" style="stroke: #516176; stroke-width: 0.8"/>
+      </defs>
+      <g>
+       <use xlink:href="#mda19ecf194" x="873.288" y="391.68" style="fill: #516176; stroke: #516176; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_43">
+      <text style="font-size: 11px; font-family: 'AppleGothic'; text-anchor: start; fill: #516176" x="880.288" y="395.992344" transform="rotate(-0 880.288 395.992344)">-1.0</text>
+     </g>
+    </g>
+    <g id="ytick_6">
+     <g id="line2d_18">
+      <g>
+       <use xlink:href="#mda19ecf194" x="873.288" y="321.912" style="fill: #516176; stroke: #516176; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_44">
+      <text style="font-size: 11px; font-family: 'AppleGothic'; text-anchor: start; fill: #516176" x="880.288" y="326.224344" transform="rotate(-0 880.288 326.224344)">-0.5</text>
+     </g>
+    </g>
+    <g id="ytick_7">
+     <g id="line2d_19">
+      <g>
+       <use xlink:href="#mda19ecf194" x="873.288" y="252.144" style="fill: #516176; stroke: #516176; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_45">
+      <text style="font-size: 11px; font-family: 'AppleGothic'; text-anchor: start; fill: #516176" x="880.288" y="256.456344" transform="rotate(-0 880.288 256.456344)">0.0</text>
+     </g>
+    </g>
+    <g id="ytick_8">
+     <g id="line2d_20">
+      <g>
+       <use xlink:href="#mda19ecf194" x="873.288" y="182.376" style="fill: #516176; stroke: #516176; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_46">
+      <text style="font-size: 11px; font-family: 'AppleGothic'; text-anchor: start; fill: #516176" x="880.288" y="186.688344" transform="rotate(-0 880.288 186.688344)">0.5</text>
+     </g>
+    </g>
+    <g id="ytick_9">
+     <g id="line2d_21">
+      <g>
+       <use xlink:href="#mda19ecf194" x="873.288" y="112.608" style="fill: #516176; stroke: #516176; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_47">
+      <text style="font-size: 11px; font-family: 'AppleGothic'; text-anchor: start; fill: #516176" x="880.288" y="116.920344" transform="rotate(-0 880.288 116.920344)">1.0</text>
+     </g>
+    </g>
+    <g id="text_48">
+     <text style="font-size: 11px; font-family: 'AppleGothic'; text-anchor: middle; fill: #29384a" x="917.167688" y="252.144" transform="rotate(-90 917.167688 252.144)">Pearson r</text>
+    </g>
+   </g>
+   <g id="LineCollection_1"/>
+   <g id="patch_9">
+    <path d="M 856.44 391.68 
+L 864.864 391.68 
+L 873.288 391.68 
+L 873.288 112.608 
+L 864.864 112.608 
+L 856.44 112.608 
+L 856.44 391.68 
+z
+" style="fill: none; stroke: #d3dae5; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+  </g>
+  <g id="text_49">
+   <text style="font-weight: 700; font-size: 20px; font-family: 'AppleGothic'; text-anchor: start; fill: #18283d" x="60.84" y="35.26525" transform="rotate(-0 60.84 35.26525)">가격 수준과 주별 변화율은 다른 결과를 보인다</text>
+  </g>
+  <g id="text_50">
+   <text style="font-size: 9px; font-family: 'AppleGothic'; text-anchor: start; fill: #516176" x="16.848" y="479.238919" transform="rotate(-0 16.848 479.238919)">셀의 n은 두 값이 동시에 있는 주 수 | 가격·주가 수준의 높은 상관은 인과관계나 예측력을 뜻하지 않음</text>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p28b3ee24db">
+   <rect x="187.2" y="88.128" width="636.48" height="125.633208"/>
+  </clipPath>
+  <clipPath id="p86f4572566">
+   <rect x="187.2" y="295.422792" width="636.48" height="125.633208"/>
+  </clipPath>
+ </defs>
+</svg>

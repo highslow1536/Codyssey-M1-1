@@ -1,0 +1,53 @@
+{
+  "source": {
+    "name": "Coin Metrics Community Data",
+    "url": "https://github.com/coinmetrics/data",
+    "license": "CC BY-NC 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-nc/4.0/",
+    "changes": "Saved Community API ETH data filtered to 2020–2022; weekly returns, 30-day mean and fixed-100-MH/s proxies calculated locally."
+  },
+  "daily_n": 1096,
+  "weekly_n": 156,
+  "weekly_return_n": 155,
+  "moving_average_n": 1067,
+  "proxy_valid_n": 988,
+  "partial_days": 1,
+  "pow_terminated_days": 107,
+  "years": [
+    {
+      "year": 2020,
+      "days": 366,
+      "mean_price_usd": 307.513387,
+      "first_price_usd": 129.963875,
+      "last_price_usd": 739.02585,
+      "first_to_last_change_pct": 468.639439,
+      "weekly_return_n": 50,
+      "weekly_return_std_pct": 11.914951
+    },
+    {
+      "year": 2021,
+      "days": 365,
+      "mean_price_usd": 2779.20763,
+      "first_price_usd": 730.914321,
+      "last_price_usd": 3686.951792,
+      "first_to_last_change_pct": 404.430093,
+      "weekly_return_n": 53,
+      "weekly_return_std_pct": 15.95097
+    },
+    {
+      "year": 2022,
+      "days": 365,
+      "mean_price_usd": 1987.446384,
+      "first_price_usd": 3761.05964,
+      "last_price_usd": 1195.330879,
+      "first_to_last_change_pct": -68.218242,
+      "weekly_return_n": 52,
+      "weekly_return_std_pct": 11.651817
+    }
+  ],
+  "inputs_sha256": {
+    "data/processed/2026-10-22/crypto/eth_daily.csv": "bc7d0dcebf8c22f686516309230f4688a1e8b4a933500074b42bc9083eea00ea",
+    "data/processed/2026-10-22/crypto/eth_weekly.csv": "d322455caac3dbccd89cbc986e71e9d69d9671cf31b56249dd25f73b8cd437a8",
+    "data/analysis/2026-10-23/forecast/forecast_metrics.csv": "52e7185bd794af2ffeb491cccb277b92964ad8404c04ffe8d608de6b4666d967"
+  }
+}

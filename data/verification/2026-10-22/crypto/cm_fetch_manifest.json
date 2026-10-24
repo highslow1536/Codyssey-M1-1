@@ -1,0 +1,45 @@
+{
+ "fetched_at_utc": "2026-10-21 17:16:23 UTC",
+ "api_root": "https://community-api.coinmetrics.io/v4",
+ "endpoint": "/timeseries/asset-metrics",
+ "params": {
+  "assets": "eth",
+  "frequency": "1d",
+  "start_time": "2020-01-01",
+  "end_time": "2023-01-01",
+  "page_size": "1000"
+ },
+ "metrics": [
+  "PriceUSD",
+  "HashRate",
+  "FeeTotNtv",
+  "IssTotNtv",
+  "IssTotUSD"
+ ],
+ "note": "RevUSD/RevNtv not available in community tier (API returns forbidden for those metrics); revenue proxy is rebuilt from IssTotNtv+FeeTotNtv. See docs/eth_mining_data_basis.md.",
+ "PriceUSD": {
+  "n_rows": 1097,
+  "min_time": "2020-01-01",
+  "max_time": "2023-01-01"
+ },
+ "HashRate": {
+  "n_rows": 988,
+  "min_time": "2020-01-01",
+  "max_time": "2022-09-14"
+ },
+ "FeeTotNtv": {
+  "n_rows": 1097,
+  "min_time": "2020-01-01",
+  "max_time": "2023-01-01"
+ },
+ "IssTotNtv": {
+  "n_rows": 1097,
+  "min_time": "2020-01-01",
+  "max_time": "2023-01-01"
+ },
+ "IssTotUSD": {
+  "n_rows": 1097,
+  "min_time": "2020-01-01",
+  "max_time": "2023-01-01"
+ }
+}

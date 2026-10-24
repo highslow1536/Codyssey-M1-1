@@ -1,0 +1,30 @@
+{
+ "coinmetrics_community_api": {
+  "root": "https://community-api.coinmetrics.io/v4",
+  "endpoint": "/timeseries/asset-metrics",
+  "assets": "eth",
+  "frequency": "1d",
+  "metrics": [
+   "PriceUSD",
+   "HashRate",
+   "FeeTotNtv",
+   "IssTotNtv",
+   "IssTotUSD"
+  ],
+  "raw_file": "data/verification/2026-10-22/crypto/cm_eth_daily_raw.json",
+  "raw_sha256": "095b9879d729c5fbfc39832609eb6bc2af6ec1e58ab5a47ca775850ebc0bacf9",
+  "unavailable_in_community_tier": [
+   "RevUSD",
+   "RevNtv",
+   "FeeBurnNtv",
+   "FeePrioTotNtv",
+   "miner/uncle breakdowns"
+  ]
+ },
+ "definitions": {
+  "price": "https://gitbook-docs.coinmetrics.io/network-data/network-data-overview/market/price",
+  "issuance": "https://gitbook-docs.coinmetrics.io/network-data/network-data-overview/supply/supply-issuance",
+  "hash_rate": "https://gitbook-docs.coinmetrics.io/network-data/network-data-overview/mining/hash-rate",
+  "fees": "https://gitbook-docs.coinmetrics.io/network-data/network-data-overview/fees-and-revenue/fees"
+ }
+}

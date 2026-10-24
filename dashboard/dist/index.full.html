@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#143b36">
+  <meta name="description" content="2026년 국내 PC 부품 가격 흐름으로 지금 살지 기다릴지 판단하는 업그레이드 플래너. 최근 시장과 과거 채굴 붐 분석을 함께 확인하세요.">
+  <title>Parts Observatory — PC 부품 가격 분석</title>
+  <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="./timing.css?v=20261023-forecast">
+  <link rel="stylesheet" href="./forecast.css?v=20261023-forecast">
+  <script type="module" src="./app.js?v=20261023-forecast"></script>
+</head>
+<body>
+  <a class="skip" href="#main">분석으로 건너뛰기</a>
+  <aside class="sidebar">
+    <a class="brand" href="#domestic" aria-label="Parts Observatory 홈"><span class="brand-symbol" aria-hidden="true">▥</span><span>PARTS<span class="brand-sub">OBSERVATORY</span></span></a>
+    <div class="workspace-label">PC 부품 시장 관측소 <span>MVP</span></div>
+    <nav aria-label="주요 화면">
+      <a href="#domestic" data-nav="domestic"><span aria-hidden="true">◷</span>지금 살까, 기다릴까</a>
+      <a href="#forecast" data-nav="forecast"><span aria-hidden="true">◉</span>3개월 예측 검증</a>
+      <a href="#compare" data-nav="compare"><span aria-hidden="true">▤</span>성능·가격 비교</a>
+      <a href="#recent" data-nav="recent"><span aria-hidden="true">↗</span>최근 시장 2023–26</a>
+      <a href="#mining" data-nav="mining"><span aria-hidden="true">◇</span>과거 채굴 붐 사례</a>
+      <a href="#quality" data-nav="quality"><span aria-hidden="true">◎</span>데이터와 한계</a>
+    </nav>
+    <div class="sidebar-note">사용 순서<p>1. 부품과 제품 선택<br>2. 예측의 검증 결과 확인<br>3. 성능·호환·예산 점검</p></div>
+    <div class="sidebar-bottom"><span>DATA SNAPSHOT</span><strong>2026.10.23</strong><small>국내 추세 10.20까지<br>시장 일별 10.22까지 · 자동 갱신 없음</small></div>
+  </aside>
+  <div class="workspace">
+    <header class="topbar"><div>PC 부품 업그레이드 플래너</div><div class="topbar-right"><span class="verified">저장 스냅샷 · 실시간 아님</span><a href="#quality" class="plain-link">데이터 기준 ↗</a></div></header>
+    <main id="main" tabindex="-1"><div class="loading"><span class="loader"></span>분석 자료를 불러오고 있습니다.</div></main>
+    <footer>PARTS OBSERVATORY <span>공개 원본 기반 · 가격 관측과 추정 근거를 구분</span><a href="#quality">방법과 출처 ↗</a></footer>
+  </div>
+  <noscript>대시보드는 JavaScript가 필요합니다. <a href="./data/downloads/cpu_ssd_weekly.csv">원본 결합 CSV 다운로드</a></noscript>
+</body>
+</html>

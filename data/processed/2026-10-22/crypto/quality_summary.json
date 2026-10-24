@@ -1,0 +1,86 @@
+{
+ "grid": {
+  "daily": [
+   "2020-01-01",
+   "2022-12-31"
+  ],
+  "weekly": [
+   "2020-01-04",
+   "2022-12-30"
+  ],
+  "n_weeks": 156,
+  "convention": "Saturday-to-Friday"
+ },
+ "merge_date": "2022-09-15",
+ "london_date": "2021-08-05",
+ "rows_daily": 1096,
+ "rows_weekly": 156,
+ "n_rev_gross_days": 988,
+ "n_partial_days": 1,
+ "n_terminated_days": 107,
+ "n_unobserved_days": 0,
+ "electricity": {
+  "watts": 200.0,
+  "kwh_per_day": 4.8,
+  "cost_010_usd_perday": 0.48,
+  "cost_020_usd_perday": 0.96,
+  "note": "fixed assumption, NOT measured RTX figures"
+ },
+ "proxy": {
+  "formula_ntv": "IssTotNtv + FeeTotNtv",
+  "formula_usd_per100mh": "rev_ntv_proxy * PriceUSD / (HashRate_THS * 1e6) * 100",
+  "fee_fully_included_overstates_from": "2021-08-05",
+  "reason": "FeeTotNtv includes EIP-1559 base fees burned; no FeeBurn/FeePrio metric in community tier",
+  "iss_only_formula": "IssTotNtv * PriceUSD / (HashRate_THS * 1e6) * 100",
+  "iss_only_note": "Fee-excluded sensitivity series, NOT a lower bound; IssTotNtv includes Beacon staking rewards after launch",
+  "beacon_issuance_included_from": "2020-12-01",
+  "beacon_breakdown_request": "ETH_CL IssContNtv request returned HTTP 403; no separate series acquired"
+ },
+ "source_file": "data/verification/2026-10-22/crypto/cm_eth_daily_raw.json",
+ "source_sha256": "095b9879d729c5fbfc39832609eb6bc2af6ec1e58ab5a47ca775850ebc0bacf9",
+ "fetch_manifest": {
+  "fetched_at_utc": "2026-10-21 17:16:23 UTC",
+  "api_root": "https://community-api.coinmetrics.io/v4",
+  "endpoint": "/timeseries/asset-metrics",
+  "params": {
+   "assets": "eth",
+   "frequency": "1d",
+   "start_time": "2020-01-01",
+   "end_time": "2023-01-01",
+   "page_size": "1000"
+  },
+  "metrics": [
+   "PriceUSD",
+   "HashRate",
+   "FeeTotNtv",
+   "IssTotNtv",
+   "IssTotUSD"
+  ],
+  "note": "RevUSD/RevNtv not available in community tier (API returns forbidden for those metrics); revenue proxy is rebuilt from IssTotNtv+FeeTotNtv. See docs/eth_mining_data_basis.md.",
+  "PriceUSD": {
+   "n_rows": 1097,
+   "min_time": "2020-01-01",
+   "max_time": "2023-01-01"
+  },
+  "HashRate": {
+   "n_rows": 988,
+   "min_time": "2020-01-01",
+   "max_time": "2022-09-14"
+  },
+  "FeeTotNtv": {
+   "n_rows": 1097,
+   "min_time": "2020-01-01",
+   "max_time": "2023-01-01"
+  },
+  "IssTotNtv": {
+   "n_rows": 1097,
+   "min_time": "2020-01-01",
+   "max_time": "2023-01-01"
+  },
+  "IssTotUSD": {
+   "n_rows": 1097,
+   "min_time": "2020-01-01",
+   "max_time": "2023-01-01"
+  }
+ }
+}

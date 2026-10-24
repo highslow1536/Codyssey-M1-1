@@ -1,0 +1,1015 @@
+{
+  "edition": "public-submission",
+  "date": "2026-10-24",
+  "repository": "https://github.com/highslow1536/Codyssey-M1-1",
+  "files": [
+    {
+      "path": ".gitignore",
+      "bytes": 79,
+      "sha256": "28056353ab9211565ecb45288489a3a1e7f8307c2b6e74dacc683fcee196a29c",
+      "basis": "project-authored code or public-edition documentation"
+    },
+    {
+      "path": "README.md",
+      "bytes": 8386,
+      "sha256": "5e255963d6bb11e385d2efdff66eb76e3b06d3952c6a9fb5462b3fc573d31f92",
+      "basis": "project-authored code or public-edition documentation"
+    },
+    {
+      "path": "REPORT.md",
+      "bytes": 26986,
+      "sha256": "572a8cbb748ae008574754412360141e5e487fcd91b517b05e099ca3367c07fb",
+      "basis": "project-authored code or public-edition documentation"
+    },
+    {
+      "path": "RIGHTS.md",
+      "bytes": 2526,
+      "sha256": "ca5a7c813c34fa47a230c88a3c1a3b2eb4fbf320860f61ed954b55aaaa9f82c8",
+      "basis": "project-authored code or public-edition documentation"
+    },
+    {
+      "path": "config/correlation_analysis.json",
+      "bytes": 492,
+      "sha256": "7596bfe6ae142697e87dd123ac0622f971409e06058f6d0873b764a92797c462",
+      "basis": "project-authored code or public-edition documentation"
+    },
+    {
+      "path": "config/price_preprocessing.json",
+      "bytes": 922,
+      "sha256": "e77ca954ad2d94e9cc1fa9a6d83d1125c3cacbbc8afe4a914b4f47d24ca7fbec",
+      "basis": "project-authored code or public-edition documentation"
+    },
+    {
+      "path": "dashboard/README.md",
+      "bytes": 1712,
+      "sha256": "e5bfd7138d76f761d2792310fe5c0595589fb8c80fb645392068514f1616c914",
+      "basis": "project-authored code or public-edition documentation"
+    },
+    {
+      "path": "dashboard/dist/app.js",
+      "bytes": 40356,
+      "sha256": "c86b4957ef6e8a5986dad041cef95376b780ac6147f98b41d2b9d255a40bab0a",
+      "basis": "project-authored code or public-edition documentation"
+    },
+    {
+      "path": "dashboard/dist/assets/favicon.svg",
+      "bytes": 189,
+      "sha256": "1acfb910798d27db9f2bfa0d7b70672bdc012994c2fd2c846b9b534ea7692299",
+      "basis": "original non-reconstructive statistics or explanatory figure"
+    },
+    {
+      "path": "dashboard/dist/charts.js",
+      "bytes": 8089,
+      "sha256": "3b48a50575780d9344496238dc424df87962823561de9ef70915ca6bc39c2e1c",
+      "basis": "project-authored code or public-edition documentation"
+    },
+    {
+      "path": "dashboard/dist/domestic-model.js",
+      "bytes": 7878,
+      "sha256": "813ef80940fbb33e55a7cc73c0801eb242e3b4fb6212e8b0178b6a4fd699459e",
+      "basis": "project-authored code or public-edition documentation"
+    },
+    {
+      "path": "dashboard/dist/domestic.js",
+      "bytes": 22781,
+      "sha256": "80f0a9789001bbf0c32ab6845e60275dd5fe1652fee1abe35ee43d21ac6fdb79",
+      "basis": "project-authored code or public-edition documentation"
+    },
+    {
+      "path": "dashboard/dist/forecast-model.js",
+      "bytes": 4791,
+      "sha256": "4420b910e6e0ab2a1268d39b1dc4f40bb2816e8bccb34f31d69d45d49bff84d9",
+      "basis": "project-authored code or public-edition documentation"
+    },
+    {
+      "path": "dashboard/dist/forecast-view.js",
+      "bytes": 23905,
+      "sha256": "883a5e5593fb1b32f19d4583b27cdcc22ee7b2f1c3e20eaef0328816de14b87c",
+      "basis": "project-authored code or public-edition documentation"
+    },
+    {
+      "path": "dashboard/dist/forecast.css",
+      "bytes": 3750,
+      "sha256": "e15c4babce3517e7621cde5ba732ec0ceac62280b00bfe61627d57c65cbdabdb",
+      "basis": "project-authored code or public-edition documentation"
+    },
+    {
+      "path": "dashboard/dist/index.full.html",
+      "bytes": 2945,
+      "sha256": "af1ef53936e074ee86637d8f7a1c21461d206294461aaa8c08ea59893a3250ae",
+      "basis": "project-authored code or public-edition documentation"
+    },
+    {
+      "path": "dashboard/dist/index.html",
+      "bytes": 366,
+      "sha256": "23ab0a551d98f24cc2c08eaeee729515fc1997dfae90c8b3bd38633823862b9c",
+      "basis": "project-authored code or public-edition documentation"
+    },
+    {
+      "path": "dashboard/dist/model.js",
+      "bytes": 3458,
+      "sha256": "e3ff59780db1166d7eb68b162b9af0f7ca5d8d6654353aa6bcc778843b04b037",
+      "basis": "project-authored code or public-edition documentation"
+    },
+    {
+      "path": "dashboard/dist/styles.css",
+      "bytes": 25127,
+      "sha256": "54d920c2547737a8354b916356a78319fbaf4e78aff72190d6154bbbb5642b5e",
+      "basis": "project-authored code or public-edition documentation"
+    },
+    {
+      "path": "dashboard/dist/timing-model.js",
+      "bytes": 8087,
+      "sha256": "3bb148db187f497d7892a7ca87d37e47595ebddbd4a0f9067ae6f5ab05ba5d69",
+      "basis": "project-authored code or public-edition documentation"
+    },
+    {
+      "path": "dashboard/dist/timing-view.js",
+      "bytes": 25245,
+      "sha256": "27997970f89be506e1bee68de7540e8f6a104377aee2d4f5dd2450ca8d9e489c",
+      "basis": "project-authored code or public-edition documentation"
+    },
+    {
+      "path": "dashboard/dist/timing.css",
+      "bytes": 14698,
+      "sha256": "124d986b100ce696237c33ab410c6739f406ada995a96c8765df58096ea92098",
+      "basis": "project-authored code or public-edition documentation"
+    },
+    {
+      "path": "dashboard/package.json",
+      "bytes": 131,
+      "sha256": "5a7a2b36273b17a5fc145ace23f2876548a05cb922cc5089f54aab729a3ab008",
+      "basis": "project-authored code or public-edition documentation"
+    },
+    {
+      "path": "dashboard/public/index.html",
+      "bytes": 10721,
+      "sha256": "02195935470409b5cecc0493c77a053ca1850dd03f3f54c2f0ab67d941bc7914",
+      "basis": "project-authored code or public-edition documentation"
+    },
+    {
+      "path": "dashboard/public/public-view.js",
+      "bytes": 14432,
+      "sha256": "97f7eae2beaacf3e39a9b2f3cf20e3cab8830b5294a9f4b2a26a6b79adc0b208",
+      "basis": "project-authored code or public-edition documentation"
+    },
+    {
+      "path": "dashboard/public/styles.css",
+      "bytes": 9146,
+      "sha256": "3d6a3de312d10fb6c2dc8a08acf585f19c9eb4a0068d553a026ac8f6a94b6cf4",
+      "basis": "project-authored code or public-edition documentation"
+    },
+    {
+      "path": "dashboard/qa/README.md",
+      "bytes": 2065,
+      "sha256": "f1ad7bd5db7385c885d428132456c66b9f34c11399ddb9212eb6be4cd6936ee9",
+      "basis": "project-authored code or public-edition documentation"
+    },
+    {
+      "path": "dashboard/qa/domestic-2026-10-23.md",
+      "bytes": 1828,
+      "sha256": "f82eb2f0e72d9ad5a6bb6fe6e96e800cc3cac2a99654da37f514e43133e49df2",
+      "basis": "project-authored code or public-edition documentation"
+    },
+    {
+      "path": "dashboard/qa/expanded-verification.md",
+      "bytes": 2020,
+      "sha256": "aacfabd43632bc6d15c95f4901493a0bca6d79d23e9f7fcbdf03d528b3b81dbd",
+      "basis": "project-authored code or public-edition documentation"
+    },
+    {
+      "path": "dashboard/qa/forecast-2026-10-23.md",
+      "bytes": 2241,
+      "sha256": "dfee4ed7c423890f807fb52ca3bcf4efb83f209c94d88a12624d7776876ae716",
+      "basis": "project-authored code or public-edition documentation"
+    },
+    {
+      "path": "dashboard/qa/timing-2026-10-23.md",
+      "bytes": 2403,
+      "sha256": "077c82bac5747cc488c4f1725578f9af34e08d94dcdfc5f076315f6cb97fbd3a",
+      "basis": "project-authored code or public-edition documentation"
+    },
+    {
+      "path": "dashboard/tests/domestic.test.mjs",
+      "bytes": 6654,
+      "sha256": "35846dfef9c14865bc8a80e20964ed5e4f1b9c6052dd4c97617629f437a19108",
+      "basis": "project-authored code or public-edition documentation"
+    },
+    {
+      "path": "dashboard/tests/forecast-purchase.test.mjs",
+      "bytes": 3312,
+      "sha256": "aa34946b820102487925e8da014f065afeff2994d418b4a0d72ddb9da8ac260c",
+      "basis": "project-authored code or public-edition documentation"
+    },
+    {
+      "path": "dashboard/tests/forecast-view.test.mjs",
+      "bytes": 5852,
+      "sha256": "6fcef77af49749943fbc93b033f4fb5d43beae643b43ea0612b1cfd75f0bca0d",
+      "basis": "project-authored code or public-edition documentation"
+    },
+    {
+      "path": "dashboard/tests/model.test.mjs",
+      "bytes": 3520,
+      "sha256": "b6d2ba1555f219581bc619bc36646c1244731760c24248f520af011203c3b66a",
+      "basis": "project-authored code or public-edition documentation"
+    },
+    {
+      "path": "dashboard/tests/timing.test.mjs",
+      "bytes": 4772,
+      "sha256": "296eee7f10baed5b7309b746960e33173c91c721bd216a13d3d7ea0c4d075ab1",
+      "basis": "project-authored code or public-edition documentation"
+    },
+    {
+      "path": "data/README.md",
+      "bytes": 4782,
+      "sha256": "4eb169ef148bd0e66932c2f87546e82c15a7aaf1e427c1d5f2e8336224418b18",
+      "basis": "project-authored code or public-edition documentation"
+    },
+    {
+      "path": "data/analysis/2026-10-22/REPORT.md",
+      "bytes": 18999,
+      "sha256": "8891a0b115bf48ed67a297335d659293dbcee50416e05b3b8e0e62b8512ccdff",
+      "basis": "project-authored code or public-edition documentation"
+    },
+    {
+      "path": "data/analysis/2026-10-22/correlations.csv",
+      "bytes": 3345,
+      "sha256": "8fcce897d271677af2714ea9a782cc36fae6c38c21b694c3a9f9382b782e9851",
+      "basis": "original non-reconstructive statistics or explanatory figure"
+    },
+    {
+      "path": "data/analysis/2026-10-22/correlations_by_year.csv",
+      "bytes": 1482,
+      "sha256": "b178ea200395dcc72c459676fe9ae9d3db8c7274dfe2749198f0c2f1d2a8e7af",
+      "basis": "original non-reconstructive statistics or explanatory figure"
+    },
+    {
+      "path": "data/analysis/2026-10-22/coverage.csv",
+      "bytes": 400,
+      "sha256": "c41d747e2d4979821d4d9bd8174d51884112c1c33bf73af8f3458e6202ee704e",
+      "basis": "original non-reconstructive statistics or explanatory figure"
+    },
+    {
+      "path": "data/analysis/2026-10-22/figures/02_correlations.png",
+      "bytes": 192248,
+      "sha256": "a81bfb99f5f9d62f772e61ce2bc1788ff9c9e7abc429e3ae5f7514d93629a714",
+      "basis": "original non-reconstructive statistics or explanatory figure"
+    },
+    {
+      "path": "data/analysis/2026-10-22/figures/02_correlations.svg",
+      "bytes": 29134,
+      "sha256": "682741549ec4dc961c0b131ee71423dcae4bb51c43c9f6ecf20361b9886ee7f8",
+      "basis": "original non-reconstructive statistics or explanatory figure"
+    },
+    {
+      "path": "data/analysis/2026-10-22/figures/04_lag_correlations.png",
+      "bytes": 548348,
+      "sha256": "637fa3755673beeedef7cf2dc8971f748ca58ea68ed6ca47702d5ee465967ed6",
+      "basis": "original non-reconstructive statistics or explanatory figure"
+    },
+    {
+      "path": "data/analysis/2026-10-22/figures/04_lag_correlations.svg",
+      "bytes": 111121,
+      "sha256": "f245ff31889264f9f82ddf5b175664b4d1f24283a1f80f66314a055034767973",
+      "basis": "original non-reconstructive statistics or explanatory figure"
+    },
+    {
+      "path": "data/analysis/2026-10-22/figures/05_missing_coverage.png",
+      "bytes": 140675,
+      "sha256": "bfcb97ac7c2e750611b47bbb1b221243afddd5a301799be4e097dfb1555ad56f",
+      "basis": "original non-reconstructive statistics or explanatory figure"
+    },
+    {
+      "path": "data/analysis/2026-10-22/figures/05_missing_coverage.svg",
+      "bytes": 19939,
+      "sha256": "a5f3eefc35e02a58bbbbb229abc4638e1e4fe30dac81f9621352fb7ead238e38",
+      "basis": "original non-reconstructive statistics or explanatory figure"
+    },
+    {
+      "path": "data/analysis/2026-10-22/gpu_mining/REPORT.md",
+      "bytes": 19268,
+      "sha256": "d4a0d3789d31c8d3cd524bc026c9da4c490b4786e3ad2dbe3b4e1e347a36c7b3",
+      "basis": "project-authored code or public-edition documentation"
+    },
+    {
+      "path": "data/analysis/2026-10-22/gpu_mining/correlations.csv",
+      "bytes": 34529,
+      "sha256": "1fe33f9570cd430e2662ab88eb9a1d231aa575f91506c487f9e9979a44c06340",
+      "basis": "original non-reconstructive statistics or explanatory figure"
+    },
+    {
+      "path": "data/analysis/2026-10-22/gpu_mining/date_sensitivity.csv",
+      "bytes": 2034,
+      "sha256": "09fa458ca73594cd3c6cdbe04b3d036d26d2f80fcaba90d1609d681897e6322d",
+      "basis": "original non-reconstructive statistics or explanatory figure"
+    },
+    {
+      "path": "data/analysis/2026-10-22/gpu_mining/figures/04_observation_coverage.png",
+      "bytes": 176465,
+      "sha256": "f38f724d29cde1e94dffb95dbd5e5ac2101cea9270562cfae722dcc6a27ce67d",
+      "basis": "original non-reconstructive statistics or explanatory figure"
+    },
+    {
+      "path": "data/analysis/2026-10-22/gpu_mining/figures/04_observation_coverage.svg",
+      "bytes": 24173,
+      "sha256": "b08610b24b055a133757a85757cc6dde6a6861b7ae3c38c454ae9c3a0311ffe5",
+      "basis": "original non-reconstructive statistics or explanatory figure"
+    },
+    {
+      "path": "data/analysis/2026-10-22/lag_correlations.csv",
+      "bytes": 19482,
+      "sha256": "ad436dbd3793c2fa64209ac5c0a03f955f098daeb4ff9a6cd55d7020b073aea0",
+      "basis": "original non-reconstructive statistics or explanatory figure"
+    },
+    {
+      "path": "data/analysis/2026-10-22/lag_peaks_exploratory.csv",
+      "bytes": 1266,
+      "sha256": "adaa855554b37a7c0d048bf3655e31c226ac6f32e52afa9e5c0393325daf6a91",
+      "basis": "original non-reconstructive statistics or explanatory figure"
+    },
+    {
+      "path": "data/analysis/2026-10-22/sensitivity.csv",
+      "bytes": 4545,
+      "sha256": "0e3a362858f5b77002e2bbb560e106fdbff3b2daea6f4bc066040239b6c82c54",
+      "basis": "original non-reconstructive statistics or explanatory figure"
+    },
+    {
+      "path": "data/analysis/2026-10-23/forecast/REPORT.md",
+      "bytes": 12096,
+      "sha256": "4a7de2ddec09ac51f7717fbd98080f4660aa74885c08b018fc0e8a7ba72bb91b",
+      "basis": "project-authored code or public-edition documentation"
+    },
+    {
+      "path": "data/analysis/2026-10-23/forecast/forecast_metrics.csv",
+      "bytes": 23478,
+      "sha256": "52e7185bd794af2ffeb491cccb277b92964ad8404c04ffe8d608de6b4666d967",
+      "basis": "original non-reconstructive statistics or explanatory figure"
+    },
+    {
+      "path": "data/excluded_inventory.csv",
+      "bytes": 89802,
+      "sha256": "6088b8701aa09cf3f64f4b50f5d8c4da2cb5f12d10c3ecab41188ffa105360af",
+      "basis": "project-authored code or public-edition documentation"
+    },
+    {
+      "path": "data/processed/2026-10-22/crypto/eth_daily.csv",
+      "bytes": 319606,
+      "sha256": "bc7d0dcebf8c22f686516309230f4688a1e8b4a933500074b42bc9083eea00ea",
+      "basis": "Coin Metrics ETH / CC BY-NC 4.0 or documented aggregate"
+    },
+    {
+      "path": "data/processed/2026-10-22/crypto/eth_weekly.csv",
+      "bytes": 41885,
+      "sha256": "d322455caac3dbccd89cbc986e71e9d69d9671cf31b56249dd25f73b8cd437a8",
+      "basis": "Coin Metrics ETH / CC BY-NC 4.0 or documented aggregate"
+    },
+    {
+      "path": "data/processed/2026-10-22/crypto/quality_summary.json",
+      "bytes": 2463,
+      "sha256": "82f0399ff5e6d9f7980c857b0e7078f383bea6faff2afb29e3adef0e909030df",
+      "basis": "Coin Metrics ETH / CC BY-NC 4.0 or documented aggregate"
+    },
+    {
+      "path": "data/processed/2026-10-22/crypto/sources.json",
+      "bytes": 1004,
+      "sha256": "086e39668ff091fa641e62fd538e85183360fa14b69f2bab0edc62df009f8486",
+      "basis": "Coin Metrics ETH / CC BY-NC 4.0 or documented aggregate"
+    },
+    {
+      "path": "data/processed/2026-10-23/domestic/NOTES.md",
+      "bytes": 3546,
+      "sha256": "b31f226ed17d0047eabc9d9e37e43a9ccddcf533bbcccee43d33c9821c08b11a",
+      "basis": "project-authored code or public-edition documentation"
+    },
+    {
+      "path": "data/processed/2026-10-23/recent/README.md",
+      "bytes": 1668,
+      "sha256": "83e1587c9bad6f1c5007a1b91c0141b61a262f4d653347e7efab8b3c39e5ee0a",
+      "basis": "project-authored code or public-edition documentation"
+    },
+    {
+      "path": "data/public/dashboard.json",
+      "bytes": 138242,
+      "sha256": "9e4a30ec740b11627f351a69b667b85a2592a4a64e2bc200c87e77719c7e64b4",
+      "basis": "Coin Metrics ETH / CC BY-NC 4.0 or documented aggregate"
+    },
+    {
+      "path": "data/public/eth_analysis.json",
+      "bytes": 1777,
+      "sha256": "f25fac14a2f8c73a5398738e928f17989d2178b982c5ef62ec0bb621a2a2fde4",
+      "basis": "Coin Metrics ETH / CC BY-NC 4.0 or documented aggregate"
+    },
+    {
+      "path": "data/public/eth_yearly_summary.csv",
+      "bytes": 322,
+      "sha256": "cb7796c872c334ccfe174a80a84d5a45d94128a833d36768605c7da4a638c3f6",
+      "basis": "Coin Metrics ETH / CC BY-NC 4.0 or documented aggregate"
+    },
+    {
+      "path": "data/references_omitted.json",
+      "bytes": 1828,
+      "sha256": "3218f5a2a038f6ba15caba71724fa9c1bf2a6d86c0a64a8752c276e4294ed362",
+      "basis": "project-authored code or public-edition documentation"
+    },
+    {
+      "path": "data/source_catalog.json",
+      "bytes": 3699,
+      "sha256": "42e748a9a9ad720e8ff8441739ab321da3472f97c961bc9d569bc7499f4beb15",
+      "basis": "project-authored code or public-edition documentation"
+    },
+    {
+      "path": "data/verification/2026-10-22/crypto/cm_eth_daily_raw.json",
+      "bytes": 512773,
+      "sha256": "095b9879d729c5fbfc39832609eb6bc2af6ec1e58ab5a47ca775850ebc0bacf9",
+      "basis": "Coin Metrics ETH / CC BY-NC 4.0 or documented aggregate"
+    },
+    {
+      "path": "data/verification/2026-10-22/crypto/cm_fetch_manifest.json",
+      "bytes": 1022,
+      "sha256": "bf5e6a846cbb5583a182c9bf0ba70c3ca4075fd5148613bc9bc88feac92ea4da",
+      "basis": "Coin Metrics ETH / CC BY-NC 4.0 or documented aggregate"
+    },
+    {
+      "path": "docs/assets/README.md",
+      "bytes": 2645,
+      "sha256": "f99ff9421e58fd70796193f54d8863ad53f1e2104d7068372acce66a9b67d8ac",
+      "basis": "project-authored code or public-edition documentation"
+    },
+    {
+      "path": "docs/assets/figures/01_analysis_flow.png",
+      "bytes": 122180,
+      "sha256": "e6277e4e2175664dd8e5ce1dc5466910d2863b5c7a8aaca97730e7e8a620cc0f",
+      "basis": "original non-reconstructive statistics or explanatory figure"
+    },
+    {
+      "path": "docs/assets/figures/01_analysis_flow.svg",
+      "bytes": 197173,
+      "sha256": "4c6a2b52ee6ba9f8d6f064d3a013b686e81b2aa81645b61c64dd9a9d9db008fe",
+      "basis": "original non-reconstructive statistics or explanatory figure"
+    },
+    {
+      "path": "docs/assets/figures/02_observation_coverage.png",
+      "bytes": 92569,
+      "sha256": "bae6d9418a4140d2328e5d358cb386f0312edc6073a812f6c88155b67282e5c2",
+      "basis": "original non-reconstructive statistics or explanatory figure"
+    },
+    {
+      "path": "docs/assets/figures/02_observation_coverage.svg",
+      "bytes": 118628,
+      "sha256": "0e9ece5a7513e1b7e1ffe27cdbcf101f9621044bb4bcffb09d8544aa60ba300c",
+      "basis": "original non-reconstructive statistics or explanatory figure"
+    },
+    {
+      "path": "docs/assets/figures/04_forecast_validation.png",
+      "bytes": 146457,
+      "sha256": "3b459c365265a33e17f6758d570151aabd55169b5a611ea5ccada92ebdd0809d",
+      "basis": "original non-reconstructive statistics or explanatory figure"
+    },
+    {
+      "path": "docs/assets/figures/04_forecast_validation.svg",
+      "bytes": 214082,
+      "sha256": "947e8d8d0cfff5e422df55e2225acd4127d2771286d9b60742f181b882519dc7",
+      "basis": "original non-reconstructive statistics or explanatory figure"
+    },
+    {
+      "path": "docs/assets/figures/05_forecast_timeline.png",
+      "bytes": 123224,
+      "sha256": "a55504edf2898525d7f9830c78cfb8b03e49b20fcec41efa36ef66de53ef09c7",
+      "basis": "original non-reconstructive statistics or explanatory figure"
+    },
+    {
+      "path": "docs/assets/figures/05_forecast_timeline.svg",
+      "bytes": 182790,
+      "sha256": "9b3901e068fb8fa4385be95fbf3ca8dba0ec63b327309767389b9b6c8a2af470",
+      "basis": "original non-reconstructive statistics or explanatory figure"
+    },
+    {
+      "path": "docs/assets/public/01_eth_trend.png",
+      "bytes": 168260,
+      "sha256": "9cc9f5cdec39b7b31c5a6f8065cf53f35a32311ccbdca5f757cf7c72da01e88a",
+      "basis": "Coin Metrics ETH / CC BY-NC 4.0 or documented aggregate"
+    },
+    {
+      "path": "docs/assets/public/01_eth_trend.svg",
+      "bytes": 165716,
+      "sha256": "0263e2c6e02ac591ab2394a27f334bee1ca752874d929439f80881a7afab20ad",
+      "basis": "Coin Metrics ETH / CC BY-NC 4.0 or documented aggregate"
+    },
+    {
+      "path": "docs/assets/public/02_eth_weekly_returns.png",
+      "bytes": 75658,
+      "sha256": "03106f3dc6d4165ce99300a44fe4453004b5a23923c0f3dc7c7b358540642701",
+      "basis": "Coin Metrics ETH / CC BY-NC 4.0 or documented aggregate"
+    },
+    {
+      "path": "docs/assets/public/02_eth_weekly_returns.svg",
+      "bytes": 140590,
+      "sha256": "15cc676ebbbd32479f563122848dc1aa3279adbcd85d10fe9afdc35d2c3a746d",
+      "basis": "Coin Metrics ETH / CC BY-NC 4.0 or documented aggregate"
+    },
+    {
+      "path": "docs/assets/public/03_eth_proxies.png",
+      "bytes": 194994,
+      "sha256": "f8ac37779acc0cb5a63aff5a43c85bde38d05a2c8b1d51548f6e46a011ff7eca",
+      "basis": "Coin Metrics ETH / CC BY-NC 4.0 or documented aggregate"
+    },
+    {
+      "path": "docs/assets/public/03_eth_proxies.svg",
+      "bytes": 198697,
+      "sha256": "40cafc95dde2f7ec2e96a19580fdef9e40857a24b1cdee5a1ce576b8c267fe44",
+      "basis": "Coin Metrics ETH / CC BY-NC 4.0 or documented aggregate"
+    },
+    {
+      "path": "docs/assets/public/public_01_trend.png",
+      "bytes": 172927,
+      "sha256": "12a5a71ac51b9422a6505cbd19ea12b6a9631151d8aa938833dcbc19f2e429ea",
+      "basis": "original non-reconstructive statistics or explanatory figure"
+    },
+    {
+      "path": "docs/assets/public/public_02_proxy_2022.png",
+      "bytes": 166370,
+      "sha256": "128fdb370a6e3274e7c3d65eb2f7e88a283c64e13a95aa1f0a564f02d71a862c",
+      "basis": "original non-reconstructive statistics or explanatory figure"
+    },
+    {
+      "path": "docs/assets/public/public_03_validation.png",
+      "bytes": 148192,
+      "sha256": "f125d7955368fd21e08df48a3c37937ccca2837acf4ee12519af1f87e3352dc6",
+      "basis": "original non-reconstructive statistics or explanatory figure"
+    },
+    {
+      "path": "docs/data_redistribution.md",
+      "bytes": 13444,
+      "sha256": "3ea5085c8a94e9144bd039172f80fa45a5c50e33857010067457510d8caa0ed9",
+      "basis": "project-authored code or public-edition documentation"
+    },
+    {
+      "path": "docs/domestic_price_audit.md",
+      "bytes": 2427,
+      "sha256": "a7704dba0d7f836530f7ddfb621a6588168e4921e5ff5cf33b7dda112f46e063",
+      "basis": "project-authored code or public-edition documentation"
+    },
+    {
+      "path": "docs/domestic_value_methodology.md",
+      "bytes": 4525,
+      "sha256": "8b6b271febaa498c61b05a7f9e28cee18ca3a5a4ab12e9f9050543dc6996c81d",
+      "basis": "project-authored code or public-edition documentation"
+    },
+    {
+      "path": "docs/eth_mining_data_basis.md",
+      "bytes": 9181,
+      "sha256": "e556e2c6c7f3d9011028e30c209758e15aa2cab63a2741903c263a9f63b685e9",
+      "basis": "project-authored code or public-edition documentation"
+    },
+    {
+      "path": "docs/forecast_deployment.md",
+      "bytes": 1190,
+      "sha256": "01a4b8b801dbca392282a7ea614a23a41711121abdc88b0ec3c57c956901e2e3",
+      "basis": "project-authored code or public-edition documentation"
+    },
+    {
+      "path": "docs/forecast_protocol.md",
+      "bytes": 6562,
+      "sha256": "37b63c02a21f022c6bac3657d5e3351ac93ce696653c4e034e65bdd325aabd18",
+      "basis": "project-authored code or public-edition documentation"
+    },
+    {
+      "path": "docs/full_reproduction.md",
+      "bytes": 11994,
+      "sha256": "b19503f3abfacb27d2d7123a2e6a8b8dee131c1cad65e877e006ce4717622946",
+      "basis": "project-authored code or public-edition documentation"
+    },
+    {
+      "path": "docs/gpu_ebay_data_basis.md",
+      "bytes": 2952,
+      "sha256": "60df591e5ee100072f16d3cb48b0b4de39ab59d653f4ae4919de1cf3e1a68404",
+      "basis": "project-authored code or public-edition documentation"
+    },
+    {
+      "path": "docs/gpu_retail_data_basis.md",
+      "bytes": 4472,
+      "sha256": "70f983f38b4945cae998079172d57d166ef62633355a21734e75c6c5383ed25c",
+      "basis": "project-authored code or public-edition documentation"
+    },
+    {
+      "path": "docs/overseas_preprocessing.md",
+      "bytes": 14055,
+      "sha256": "00458b33aa2059408124e3bd2f5bd58be69efc65941d5300835a3240eb039cdc",
+      "basis": "project-authored code or public-edition documentation"
+    },
+    {
+      "path": "docs/reproduction.md",
+      "bytes": 3941,
+      "sha256": "d12d45c0b13f98e74c0f5ac068c22ad601db945f14723f657a1b37554abf3774",
+      "basis": "project-authored code or public-edition documentation"
+    },
+    {
+      "path": "docs/stock_data_basis.md",
+      "bytes": 9008,
+      "sha256": "d0edac0c4bdd9652f0b6c3dab9273bbf5483c5d4ee00eca02c96c2c5b9daa6c8",
+      "basis": "project-authored code or public-edition documentation"
+    },
+    {
+      "path": "docs/submission_checklist.md",
+      "bytes": 4670,
+      "sha256": "9c89cba7c54a545bf153190d05b63c9ac521b47c9522bf8fa7403e3d0a964a33",
+      "basis": "project-authored code or public-edition documentation"
+    },
+    {
+      "path": "publication/templates/README.md.in",
+      "bytes": 8386,
+      "sha256": "5e255963d6bb11e385d2efdff66eb76e3b06d3952c6a9fb5462b3fc573d31f92",
+      "basis": "project-authored code or public-edition documentation"
+    },
+    {
+      "path": "publication/templates/REPORT.md.in",
+      "bytes": 26986,
+      "sha256": "572a8cbb748ae008574754412360141e5e487fcd91b517b05e099ca3367c07fb",
+      "basis": "project-authored code or public-edition documentation"
+    },
+    {
+      "path": "publication/templates/RIGHTS.md.in",
+      "bytes": 2285,
+      "sha256": "357a3a3675810016bf714de516ca7b8a2c655e5d1c08f1168d7ecd285e8712a4",
+      "basis": "project-authored code or public-edition documentation"
+    },
+    {
+      "path": "publication/templates/dashboard/README.md.in",
+      "bytes": 1471,
+      "sha256": "cb40c51b41d098c2d3b162b25da9766867fcc0229d20405399df2098fc2513a8",
+      "basis": "project-authored code or public-edition documentation"
+    },
+    {
+      "path": "publication/templates/dashboard/qa/domestic-2026-10-23.md.in",
+      "bytes": 1587,
+      "sha256": "a7531d8ad968ecb260b65358872895e543ecb223eac1c2d4f564c63b9af46c3c",
+      "basis": "project-authored code or public-edition documentation"
+    },
+    {
+      "path": "publication/templates/data/README.md.in",
+      "bytes": 4782,
+      "sha256": "4eb169ef148bd0e66932c2f87546e82c15a7aaf1e427c1d5f2e8336224418b18",
+      "basis": "project-authored code or public-edition documentation"
+    },
+    {
+      "path": "publication/templates/data/analysis/2026-10-22/gpu_mining/REPORT.md.in",
+      "bytes": 18460,
+      "sha256": "195d5b2f81d1b4540881bd3991ee427d8b92ec1257baff4534a758eaa285eabd",
+      "basis": "project-authored code or public-edition documentation"
+    },
+    {
+      "path": "publication/templates/docs/assets/README.md.in",
+      "bytes": 2645,
+      "sha256": "f99ff9421e58fd70796193f54d8863ad53f1e2104d7068372acce66a9b67d8ac",
+      "basis": "project-authored code or public-edition documentation"
+    },
+    {
+      "path": "publication/templates/docs/domestic_price_audit.md.in",
+      "bytes": 2186,
+      "sha256": "1da25c665296064aae0b4dc404afa554bce8354799fabd0d465eddb0db36082e",
+      "basis": "project-authored code or public-edition documentation"
+    },
+    {
+      "path": "publication/templates/docs/domestic_value_methodology.md.in",
+      "bytes": 4284,
+      "sha256": "c1a302765a2ab683fc1f34cd29c1c7320351102ad725bbbff0bb04acf3e0f129",
+      "basis": "project-authored code or public-edition documentation"
+    },
+    {
+      "path": "publication/templates/docs/forecast_deployment.md.in",
+      "bytes": 949,
+      "sha256": "ae59e15407ecb779d62ca38b82bd346c70d18a037acd6f197807221f2cd59689",
+      "basis": "project-authored code or public-edition documentation"
+    },
+    {
+      "path": "publication/templates/docs/overseas_preprocessing.md.in",
+      "bytes": 13814,
+      "sha256": "04deaf85dfed9fae558855843407e278904386ef4e310864461919e6297a2a54",
+      "basis": "project-authored code or public-edition documentation"
+    },
+    {
+      "path": "publication/templates/docs/reproduction.md.in",
+      "bytes": 3941,
+      "sha256": "d12d45c0b13f98e74c0f5ac068c22ad601db945f14723f657a1b37554abf3774",
+      "basis": "project-authored code or public-edition documentation"
+    },
+    {
+      "path": "publication/templates/docs/submission_checklist.md.in",
+      "bytes": 4670,
+      "sha256": "9c89cba7c54a545bf153190d05b63c9ac521b47c9522bf8fa7403e3d0a964a33",
+      "basis": "project-authored code or public-edition documentation"
+    },
+    {
+      "path": "requirements-analysis.txt",
+      "bytes": 115,
+      "sha256": "298e634b0781208ddc978cd90c68308ecc0ab3d0f378b2c2e53d51f556d43251",
+      "basis": "project-authored code or public-edition documentation"
+    },
+    {
+      "path": "scripts/analyze_domestic_market.py",
+      "bytes": 3821,
+      "sha256": "04972196ec8078d082f638499aca0b373b633e72296d0c87b4eaff4c3adaccee",
+      "basis": "project-authored code or public-edition documentation"
+    },
+    {
+      "path": "scripts/analyze_gpu_mining.py",
+      "bytes": 13026,
+      "sha256": "c8aac056be4aa5dca6cfe03f88272a273b336ca0d5f5efb6b24c833d65462545",
+      "basis": "project-authored code or public-edition documentation"
+    },
+    {
+      "path": "scripts/analyze_price_stock_correlations.py",
+      "bytes": 17766,
+      "sha256": "13cf9580725a8d8adb26d33f4e40391312e8382854aecb06369ffe3578ecc71f",
+      "basis": "project-authored code or public-edition documentation"
+    },
+    {
+      "path": "scripts/analyze_recent_timing.py",
+      "bytes": 11427,
+      "sha256": "fe34adfc6f15124e36a2b17a649e4ed77b4a56b1e19fcb10ef865a0f83b5ff1e",
+      "basis": "project-authored code or public-edition documentation"
+    },
+    {
+      "path": "scripts/audit_alternative_sources.py",
+      "bytes": 13820,
+      "sha256": "d6d4e889878b29268dc8f7bd24f14c95a30f535c440e4c9b571d9146ba474d9c",
+      "basis": "project-authored code or public-edition documentation"
+    },
+    {
+      "path": "scripts/audit_domestic_prices.py",
+      "bytes": 19991,
+      "sha256": "80644f9709fc34923d0f3b99197828b540e815ef15b27e1191b3b9ef3960b400",
+      "basis": "project-authored code or public-edition documentation"
+    },
+    {
+      "path": "scripts/audit_price_history.py",
+      "bytes": 5426,
+      "sha256": "83d17c3aafff4a81488133cc4e745b798ac158fdf0f0c3d0eee69a52cf2fff4e",
+      "basis": "project-authored code or public-edition documentation"
+    },
+    {
+      "path": "scripts/audit_timing_sources.py",
+      "bytes": 8863,
+      "sha256": "faa85dcf1ad0ff96d74d2c5e191a03a6d7285a965088ebe7448674e8fb60c259",
+      "basis": "project-authored code or public-edition documentation"
+    },
+    {
+      "path": "scripts/build_forecast.py",
+      "bytes": 34034,
+      "sha256": "894f3ef92791a04805aa727367518bc5da38c1ad13d85bc7a194dc8efd753689",
+      "basis": "project-authored code or public-edition documentation"
+    },
+    {
+      "path": "scripts/build_public_eth_analysis.py",
+      "bytes": 7765,
+      "sha256": "9d1e8b781d781fd74988fa5a4d9e9e8d29c6f755f0705e3e2dee4bbf363b8870",
+      "basis": "project-authored code or public-edition documentation"
+    },
+    {
+      "path": "scripts/build_public_submission.py",
+      "bytes": 12574,
+      "sha256": "1d05d784bf75e1f4136a385eaf348ebeb472aceb52a145f46057d490b2344d6d",
+      "basis": "project-authored code or public-edition documentation"
+    },
+    {
+      "path": "scripts/build_recent_dashboard.py",
+      "bytes": 14719,
+      "sha256": "fd43c05cae6cd87c0cec3f152a94e0edb32829d66e112ef11b4ed4cb34dc1350",
+      "basis": "project-authored code or public-edition documentation"
+    },
+    {
+      "path": "scripts/collect_domestic_extended.py",
+      "bytes": 17541,
+      "sha256": "7624e87e8d340639e190250f535ba0358cd3f71f8cdd345d911d892e23247bb9",
+      "basis": "project-authored code or public-edition documentation"
+    },
+    {
+      "path": "scripts/collect_domestic_quotes.py",
+      "bytes": 8333,
+      "sha256": "213ba126cbc4eb20eb10438b7b154fd078e35a4f56e0cbd63886da603ccb8a61",
+      "basis": "project-authored code or public-edition documentation"
+    },
+    {
+      "path": "scripts/collect_forecast_overseas.py",
+      "bytes": 18327,
+      "sha256": "04362ed12167d8496c6832f2421ecbadea6849f75bde28ee1b6faa4dc4bb8184",
+      "basis": "project-authored code or public-edition documentation"
+    },
+    {
+      "path": "scripts/collect_gpu_retail_sources.py",
+      "bytes": 2498,
+      "sha256": "3f2f1a648206a11b348040dbd6200cef874cd7420a0bf5dae2d1238ccf3ac233",
+      "basis": "project-authored code or public-edition documentation"
+    },
+    {
+      "path": "scripts/collect_recent_markets.py",
+      "bytes": 10912,
+      "sha256": "ea8c1ef3d2ee089efc5b2a543cda3851a6cffe26eabe61e99571bdd11482ec36",
+      "basis": "project-authored code or public-edition documentation"
+    },
+    {
+      "path": "scripts/expand_domestic_dashboard.py",
+      "bytes": 9200,
+      "sha256": "7feadc1543ef1b74bfa1bc7a57b35fb668fdfce679b53041001d424ed7694e5d",
+      "basis": "project-authored code or public-edition documentation"
+    },
+    {
+      "path": "scripts/export_dashboard_data.py",
+      "bytes": 16843,
+      "sha256": "aa4c06956a2936bbd74f7e99dfe4229f626459d28b137215692afe3de1fcb8ab",
+      "basis": "project-authored code or public-edition documentation"
+    },
+    {
+      "path": "scripts/export_domestic_dashboard.py",
+      "bytes": 8251,
+      "sha256": "c1c7d0c84d1e53e37dda5b66d5fe3bbf83b4dbaa8667fa7ea317923eb28c30aa",
+      "basis": "project-authored code or public-edition documentation"
+    },
+    {
+      "path": "scripts/plot_documentation_figures.py",
+      "bytes": 22910,
+      "sha256": "63a5affa3419e258b5e4a932afe2b9c6500fbac5af47d9a41ac062550dec1319",
+      "basis": "project-authored code or public-edition documentation"
+    },
+    {
+      "path": "scripts/plot_gpu_mining.py",
+      "bytes": 11568,
+      "sha256": "fee5f67d4b8901716fb727b958371e39e34f6c1778350d0dadc0b7ec377b648d",
+      "basis": "project-authored code or public-edition documentation"
+    },
+    {
+      "path": "scripts/plot_price_stock_correlations.py",
+      "bytes": 12111,
+      "sha256": "c50dccb7e6a367519828cbb0b9d562e9220269d2ffaf1d4023f5b8183b768c61",
+      "basis": "project-authored code or public-edition documentation"
+    },
+    {
+      "path": "scripts/plot_report_recent_prices.py",
+      "bytes": 4091,
+      "sha256": "b44791e97a79eac27a3e8e3308bdf852f2cf9fb0060e982e2b09ed29bd8c2dce",
+      "basis": "project-authored code or public-edition documentation"
+    },
+    {
+      "path": "scripts/prepare_domestic_history.py",
+      "bytes": 12415,
+      "sha256": "c246b5ee53d5d564e9ad4329dec82843fd38fa3a045e7f36dd7da4ced6ae348d",
+      "basis": "project-authored code or public-edition documentation"
+    },
+    {
+      "path": "scripts/prepare_eth_mining.py",
+      "bytes": 12706,
+      "sha256": "09298fe05a97832c70ce9510299ed48f296992c77b1bc2390e1d4fc5837f1442",
+      "basis": "project-authored code or public-edition documentation"
+    },
+    {
+      "path": "scripts/prepare_gpu_ebay_monthly.py",
+      "bytes": 19423,
+      "sha256": "a9080ee7040500715180ceb799ae22e75130571e94cf6662914cbf277c88c620",
+      "basis": "project-authored code or public-edition documentation"
+    },
+    {
+      "path": "scripts/prepare_gpu_retail_prices.py",
+      "bytes": 9890,
+      "sha256": "3b7559ace563881af89550cf96bd5f86b76841d2136859a193e3004c56ea9f84",
+      "basis": "project-authored code or public-edition documentation"
+    },
+    {
+      "path": "scripts/prepare_weekly_stocks.py",
+      "bytes": 14093,
+      "sha256": "2a38b8fbe4d3543bdf32ad808e9a2d12db324c4320224426d34f0116845ea0b6",
+      "basis": "project-authored code or public-edition documentation"
+    },
+    {
+      "path": "scripts/preprocess_overseas_prices.py",
+      "bytes": 16692,
+      "sha256": "e3ac69a776309893a41844ec47aab5f45169962f9f32fe207c22afdb553c87d5",
+      "basis": "project-authored code or public-edition documentation"
+    },
+    {
+      "path": "scripts/probe_alternative_sources.py",
+      "bytes": 5654,
+      "sha256": "35a2aec8b9163015658829a737491f9e4eba6f351cac0f0890c1202eefa6bb37",
+      "basis": "project-authored code or public-edition documentation"
+    },
+    {
+      "path": "scripts/probe_price_history.py",
+      "bytes": 7305,
+      "sha256": "12fc5251e9cef385bf0bae3ef95d4c617712584916e561dcd0374716ab92fcfc",
+      "basis": "project-authored code or public-edition documentation"
+    },
+    {
+      "path": "scripts/verify_public_submission.py",
+      "bytes": 8905,
+      "sha256": "6f0a08eb813be35164048c489db41f47ac59b7d1f470ad890f9f63ddce1bf360",
+      "basis": "project-authored code or public-edition documentation"
+    },
+    {
+      "path": "scripts/write_forecast_report.py",
+      "bytes": 9403,
+      "sha256": "69f0c8ecb9b5878c8595013664e60a422224a5ada8534489a2992b4d24ee4f1e",
+      "basis": "project-authored code or public-edition documentation"
+    },
+    {
+      "path": "scripts/write_gpu_mining_report.py",
+      "bytes": 22105,
+      "sha256": "451bbfe6c55577d54ae534ccc47e9c1968582761df2acb0895e04d833c044126",
+      "basis": "project-authored code or public-edition documentation"
+    },
+    {
+      "path": "scripts/write_price_stock_report.py",
+      "bytes": 18072,
+      "sha256": "c437330895d597795641fae859f6448935e0a36d8d852d02868160f332608d6f",
+      "basis": "project-authored code or public-edition documentation"
+    },
+    {
+      "path": "tests/test_correlations.py",
+      "bytes": 6299,
+      "sha256": "f5511e61b2f1b6d0ccd7fa63cf64ff8d92254105285b1450b44a16cfbea7bf2c",
+      "basis": "project-authored code or public-edition documentation"
+    },
+    {
+      "path": "tests/test_dashboard_data.py",
+      "bytes": 14861,
+      "sha256": "5a0f72afec69268362ddaab6cde834ed8ee5d77708695b91a0af70c4dbfcc4fb",
+      "basis": "project-authored code or public-edition documentation"
+    },
+    {
+      "path": "tests/test_domestic_current.py",
+      "bytes": 3676,
+      "sha256": "b8c68a8db254e2cc57ba7eb76aade7f98ffe54d1f141dd0250b08ffc86ffd1b7",
+      "basis": "project-authored code or public-edition documentation"
+    },
+    {
+      "path": "tests/test_domestic_expanded.py",
+      "bytes": 5175,
+      "sha256": "5da9508c1f161534bfa78916f30e1061747a00bb8ef5b9f1aebfdbdd5bfb5109",
+      "basis": "project-authored code or public-edition documentation"
+    },
+    {
+      "path": "tests/test_domestic_history.py",
+      "bytes": 12164,
+      "sha256": "5e47eeaef9b27320d885e146298d1deef9b3bf5bac04cb44ecd9e00918931eaa",
+      "basis": "project-authored code or public-edition documentation"
+    },
+    {
+      "path": "tests/test_domestic_price_audit.py",
+      "bytes": 3977,
+      "sha256": "e4ca984a66f93da6a834c25824dbf47d8b770e2c57833355f025eadc1255baaa",
+      "basis": "project-authored code or public-edition documentation"
+    },
+    {
+      "path": "tests/test_eth_mining.py",
+      "bytes": 7209,
+      "sha256": "e3368bbce3930976c1c89e0a566e862bbeecb78cd64a73cd7f7fca440b4819f7",
+      "basis": "project-authored code or public-edition documentation"
+    },
+    {
+      "path": "tests/test_forecast.py",
+      "bytes": 16605,
+      "sha256": "40dd60e589cb9b002ad289e0f873f348ed6782287fd56f9a9e91a659a1cd510c",
+      "basis": "project-authored code or public-edition documentation"
+    },
+    {
+      "path": "tests/test_forecast_artifacts.py",
+      "bytes": 3802,
+      "sha256": "6f7f6142c9f56d60df8e70f2091ef96664ca397b001360e9e19810879dbaadee",
+      "basis": "project-authored code or public-edition documentation"
+    },
+    {
+      "path": "tests/test_gpu_ebay.py",
+      "bytes": 4000,
+      "sha256": "1f2fcecc80814dffdbe49907b91722027d385551d14b1bf5fe40660b01213105",
+      "basis": "project-authored code or public-edition documentation"
+    },
+    {
+      "path": "tests/test_gpu_mining_analysis.py",
+      "bytes": 5402,
+      "sha256": "b65928e2d4b426624f672e82f2446f24fe328d4660219cca115ecf1890e014a9",
+      "basis": "project-authored code or public-edition documentation"
+    },
+    {
+      "path": "tests/test_gpu_retail.py",
+      "bytes": 3216,
+      "sha256": "57dde38c3193d21df945ed247e190689d6de447d1ed435af343e79a7851b20c6",
+      "basis": "project-authored code or public-edition documentation"
+    },
+    {
+      "path": "tests/test_price_preprocessing.py",
+      "bytes": 8027,
+      "sha256": "b620e40e45721277982d741a0c9e202e17ebedd1d63958a60c25d01ac5b6183d",
+      "basis": "project-authored code or public-edition documentation"
+    },
+    {
+      "path": "tests/test_recent_timing.py",
+      "bytes": 16441,
+      "sha256": "fef7716834c17c19598eb54d005c83ea3eb096088d40c518f42e9e0bbb387555",
+      "basis": "project-authored code or public-edition documentation"
+    },
+    {
+      "path": "tests/test_weekly_stocks.py",
+      "bytes": 4558,
+      "sha256": "aa2703fa6d899a656dac3476c9015ee96aaa6af208f0cc722a8281a3e91afcdd",
+      "basis": "project-authored code or public-edition documentation"
+    }
+  ]
+}
