@@ -641,8 +641,8 @@
     },
     {
       "path": "docs/model_comparison.md",
-      "bytes": 16557,
-      "sha256": "69b62bf4bbdc036690a2bf23a67e39b8f069dbb12c1aff5112f31fceeadb7110",
+      "bytes": 16571,
+      "sha256": "67eecf6961ab645e575fb43c8e177597459cad228bd9d213cb677185aade78c3",
       "basis": "project-authored code or public-edition documentation"
     },
     {
@@ -983,8 +983,8 @@
     },
     {
       "path": "scripts/write_model_comparison_report.py",
-      "bytes": 14843,
-      "sha256": "fad1f975b0d191939d3e86f8264b6a0d85628ed4eb061a47f6e0fefb10832b2a",
+      "bytes": 14853,
+      "sha256": "a0243f68aac54489f245fea9a7d981ede95fecb37fd5d5a30aa3e2a057274d9c",
       "basis": "project-authored code or public-edition documentation"
     },
     {
