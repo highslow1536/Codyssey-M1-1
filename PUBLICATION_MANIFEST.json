@@ -11,14 +11,14 @@
     },
     {
       "path": "README.md",
-      "bytes": 8386,
-      "sha256": "5e255963d6bb11e385d2efdff66eb76e3b06d3952c6a9fb5462b3fc573d31f92",
+      "bytes": 8974,
+      "sha256": "ad3eef7e718bc3a51441b9082540b2d6f8fbf4b37b2cbccf058422d07202da32",
       "basis": "project-authored code or public-edition documentation"
     },
     {
       "path": "REPORT.md",
-      "bytes": 26986,
-      "sha256": "572a8cbb748ae008574754412360141e5e487fcd91b517b05e099ca3367c07fb",
+      "bytes": 29824,
+      "sha256": "ea5d0107ab02e231b37ce80a77c2157b94c00c5ee9d3d32a62860a9299487efd",
       "basis": "project-authored code or public-edition documentation"
     },
     {
@@ -41,8 +41,8 @@
     },
     {
       "path": "dashboard/README.md",
-      "bytes": 1712,
-      "sha256": "e5bfd7138d76f761d2792310fe5c0595589fb8c80fb645392068514f1616c914",
+      "bytes": 2224,
+      "sha256": "bce4b7e9269dd9753ad3db9fe1697761c1a1d6c3b3c0c00f8d8b85cb571f9442",
       "basis": "project-authored code or public-edition documentation"
     },
     {
@@ -83,14 +83,14 @@
     },
     {
       "path": "dashboard/dist/forecast-view.js",
-      "bytes": 23905,
-      "sha256": "883a5e5593fb1b32f19d4583b27cdcc22ee7b2f1c3e20eaef0328816de14b87c",
+      "bytes": 24507,
+      "sha256": "91eafc01e9fdbcddd820f215c24366179183df3a954da0dcbe74d9ffd27f8662",
       "basis": "project-authored code or public-edition documentation"
     },
     {
       "path": "dashboard/dist/forecast.css",
-      "bytes": 3750,
-      "sha256": "e15c4babce3517e7621cde5ba732ec0ceac62280b00bfe61627d57c65cbdabdb",
+      "bytes": 4445,
+      "sha256": "2ede82a7ffc6430e9bfcdaf64fdc34827fc9741230e74cd3258fc4d0aece607d",
       "basis": "project-authored code or public-edition documentation"
     },
     {
@@ -103,6 +103,12 @@
       "path": "dashboard/dist/index.html",
       "bytes": 366,
       "sha256": "23ab0a551d98f24cc2c08eaeee729515fc1997dfae90c8b3bd38633823862b9c",
+      "basis": "project-authored code or public-edition documentation"
+    },
+    {
+      "path": "dashboard/dist/model-comparison-view.js",
+      "bytes": 11070,
+      "sha256": "79c590909ea2299d76ce4f40e1a490f682fcec4b27b49855ca35ddbc0fff58a4",
       "basis": "project-authored code or public-edition documentation"
     },
     {
@@ -143,20 +149,20 @@
     },
     {
       "path": "dashboard/public/index.html",
-      "bytes": 10721,
-      "sha256": "02195935470409b5cecc0493c77a053ca1850dd03f3f54c2f0ab67d941bc7914",
+      "bytes": 14225,
+      "sha256": "c5587842a59101d0da30cd4b5fe676f6c01a0418699dd907b1bba25dc588e42f",
       "basis": "project-authored code or public-edition documentation"
     },
     {
       "path": "dashboard/public/public-view.js",
-      "bytes": 14432,
-      "sha256": "97f7eae2beaacf3e39a9b2f3cf20e3cab8830b5294a9f4b2a26a6b79adc0b208",
+      "bytes": 22018,
+      "sha256": "090e4c0f21d3a4b1e963fb2edf5a74d76ab1f56f5c27622926a35ab6fbe6ad34",
       "basis": "project-authored code or public-edition documentation"
     },
     {
       "path": "dashboard/public/styles.css",
-      "bytes": 9146,
-      "sha256": "3d6a3de312d10fb6c2dc8a08acf585f19c9eb4a0068d553a026ac8f6a94b6cf4",
+      "bytes": 9853,
+      "sha256": "0d5c9a43b6d11a850c511dd09d8ac5c8099b0cf116c20525ea8680c312529a2c",
       "basis": "project-authored code or public-edition documentation"
     },
     {
@@ -205,6 +211,12 @@
       "path": "dashboard/tests/forecast-view.test.mjs",
       "bytes": 5852,
       "sha256": "6fcef77af49749943fbc93b033f4fb5d43beae643b43ea0612b1cfd75f0bca0d",
+      "basis": "project-authored code or public-edition documentation"
+    },
+    {
+      "path": "dashboard/tests/model-comparison.test.mjs",
+      "bytes": 6652,
+      "sha256": "8f0d91d821b9fd31fac695998643e7d2e6e18b67cfe05284d6c44f1294841008",
       "basis": "project-authored code or public-edition documentation"
     },
     {
@@ -335,20 +347,20 @@
     },
     {
       "path": "data/analysis/2026-10-23/forecast/REPORT.md",
-      "bytes": 12096,
-      "sha256": "4a7de2ddec09ac51f7717fbd98080f4660aa74885c08b018fc0e8a7ba72bb91b",
+      "bytes": 8490,
+      "sha256": "1ade42cf9a20a74e61ea1513826773788fc7ac010b6b1dc3c6ef65a853c96cd1",
       "basis": "project-authored code or public-edition documentation"
     },
     {
       "path": "data/analysis/2026-10-23/forecast/forecast_metrics.csv",
-      "bytes": 23478,
-      "sha256": "52e7185bd794af2ffeb491cccb277b92964ad8404c04ffe8d608de6b4666d967",
+      "bytes": 23080,
+      "sha256": "eb8a519cbe6e685ef850f3e67f7d27f426d68d6df56f608a0db0457c2d344271",
       "basis": "original non-reconstructive statistics or explanatory figure"
     },
     {
       "path": "data/excluded_inventory.csv",
-      "bytes": 89802,
-      "sha256": "6088b8701aa09cf3f64f4b50f5d8c4da2cb5f12d10c3ecab41188ffa105360af",
+      "bytes": 123936,
+      "sha256": "a444852c1c483e14ddf5cd0a231805f22b59fefb41464c6e603fe1d18d37e08d",
       "basis": "project-authored code or public-edition documentation"
     },
     {
@@ -390,13 +402,13 @@
     {
       "path": "data/public/dashboard.json",
       "bytes": 138242,
-      "sha256": "9e4a30ec740b11627f351a69b667b85a2592a4a64e2bc200c87e77719c7e64b4",
+      "sha256": "a762a173868a838c2eebde8effc6aabd57a91cfc63bb34a05e764c3f9167e51f",
       "basis": "Coin Metrics ETH / CC BY-NC 4.0 or documented aggregate"
     },
     {
       "path": "data/public/eth_analysis.json",
       "bytes": 1777,
-      "sha256": "f25fac14a2f8c73a5398738e928f17989d2178b982c5ef62ec0bb621a2a2fde4",
+      "sha256": "b210b1e4130d029b8568c07ba3e9606e15552a8ddd4148e378a06c92515ce990",
       "basis": "Coin Metrics ETH / CC BY-NC 4.0 or documented aggregate"
     },
     {
@@ -406,6 +418,18 @@
       "basis": "Coin Metrics ETH / CC BY-NC 4.0 or documented aggregate"
     },
     {
+      "path": "data/public/model_comparison.json",
+      "bytes": 939655,
+      "sha256": "49e0ab2f6d1cd72dd0ed1f9118497b23194f3f38d14b5ec6f574d84e44696450",
+      "basis": "project-authored non-reconstructive model validation aggregates; not Coin Metrics ETH data"
+    },
+    {
+      "path": "data/public/model_comparison_metrics.csv",
+      "bytes": 31928,
+      "sha256": "db7ba718d509d2a11c2788bee11c2d509c6d07395c23e62d2aaa1000237830df",
+      "basis": "project-authored non-reconstructive model validation aggregates; not Coin Metrics ETH data"
+    },
+    {
       "path": "data/references_omitted.json",
       "bytes": 1828,
       "sha256": "3218f5a2a038f6ba15caba71724fa9c1bf2a6d86c0a64a8752c276e4294ed362",
@@ -413,8 +437,8 @@
     },
     {
       "path": "data/source_catalog.json",
-      "bytes": 3699,
-      "sha256": "42e748a9a9ad720e8ff8441739ab321da3472f97c961bc9d569bc7499f4beb15",
+      "bytes": 4071,
+      "sha256": "bb8c1f42f4c592ef0fef99cbceba9526dffb50f8b4a58f29e9af2a12d063428c",
       "basis": "project-authored code or public-edition documentation"
     },
     {
@@ -461,14 +485,14 @@
     },
     {
       "path": "docs/assets/figures/04_forecast_validation.png",
-      "bytes": 146457,
-      "sha256": "3b459c365265a33e17f6758d570151aabd55169b5a611ea5ccada92ebdd0809d",
+      "bytes": 146793,
+      "sha256": "a8ac7ce9e32d9179284e5518324cb6d2893d2484af183fe11144031edcb6066c",
       "basis": "original non-reconstructive statistics or explanatory figure"
     },
     {
       "path": "docs/assets/figures/04_forecast_validation.svg",
-      "bytes": 214082,
-      "sha256": "947e8d8d0cfff5e422df55e2225acd4127d2771286d9b60742f181b882519dc7",
+      "bytes": 206643,
+      "sha256": "e8c0250e372c00a1fb43b3aa814eee40a0302c5e9187a5be614698d79e91b91b",
       "basis": "original non-reconstructive statistics or explanatory figure"
     },
     {
@@ -520,6 +544,30 @@
       "basis": "Coin Metrics ETH / CC BY-NC 4.0 or documented aggregate"
     },
     {
+      "path": "docs/assets/public/04_model_comparison.png",
+      "bytes": 172735,
+      "sha256": "bb5158924aadb1c3733c275a476d1e091b68da19eecffa8ad17c58ef8ce84257",
+      "basis": "project-authored non-reconstructive model validation aggregates; not Coin Metrics ETH data"
+    },
+    {
+      "path": "docs/assets/public/04_model_comparison.svg",
+      "bytes": 230807,
+      "sha256": "c578a6a0c2b3e978632c0624af38c654c82badd35bbf4e114cd8d21704a85790",
+      "basis": "project-authored non-reconstructive model validation aggregates; not Coin Metrics ETH data"
+    },
+    {
+      "path": "docs/assets/public/05_model_coverage.png",
+      "bytes": 332000,
+      "sha256": "55fcf02544a86d2c92aa1df235315d49b6e89dd526f8f89bc7e2fd29dfdcce0b",
+      "basis": "project-authored non-reconstructive model validation aggregates; not Coin Metrics ETH data"
+    },
+    {
+      "path": "docs/assets/public/05_model_coverage.svg",
+      "bytes": 319678,
+      "sha256": "ca424d57120203d74bd23a8c872b0430064141f9e0e0d285cafec358c5c62d66",
+      "basis": "project-authored non-reconstructive model validation aggregates; not Coin Metrics ETH data"
+    },
+    {
       "path": "docs/assets/public/public_01_trend.png",
       "bytes": 172927,
       "sha256": "12a5a71ac51b9422a6505cbd19ea12b6a9631151d8aa938833dcbc19f2e429ea",
@@ -533,8 +581,8 @@
     },
     {
       "path": "docs/assets/public/public_03_validation.png",
-      "bytes": 148192,
-      "sha256": "f125d7955368fd21e08df48a3c37937ccca2837acf4ee12519af1f87e3352dc6",
+      "bytes": 90497,
+      "sha256": "e42ad6758fe30d90a552f3bf989155e214dd0a19b86a26665bc603ac95acc1ce",
       "basis": "original non-reconstructive statistics or explanatory figure"
     },
     {
@@ -569,14 +617,14 @@
     },
     {
       "path": "docs/forecast_protocol.md",
-      "bytes": 6562,
-      "sha256": "37b63c02a21f022c6bac3657d5e3351ac93ce696653c4e034e65bdd325aabd18",
+      "bytes": 13037,
+      "sha256": "35fc02180cdbcf6aff23d39e283ee3b4877b5762d9dc6a0f66b91f5181e57672",
       "basis": "project-authored code or public-edition documentation"
     },
     {
       "path": "docs/full_reproduction.md",
-      "bytes": 11994,
-      "sha256": "b19503f3abfacb27d2d7123a2e6a8b8dee131c1cad65e877e006ce4717622946",
+      "bytes": 12506,
+      "sha256": "ae434c693e3bf5000ea1c47b43938d3a2453078b9b58732d67b807d46eba695f",
       "basis": "project-authored code or public-edition documentation"
     },
     {
@@ -592,6 +640,12 @@
       "basis": "project-authored code or public-edition documentation"
     },
     {
+      "path": "docs/model_comparison.md",
+      "bytes": 16557,
+      "sha256": "69b62bf4bbdc036690a2bf23a67e39b8f069dbb12c1aff5112f31fceeadb7110",
+      "basis": "project-authored code or public-edition documentation"
+    },
+    {
       "path": "docs/overseas_preprocessing.md",
       "bytes": 14055,
       "sha256": "00458b33aa2059408124e3bd2f5bd58be69efc65941d5300835a3240eb039cdc",
@@ -599,8 +653,8 @@
     },
     {
       "path": "docs/reproduction.md",
-      "bytes": 3941,
-      "sha256": "d12d45c0b13f98e74c0f5ac068c22ad601db945f14723f657a1b37554abf3774",
+      "bytes": 5553,
+      "sha256": "115bbe80dbe3aa80171e78b538782d9f477e47392d7eecf70b19be2138db5aa0",
       "basis": "project-authored code or public-edition documentation"
     },
     {
@@ -611,20 +665,20 @@
     },
     {
       "path": "docs/submission_checklist.md",
-      "bytes": 4670,
-      "sha256": "9c89cba7c54a545bf153190d05b63c9ac521b47c9522bf8fa7403e3d0a964a33",
+      "bytes": 4968,
+      "sha256": "7626ad6340faa2a9dca8be09db262957a77e782a960bb689bee73f682b320947",
       "basis": "project-authored code or public-edition documentation"
     },
     {
       "path": "publication/templates/README.md.in",
-      "bytes": 8386,
-      "sha256": "5e255963d6bb11e385d2efdff66eb76e3b06d3952c6a9fb5462b3fc573d31f92",
+      "bytes": 8974,
+      "sha256": "ad3eef7e718bc3a51441b9082540b2d6f8fbf4b37b2cbccf058422d07202da32",
       "basis": "project-authored code or public-edition documentation"
     },
     {
       "path": "publication/templates/REPORT.md.in",
-      "bytes": 26986,
-      "sha256": "572a8cbb748ae008574754412360141e5e487fcd91b517b05e099ca3367c07fb",
+      "bytes": 29824,
+      "sha256": "ea5d0107ab02e231b37ce80a77c2157b94c00c5ee9d3d32a62860a9299487efd",
       "basis": "project-authored code or public-edition documentation"
     },
     {
@@ -635,8 +689,8 @@
     },
     {
       "path": "publication/templates/dashboard/README.md.in",
-      "bytes": 1471,
-      "sha256": "cb40c51b41d098c2d3b162b25da9766867fcc0229d20405399df2098fc2513a8",
+      "bytes": 1983,
+      "sha256": "bf2892d3a57c91b5ef278c037c2eb8adcbc386f92361fa8a73e60248f86dcbcd",
       "basis": "project-authored code or public-edition documentation"
     },
     {
@@ -689,20 +743,20 @@
     },
     {
       "path": "publication/templates/docs/reproduction.md.in",
-      "bytes": 3941,
-      "sha256": "d12d45c0b13f98e74c0f5ac068c22ad601db945f14723f657a1b37554abf3774",
+      "bytes": 5553,
+      "sha256": "115bbe80dbe3aa80171e78b538782d9f477e47392d7eecf70b19be2138db5aa0",
       "basis": "project-authored code or public-edition documentation"
     },
     {
       "path": "publication/templates/docs/submission_checklist.md.in",
-      "bytes": 4670,
-      "sha256": "9c89cba7c54a545bf153190d05b63c9ac521b47c9522bf8fa7403e3d0a964a33",
+      "bytes": 4968,
+      "sha256": "7626ad6340faa2a9dca8be09db262957a77e782a960bb689bee73f682b320947",
       "basis": "project-authored code or public-edition documentation"
     },
     {
       "path": "requirements-analysis.txt",
-      "bytes": 115,
-      "sha256": "298e634b0781208ddc978cd90c68308ecc0ab3d0f378b2c2e53d51f556d43251",
+      "bytes": 148,
+      "sha256": "718fa24c538018c11dfe8cb67d1f0f22b5aa7134724ebd3cc5de33db28de11f8",
       "basis": "project-authored code or public-edition documentation"
     },
     {
@@ -761,14 +815,14 @@
     },
     {
       "path": "scripts/build_public_eth_analysis.py",
-      "bytes": 7765,
-      "sha256": "9d1e8b781d781fd74988fa5a4d9e9e8d29c6f755f0705e3e2dee4bbf363b8870",
+      "bytes": 7799,
+      "sha256": "2ccfcb1360b6e8dfb9ce2a27a47f41121d5b238e48eb94e784d1a83e6636edea",
       "basis": "project-authored code or public-edition documentation"
     },
     {
       "path": "scripts/build_public_submission.py",
-      "bytes": 12574,
-      "sha256": "1d05d784bf75e1f4136a385eaf348ebeb472aceb52a145f46057d490b2344d6d",
+      "bytes": 12844,
+      "sha256": "8e4fbf4322a88e488c46f6c6df0114d91935c70a6a835760bf2218166a66631b",
       "basis": "project-authored code or public-edition documentation"
     },
     {
@@ -808,6 +862,12 @@
       "basis": "project-authored code or public-edition documentation"
     },
     {
+      "path": "scripts/compare_forecast_models.py",
+      "bytes": 26912,
+      "sha256": "9ff116cfd7793c645096e3e45b109cd0e2a00700649c4456beb8a7cb1aa2cff7",
+      "basis": "project-authored code or public-edition documentation"
+    },
+    {
       "path": "scripts/expand_domestic_dashboard.py",
       "bytes": 9200,
       "sha256": "7feadc1543ef1b74bfa1bc7a57b35fb668fdfce679b53041001d424ed7694e5d",
@@ -835,6 +895,12 @@
       "path": "scripts/plot_gpu_mining.py",
       "bytes": 11568,
       "sha256": "fee5f67d4b8901716fb727b958371e39e34f6c1778350d0dadc0b7ec377b648d",
+      "basis": "project-authored code or public-edition documentation"
+    },
+    {
+      "path": "scripts/plot_model_comparison.py",
+      "bytes": 5923,
+      "sha256": "da61fb07a7f1b82907433878763b538929e101b17fe453c1ad9ee3c1ef0dd27b",
       "basis": "project-authored code or public-edition documentation"
     },
     {
@@ -899,20 +965,26 @@
     },
     {
       "path": "scripts/verify_public_submission.py",
-      "bytes": 8905,
-      "sha256": "6f0a08eb813be35164048c489db41f47ac59b7d1f470ad890f9f63ddce1bf360",
+      "bytes": 10792,
+      "sha256": "ebe7fa810fdd77d3d453aac81fad1c9d57ee55b748344759538319ec4d2f48c3",
       "basis": "project-authored code or public-edition documentation"
     },
     {
       "path": "scripts/write_forecast_report.py",
-      "bytes": 9403,
-      "sha256": "69f0c8ecb9b5878c8595013664e60a422224a5ada8534489a2992b4d24ee4f1e",
+      "bytes": 13013,
+      "sha256": "5621088ed52a57607e4d372de604644588bb95a886d1e4e3aaa90af933e5c9fe",
       "basis": "project-authored code or public-edition documentation"
     },
     {
       "path": "scripts/write_gpu_mining_report.py",
       "bytes": 22105,
       "sha256": "451bbfe6c55577d54ae534ccc47e9c1968582761df2acb0895e04d833c044126",
+      "basis": "project-authored code or public-edition documentation"
+    },
+    {
+      "path": "scripts/write_model_comparison_report.py",
+      "bytes": 14843,
+      "sha256": "fad1f975b0d191939d3e86f8264b6a0d85628ed4eb061a47f6e0fefb10832b2a",
       "basis": "project-authored code or public-edition documentation"
     },
     {
@@ -991,6 +1063,18 @@
       "path": "tests/test_gpu_retail.py",
       "bytes": 3216,
       "sha256": "57dde38c3193d21df945ed247e190689d6de447d1ed435af343e79a7851b20c6",
+      "basis": "project-authored code or public-edition documentation"
+    },
+    {
+      "path": "tests/test_model_comparison.py",
+      "bytes": 27953,
+      "sha256": "222f5c5c8701d7a55b7f7bceea2a3e6b74fcd52e2566dd4ceb1dbeb5574e90dc",
+      "basis": "project-authored code or public-edition documentation"
+    },
+    {
+      "path": "tests/test_model_comparison_artifacts.py",
+      "bytes": 2996,
+      "sha256": "115c3349894db9345391ecb6ad3a5055de8b1fe577c5db206fb5e941cfbc12a1",
       "basis": "project-authored code or public-edition documentation"
     },
     {

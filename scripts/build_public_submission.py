@@ -79,6 +79,9 @@ def digest(p):
 
 
 def classify(rel):
+    if rel.startswith(('data/public/model_comparison', 'docs/assets/public/04_model_comparison',
+                       'docs/assets/public/05_model_coverage')):
+        return 'project-authored non-reconstructive model validation aggregates; not Coin Metrics ETH data'
     if "crypto/" in rel or rel.startswith("docs/assets/public/0") or rel.startswith("data/public/"):
         return "Coin Metrics ETH / CC BY-NC 4.0 or documented aggregate"
     if rel in SAFE_TABLES or Path(rel).suffix in (".png", ".svg"):

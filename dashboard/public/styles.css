@@ -114,3 +114,13 @@ footer{border-top:1px solid var(--line);padding:18px 40px;font-size:10px;color:#
   h1{font-size:23px}
   .kpis{grid-template-columns:1fr}
 }
+.table-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
+#mc-table{min-width:1020px}
+#mc-table caption{text-align:left;font-weight:650;margin-bottom:8px;color:#405637}
+.mc-controls{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:12px}
+.mc-controls .control{flex:1 1 200px;min-width:0}
+.mc-badge{display:inline-block;border:1px solid #dfe7e2;background:#f3f5ee;color:#5c6d67;border-radius:20px;padding:1px 8px;font-size:10px;white-space:nowrap}
+.mc-badge.mc-sel{background:#dff2e4;color:#1c5c34;border-color:#bfe0cc;font-weight:700}
+.mc-badge.mc-best{background:#f9f0de;color:#7a5c22;border-color:#e7d9b8;font-weight:700}
+.mc-id{font-size:10px;color:#8b9684}
+.mc-fail{color:#8b9584;font-size:10px}

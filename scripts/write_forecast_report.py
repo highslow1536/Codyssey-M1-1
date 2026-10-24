@@ -12,6 +12,10 @@ WEB=ROOT/'dashboard/dist/data/downloads'
 
 def main():
     data=json.loads((OUT/'forecast.json').read_text())
+    comparison=ROOT/'data/public/model_comparison.json'
+    if comparison.exists() and data.get('modelComparison'):
+        write_expanded(data,json.loads(comparison.read_text()))
+        return
     series=data['series']
     new=[s for s in series if '__' in s['id']]
     def score(v):return '—' if v is None else f'{v:.4f}'
@@ -83,6 +87,40 @@ def main():
         '방법 근거: [시계열 교차 검증](https://otexts.com/fpp3/toolbox.html#time-series-cross-validation), [scikit-learn 확률 보정](https://scikit-learn.org/stable/modules/calibration.html). 자세한 고정 기준은 `docs/forecast_protocol.md`.',
         '',
     ]
+    (OUT/'REPORT.md').write_text('\n'.join(lines))
+    shutil.copyfile(OUT/'REPORT.md',WEB/'forecast_report.md')
+
+
+def write_expanded(data,comparison):
+    def score(v):return '—' if v is None else f'{v:.4f}'
+    def pp(v):return '—' if v is None else f'{v*100:.2f}%p'
+    lines=['# 3개월 PC 부품 가격 모형 검증 결과', '',
+        '가격 스냅샷 2026-10-23, 모델 비교 2026-10-24. ARIMA·SARIMA·ETS를 기존 로지스틱·랜덤포레스트와 비교했다. '
+        f'구매 추천 기준 통과는 **{data["totals"]["passed"]}/{len(data["series"])}계열**이다. '
+        '새 후보는 2023–2024년 과거 선택 구간으로만 선택했다. 2025–2026년은 이미 결과를 열람한 회고 벤치마크이며 새 미관측 홀드아웃이 아니다.', '',
+        '## 반영한 선택과 점수의 범위', '',
+        f'총 선택 모델 평가 {data["totals"]["backtests"]}행, 후보 공통 평가 {comparison["summary"]["commonTestRows"]}행. '
+        '같은 3개월 목표가 겹치므로 독립 표본 수가 아니다. 아래는 선택 모델의 **전체 산출 가능 평가**이며, '
+        '후보별 우열 비교는 공개 집계 JSON의 공통 원점 점수를 사용한다.', '',
+        '| 계열 | 선택 모델 | 과거 선택 n | 전체 시험 n / 비중첩 | Brier / 빈도 기준 | 변화율 MAE / 유지 |',
+        '|---|---|---:|---:|---:|---:|']
+    for s in data['series']:
+        e=s['evaluation']
+        lines.append(f'| {s["region"]} · {s["name"]} | {s["selection"]["candidate"]} | {s["selection"]["n"]} | '
+            f'{e["n"]} / {e["nonoverlapN"]} | {score(e["brier"])} / {score(e["baselineBrier"])} | {pp(e["mae"])} / {pp(e["naiveMae"])} |')
+    lines += ['', '## 방법과 자료의 한계', '',
+        *['- '+s for s in comparison['limitations']], '',
+        '- 국내 아카이브 26건 중 25건은 별도 참고용, 1건은 일반·현금 가격 충돌로 격리했다. 월간 minPrice와 이어 붙이지 않는다.',
+        '- 신규 해외 8계열 원문 3,065점과 기존 6계열의 가격 정의·국가·통화를 분리한다. 국내는 최대 완료 월 22개이며 연간 SARIMA를 제외했다.',
+        '- 국내 최신 목표는 2026-09→2026-12 월간 버킷이며 2026-10-23 현재 결제 가격에서 3개월 뒤의 국내 가격을 예측한 것이 아니다.', '',
+        '## 재현·감사', '',
+        '`python scripts/build_forecast.py` → `python scripts/compare_forecast_models.py` → '
+        '`python scripts/write_forecast_report.py`. 별도 허가 원본이 필요한 오프라인 절차다. 공개 집계만으로 원모델을 재학습할 수 없다.', '',
+        '- 상세 비교 규약: `docs/forecast_protocol.md`; 결과 설명: `docs/model_comparison.md`.',
+        '- 공개 통계: `data/public/model_comparison.json`, `data/public/model_comparison_metrics.csv`.',
+        '- 비공개 연구 감사: `data/analysis/2026-10-24/model_comparison/candidate_predictions.json`, SKU별 적합 기록과 원본 해시.',
+        '- `forecast_predictions.csv`, `forecast_metrics.csv`, `forecast.json`은 새 선택 모델을 반영했다. 최초 두 후보의 결과는 `legacy_forecast.json`에 보존했다.',
+        '- 최초 두 후보 선택 감사는 `forecast_selection_predictions.csv`; 확장 후보 선택 옵션·온도 점수는 공개 JSON의 `selection.options`에 있다.', '']
     (OUT/'REPORT.md').write_text('\n'.join(lines))
     shutil.copyfile(OUT/'REPORT.md',WEB/'forecast_report.md')
 

@@ -1,5 +1,7 @@
 'use strict';
 var DATA_URL = '../../data/public/dashboard.json';
+var MC_URL = '../../data/public/model_comparison.json';
+var mc = { data: null, model: 'all', series: 'all' };
 var MERGE_DATE = '2022-09-15';
 var SVG_NS = 'http://www.w3.org/2000/svg';
 var state = { data: null, year: 'all', metric: 'price_usd', focusIdx: 0, geom: null };
@@ -244,6 +246,148 @@ function renderForecast(fc) {
   table.innerHTML = th;
 }
 
+function mcName(id) {
+  var fb = { logistic: '다항 로지스틱', forest: '랜덤 포레스트', arima: 'ARIMA', sarima: 'SARIMA', ets: 'ETS', baseline: '기준(과거 빈도·유지)' };
+  return fb[id] || String(id);
+}
+function mcNum(v, digits) {
+  if (v === null || v === undefined || !isFinite(Number(v))) return '—';
+  return Number(v).toFixed(digits);
+}
+function mcMaeP(v) {
+  if (v === null || v === undefined || !isFinite(Number(v))) return '—';
+  return (Number(v) * 100).toFixed(1) + '%p';
+}
+function mcCover(v) {
+  if (v === null || v === undefined || !isFinite(Number(v))) return '—';
+  return (Number(v) * 100).toFixed(1) + '%';
+}
+function mcInterval(ev) {
+  ev = ev || {};
+  var n = ev.intervalN;
+  if (n === null || n === undefined || !isFinite(Number(n)) || Number(n) <= 0) return '—';
+  return mcCover(ev.interval80Coverage) + ' / ' + mcCover(ev.interval95Coverage) + ' (n=' + fmtInt(n) + ')';
+}
+function mcStatus(st) {
+  if (st === 'evaluated') return '평가됨';
+  if (st === 'unavailable') return '미산출';
+  return '미산출';
+}
+function mcBest(entry) {
+  if (!entry || !entry.models) return null;
+  var best = null;
+  entry.models.forEach(function(m) {
+    var b = m && m.evaluation ? m.evaluation.brier : null;
+    if (b === null || b === undefined || !isFinite(Number(b))) return;
+    if (!best || Number(b) < best.brier) best = { candidate: m.candidate, brier: Number(b) };
+  });
+  return best;
+}
+function mcFailHtml(m) {
+  var f = m.failures;
+  if (!f || typeof f !== 'object') return '';
+  var ks = Object.keys(f);
+  if (!ks.length) return '';
+  if (f.code) {
+    var fd = (f.detail === null || f.detail === undefined || f.detail === '') ? '' : ' ' + String(f.detail);
+    return '<br><span class="mc-fail">[' + esc(String(f.code)) + ']' + esc(fd) + '</span>';
+  }
+  return '<br><span class="mc-fail">' + ks.map(function(k) {
+    var v = f[k];
+    return esc(k + ((v === null || v === undefined || v === '') ? '' : ': ' + String(v)));
+  }).join('<br>') + '</span>';
+}
+function mcRowHtml(s, m, showSeries, best) {
+  var ev = m.evaluation || {};
+  var sl = m.selection || {};
+  var actualSel = (s.selection || {}).candidate;
+  var isSel = m.candidate === actualSel;
+  var isBest = !!(best && m.candidate === best.candidate);
+  var cell = esc(m.name || mcName(m.candidate)) + '<br><span class="mc-id">' + esc(m.candidate) + '</span> ';
+  cell += isSel ? '<span class="mc-badge mc-sel">선택됨(과거)</span>' : '<span class="mc-badge">미선택</span>';
+  if (isBest) cell += ' <span class="mc-badge mc-best">회고 최저</span>';
+  if (showSeries && best && !isBest && mc.model === 'all') {
+    cell += '<br><span class="mc-id">회고 최저: ' + esc(mcName(best.candidate)) + ' ' + mcNum(best.brier, 4) + '</span>';
+  }
+  var reasons = (m.reasons || []).filter(function(x) { return typeof x === 'string' && x !== ''; });
+  var rhtml = reasons.length ? reasons.map(function(x) { return esc(x); }).join('<br>') : '—';
+  var mcStandalone = (m.standaloneTestN === null || m.standaloneTestN === undefined || !isFinite(Number(m.standaloneTestN))) ? null : Number(m.standaloneTestN);
+  if (mcStandalone !== null && mcStandalone > 0) rhtml += '<br><span class="mc-fail">' + esc('별도 단독 성숙 예측 n=' + mcStandalone + ' (공통원점 비교 범위 밖; 미출력으로 보지 않음)') + '</span>';
+  var seriesCell = esc(s.name || s.id) + '<br><span class="mc-id">' + esc(s.id + ' · ' + (s.region || '') + ' ' + (s.frequency || '')) + '</span>';
+  var rmse = (ev.rmse === null || ev.rmse === undefined || !isFinite(Number(ev.rmse))) ? '' : '<br><span class="mc-id">RMSE ' + mcMaeP(ev.rmse) + '</span>';
+  return '<tr><td>' + seriesCell + '</td><td>' + cell + '</td><td>' + esc(mcStatus(m.status)) + '</td>' +
+    '<td class="num">' + fmtInt(sl.n) + ' / ' + mcNum(sl.logLoss, 4) + '</td>' +
+    '<td class="num">' + mcNum(ev.brier, 4) + '</td>' +
+    '<td class="num">' + mcNum(ev.logLoss, 4) + '</td>' +
+    '<td class="num">' + mcMaeP(ev.mae) + rmse + '</td>' +
+    '<td class="num">' + mcInterval(ev) + '</td>' +
+    '<td class="num">' + fmtInt(ev.n) + ' / ' + fmtInt(ev.nonoverlapN) + '</td>' +
+    '<td class="num">' + fmtInt(m.allTestN) + '</td>' +
+    '<td>' + rhtml + mcFailHtml(m) + '</td></tr>';
+}
+function buildMcSeriesOptions() {
+  var sel = el('mc-series');
+  if (!sel || !mc.data) return;
+  var html = '<option value="all">전체 계열</option>';
+  (mc.data.series || []).forEach(function(s) {
+    html += '<option value="' + esc(s.id) + '">' + esc((s.name || s.id) + ' · ' + s.id) + '</option>';
+  });
+  sel.innerHTML = html;
+  sel.value = mc.series;
+}
+function renderMc() {
+  if (!mc.data) return;
+  var d = mc.data;
+  var sum = d.summary || {};
+  el('mc-series-n').textContent = fmtInt(sum.series);
+  el('mc-changed').textContent = fmtInt(sum.selectionChanged);
+  el('mc-passed').textContent = fmtInt(sum.passed);
+  el('mc-common-detail').textContent = '공통 테스트 행 ' + fmtInt(sum.commonTestRows) + ' · 통과 ' + fmtInt(sum.passed);
+  var ids = (d.series || []).map(function(s) { return s.id; });
+  if (mc.series !== 'all') ids = ids.filter(function(id) { return id === mc.series; });
+  var tb = el('mc-table').querySelector('tbody');
+  var html = '';
+  ids.forEach(function(id) {
+    var s = null;
+    (d.series || []).forEach(function(x) { if (x.id === id) s = x; });
+    if (!s) return;
+    var models = s.models || [];
+    var best = mcBest(s);
+    var list = models;
+    if (mc.model === 'all' && mc.series === 'all') {
+      var actual = (s.selection || {}).candidate;
+      var selM = null;
+      models.forEach(function(m) { if (m.candidate === actual) selM = m; });
+      list = selM ? [selM] : models.slice(0, 1);
+    } else if (mc.model !== 'all') {
+      list = models.filter(function(m) { return m.candidate === mc.model; });
+    }
+    list.forEach(function(m) { html += mcRowHtml(s, m, mc.series === 'all', best); });
+  });
+  tb.innerHTML = html || '<tr><td colspan="11">표시할 행이 없습니다.</td></tr>';
+  var note = '선택됨 표시는 과거 선택 구간 기준이며 테스트 구간 성적이 아닙니다. 회고 테스트 최저는 같은 원점의 사후 조회이며 선택 근거가 아닙니다.';
+  if (sum.passed === 0) note += ' 어떤 모형도 추천 기준을 통과하지 못했습니다(통과 0건). 개선 주장을 하지 않습니다.';
+  note += ' 비교 universe는 기존 분류기 유효 원점으로 고정되며, 전체 n(기존 범위)은 그 안의 후보별 평가 가능 수입니다.';
+  el('mc-note').textContent = note;
+  var lim = el('mc-limitations');
+  lim.innerHTML = (d.limitations || []).map(function(x) { return '<li>' + esc(String(x)) + '</li>'; }).join('') || '<li>한계 정보 없음</li>';
+}
+function initMc() {
+  var mm = el('mc-model'), ms = el('mc-series');
+  if (!mm || !ms) return;
+  mm.addEventListener('change', function(ev) { mc.model = ev.target.value; renderMc(); });
+  ms.addEventListener('change', function(ev) { mc.series = ev.target.value; renderMc(); });
+  fetch(MC_URL, { cache: 'no-store' }).then(function(res) {
+    if (!res.ok) throw new Error('HTTP ' + res.status);
+    return res.json();
+  }).then(function(data) {
+    mc.data = data;
+    buildMcSeriesOptions();
+    renderMc();
+  }).catch(function() {
+    el('mc-note').textContent = '모형 비교 자료를 불러오지 못했습니다. 기존 예측 검증 요약은 위에서 확인할 수 있습니다.';
+  });
+}
 function showError(msg) {
   var box = document.createElement('div');
   box.className = 'error-box';
@@ -269,7 +413,7 @@ document.addEventListener('DOMContentLoaded', function() {
     a.addEventListener('click', function() { selectTab(a.getAttribute('data-tab-link')); });
   });
   var h = (location.hash || '').replace('#', '');
-  if (h === 'forecast' || h === 'trend') selectTab(h);
+  if (h === 'forecast' || h === 'trend' || h === 'comparison') selectTab(h);
 
   el('year-seg').querySelectorAll('button').forEach(function(b) {
     b.addEventListener('click', function() {
@@ -307,6 +451,7 @@ document.addEventListener('DOMContentLoaded', function() {
     if (ev.key === 'Escape') { hideTip(); }
   });
 
+  initMc();
   fetch(DATA_URL, { cache: 'no-store' }).then(function(res) {
     if (!res.ok) throw new Error('HTTP ' + res.status);
     return res.json();

@@ -1,99 +1,77 @@
 > 공개판 안내: 작성 당시 연구 기록입니다. 원가격·주가·벤치마크 원본과 복원 가능한 파일은 제외했습니다. 현재 공개 범위·실행법은 루트 README와 데이터 이용 안내를 따릅니다.
 
-# 3개월 PC 부품 가격 확률 모형 검증 결과
+# 3개월 PC 부품 가격 모형 검증 결과
 
-기준일: 2026-10-23. 실제 가격 이력을 늘려 확률 모형을 학습·검증하고 대시보드에 연결했다. **이번에 검증한 모형 중 구매 추천 사용 기준을 통과한 계열은 0개**다. 확률 숫자가 생성됐다는 이유로 신뢰할 만한 미래 확률이라고 판단하지 않는다.
+가격 스냅샷 2026-10-23, 모델 비교 2026-10-24. ARIMA·SARIMA·ETS를 기존 로지스틱·랜덤포레스트와 비교했다. 구매 추천 기준 통과는 **0/35계열**이다. 새 후보는 2023–2024년 과거 선택 구간으로만 선택했다. 2025–2026년은 이미 결과를 열람한 회고 벤치마크이며 새 미관측 홀드아웃이 아니다.
 
-## 실제 확장한 데이터
+## 반영한 선택과 점수의 범위
 
-- 신규 해외 8개 계열 **3,065개 원문 관측**을 확보했다. 기존 자료 6개와 별도로 보존한다. 국가·통화·신품/리퍼·용량·히트싱크 옵션을 구분했다.
-- 국내 9개 제품의 과거 아카이브 **26건**을 확보했다. 교차 확인된 **25건(2021-11~2024-11)**을 별도 맥락 자료로 표시하고, 2020-11 DDR4 한 건은 일반·현금 기준 충돌로 격리했다. 원문·추출값·사유를 보존했다.
-- 국내 아카이브는 일반 최저가 스냅샷이고 기존 차트는 집계 정의가 불명확한 월간 minPrice다. 이어 붙이거나 보간해 학습 기간을 늘리지 않았다. 국내 연속 이력은 여전히 최대 완료 월 22개이며, 오늘부터 3개월 뒤에 대응하는 연속 주간 자료는 미확보다.
+총 선택 모델 평가 394행, 후보 공통 평가 332행. 같은 3개월 목표가 겹치므로 독립 표본 수가 아니다. 아래는 선택 모델의 **전체 산출 가능 평가**이며, 후보별 우열 비교는 공개 집계 JSON의 공통 원점 점수를 사용한다.
 
-| 신규 해외 계열 | 통화 | 관측 주 / 전체 달력 주 | 실제 관측 주 범위 |
-|---|---|---:|---|
-| [Samsung 990 Pro SSD 1TB PCIe 4.0 NVMe M.2](https://pricehistory.app/p/samsung-990-pro-ssd-1tb-pcie-4-LraBLhQ2) | USD | 165 / 207 | 2022-11-04 ~ 2026-10-09 |
-| [WD_Black SN850X 1TB NVMe SSD (WDS100T2X0E)](https://pricehistory.app/p/wd-black-sn850x-1tb-nvme-ssd-m-yaDS6vce) | USD | 188 / 220 | 2022-08-05 ~ 2026-10-16 |
-| [SK Hynix Platinum P41 1TB PCIe NVMe Gen4 M.2 2280](https://pricehistory.app/p/sk-hynix-platinum-p41-2tb-pcie-nvme-vgJlNIyp) | USD | 158 / 231 | 2022-05-20 ~ 2026-08-07 |
-| [Crucial T500 1TB PCIe Gen4 NVMe Gaming SSD with heatsink](https://pricehistory.app/p/crucial-t500-1tb-pcie-gen4-nvme-gaming-1hEPfsmb) | USD | 125 / 155 | 2023-11-03 ~ 2026-10-16 |
-| [AMD Ryzen 5 9600X 3.9 GHz](https://pricehistory.app/p/amd-ryzen-5-9600x-3-9-ghz-Jby9ysce) | INR | 81 / 81 | 2025-04-04 ~ 2026-10-16 |
-| [Gigabyte RTX 4060 Eagle OC 8G GV-N4060EAGLE OC-8GD](https://pricehistory.app/p/gigabyte-geforce-rtx-4060-eagle-oc-8g-ZFiDGow8) | USD | 113 / 173 | 2023-06-30 ~ 2026-10-16 |
-| [Crucial 16GB DDR5-5600 CL46 CT16G56C46U5 desktop](https://pricehistory.app/p/crucial-ram-16gb-ddr5-5600-mhz-cl46-zrPuclce) | INR | 123 / 185 | 2023-04-07 ~ 2026-10-16 |
-| [Crucial Pro 16GB DDR4-3200 CP16G4DFRA32A single module](https://pricehistory.app/p/crucial-pro-16gb-ram-1x16gb-ddr4-3200mhz-36iDhxSj) | INR | 112 / 128 | 2024-05-10 ~ 2026-10-16 |
+| 계열 | 선택 모델 | 과거 선택 n | 전체 시험 n / 비중첩 | Brier / 빈도 기준 | 변화율 MAE / 유지 |
+|---|---|---:|---:|---:|---:|
+| US · AMD Ryzen 5 3600 | arima | 55 | 56 / 6 | 0.6441 / 0.6645 | 35.81%p / 35.78%p |
+| US · Crucial DDR4-3200 16GB CT16G4DFRA32A | logistic | 0 | 20 / 3 | 1.2232 / 0.5741 | 40.54%p / 14.74%p |
+| US · Samsung 970 EVO Plus 1TB | sarima | 76 | 53 / 6 | 0.5875 / 0.7041 | 21.99%p / 22.10%p |
+| US · EVGA RTX 3090 FTW3 Ultra 24G-P5-3987-KR | logistic | 0 | 0 / 0 | — / — | — / — |
+| IN · NVIDIA GeForce RTX 3070 8GB (Amazon.in listing) | logistic | 0 | 0 / 0 | — / — | — / — |
+| US · EVGA RTX 3080 FTW3 Ultra Gaming (Renewed) | logistic | 0 | 23 / 4 | 1.1482 / 0.6770 | 23.40%p / 9.98%p |
+| US · Samsung 990 Pro SSD 1TB PCIe 4.0 NVMe M.2 | logistic | 0 | 32 / 3 | 1.2832 / 0.5699 | 55.20%p / 47.76%p |
+| US · WD_Black SN850X 1TB NVMe SSD (WDS100T2X0E) | logistic | 0 | 52 / 5 | 0.7765 / 0.6233 | 36.04%p / 37.67%p |
+| US · SK Hynix Platinum P41 1TB PCIe NVMe Gen4 M.2 2280 | logistic | 0 | 20 / 5 | 1.3060 / 0.7345 | 50.04%p / 47.84%p |
+| US · Crucial T500 1TB PCIe Gen4 NVMe Gaming SSD with heatsink | logistic | 0 | 0 / 0 | — / — | — / — |
+| IN · AMD Ryzen 5 9600X 3.9 GHz | logistic | 0 | 0 / 0 | — / — | — / — |
+| US · Gigabyte RTX 4060 Eagle OC 8G GV-N4060EAGLE OC-8GD | logistic | 0 | 0 / 0 | — / — | — / — |
+| IN · Crucial 16GB DDR5-5600 CL46 CT16G56C46U5 desktop | logistic | 0 | 0 / 0 | — / — | — / — |
+| IN · Crucial Pro 16GB DDR4-3200 CP16G4DFRA32A single module | logistic | 0 | 0 / 0 | — / — | — / — |
+| KR · Ryzen 5 7500F | logistic | 0 | 7 / 3 | 1.3522 / 0.9611 | 24.23%p / 9.04%p |
+| KR · Core i5-14400F | logistic | 0 | 7 / 3 | 0.9462 / 0.7733 | 16.14%p / 5.01%p |
+| KR · Ryzen 5 7600 | logistic | 0 | 7 / 3 | 0.2540 / 0.4733 | 12.78%p / 8.98%p |
+| KR · Ryzen 5 9600X | logistic | 0 | 7 / 3 | 1.4976 / 0.9785 | 22.01%p / 7.76%p |
+| KR · MSI RTX 4060 8GB | logistic | 0 | 7 / 3 | 1.2425 / 0.7611 | 22.44%p / 6.10%p |
+| KR · MSI RTX 5070 Ti 16GB | logistic | 0 | 7 / 3 | 0.6762 / 0.5733 | 18.81%p / 11.19%p |
+| KR · PALIT 5070 Ti 16GB | logistic | 0 | 1 / 1 | 0.5193 / 1.0068 | 24.61%p / 20.34%p |
+| KR · MSI 5070 Ti GAMING TRIO | logistic | 0 | 7 / 3 | 1.3115 / 0.8386 | 22.30%p / 10.51%p |
+| KR · GIGABYTE 5070 Ti GAMING OC | logistic | 0 | 7 / 3 | 1.1874 / 0.8305 | 19.36%p / 5.94%p |
+| KR · GALAX 5070 Ti BLACK 2X | logistic | 0 | 5 / 2 | 0.5782 / 0.6574 | 14.92%p / 11.66%p |
+| KR · MSI RTX 5060 Ti 16GB | logistic | 0 | 7 / 3 | 0.9943 / 0.7386 | 21.27%p / 12.06%p |
+| KR · MSI RTX 5060 8GB | logistic | 0 | 7 / 3 | 1.2642 / 0.8386 | 22.39%p / 11.10%p |
+| KR · SAPPHIRE RX 9060 XT 16GB | logistic | 0 | 7 / 3 | 0.7291 / 0.6509 | 16.47%p / 11.05%p |
+| KR · 삼성 DDR4-3200 16GB | logistic | 0 | 7 / 3 | 1.1508 / 0.7229 | 24.83%p / 15.95%p |
+| KR · 삼성 DDR5-5600 16GB | logistic | 0 | 7 / 3 | 0.3092 / 0.3616 | 13.93%p / 13.86%p |
+| KR · 삼성 990 PRO 1TB | logistic | 0 | 7 / 3 | 0.7742 / 0.6683 | 22.48%p / 17.89%p |
+| KR · SK하이닉스 P41 1TB | logistic | 0 | 7 / 3 | 0.7843 / 0.5948 | 25.35%p / 20.22%p |
+| KR · TeamGroup DDR4-3200 Elite 서린 16GB | logistic | 0 | 6 / 2 | 1.8096 / 0.8947 | 22.40%p / 5.02%p |
+| KR · Crucial DDR5-5600 CL46 대원 16GB | logistic | 0 | 7 / 3 | 0.5897 / 0.4657 | 16.62%p / 17.02%p |
+| KR · WD BLACK SN850X 1TB | logistic | 0 | 7 / 3 | 1.0637 / 0.5923 | 43.26%p / 38.27%p |
+| KR · Crucial T500 대원 1TB | logistic | 0 | 7 / 3 | 0.3664 / 0.4045 | 19.72%p / 19.94%p |
 
-토~금 주의 마지막 실제 호가를 사용한다. 전체 그리드는 현재 완료 주 2026-10-16까지여서 추적 중단 뒤 결측도 포함한다. 원문 날짜의 주가 완료했는지와 관측 최초/최후 날짜 안에서 7일 전체가 관측됐는지는 다르다. 소스별 매니페스트의 완전 포함 주 수와 위 수치는 기준이 다르며, 위 표가 실제 모형 입력 수다. 실제로 매일 조사했거나 거래가 체결됐다는 뜻은 아니다.
+## 방법과 자료의 한계
 
-## 모형과 검증
+- 2025–2026년 결과를 이미 살펴본 뒤 후보를 확장한 회고 비교입니다. 새 미관측 홀드아웃이나 실시간 성과가 아닙니다.
+- 모형·온도는 2023–2024년 공통 과거 원점에서만 선택합니다. 선택 표본 부족 시 기존 모형을 유지하며 시험 점수의 최저 모형으로 교체하지 않습니다.
+- 국내 7–22개월 자료는 연간 계절성 두 주기도 충족하지 않습니다. SARIMA 제외를 성능 열위로 읽지 않습니다.
+- 각 SKU에서 산출 가능한 후보의 공통 원점만 비교하므로 기존 전체 평가보다 n이 작습니다. 후보별 전체 평가 가능 행 수와 실패 사유를 함께 기록합니다.
+- 전체 평가 allTestN도 기존 분류 모형이 산출한 평가 원점 범위 안의 수입니다. 그 밖에서 시계열 모형만 산출한 사례는 standaloneTestN에 기록하며 점수 비교·교체 근거에 쓰지 않습니다.
+- 3개월 목표가 겹치므로 n은 독립 표본 수가 아닙니다. 비중첩 시간 구간 수를 함께 봅니다.
+- 달력의 결측은 NaN으로 유지합니다. 칼만 필터의 내부 상태 예측은 관측 가격이나 정답으로 추가하지 않습니다.
+- SARIMA는 주별 52주 주기 가정의 제한된 고정 차수 후보입니다. 모든 차수·계절주기·ETS 변형의 우열을 검증한 것은 아닙니다.
+- ARIMA·SARIMA·ETS는 로그가격의 가우시안 예측 분포를 가정합니다. 확률 온도는 클래스 확률에만 적용하며 80/95% 가격구간은 원분포 구간입니다. 급변·두꺼운 꼬리·매개변수 추정 불확실성을 충분히 반영하지 못할 수 있습니다.
+- 분류 모형은 국내 패널/해외 SKU 학습이고 시계열 모형은 각 SKU의 관측 가격을 학습합니다. 학습 대상과 이용 가능한 정답 정보가 다르지만 예측 시점과 목표·평가 원점은 동일합니다.
+- 수렴 실패·이력 부족·결측이 많은 주기를 제외한 공통 표본에는 선택 편향이 남습니다. 미산출은 0점이 아닙니다.
+- 실패 사유별 건수는 2023년 이후 전체 산출 요청 원점 수이며, 선택·시험뿐 아니라 최신 미성숙 목표의 요청도 포함합니다. allTestN과 분모가 다릅니다.
+- 관측 스냅샷은 2026-10-23으로 고정되어 있습니다. 자동 갱신·미래 주가·ETH·재고·출시 정보는 사용하지 않습니다.
 
-- 하락: -3% 미만, 보합: ±3% 이내, 상승: +3% 초과. 주간 목표는 달력 3개월 뒤 이상인 첫 금요일(13~14주), 월간 목표는 정확히 3개 달 뒤 동일 버킷이다.
-- 해외는 SKU별 L2 다항 로지스틱 회귀·깊이 제한 랜덤포레스트를 분기별 학습했다. 2023~2024년 중 정답까지 2024년에 확보 가능한 예측만으로 후보·확률 온도를 선택하고 2025~2026년에서 최종 평가했다. 선택 자료가 모자란 제품은 사전 고정 로지스틱·온도 1이다.
-- 국내는 동일 가격 정의 21개 SKU 월간 패널의 고정 로지스틱 모형이다. 같은 칩 보드와 공통 시기 충격을 공유하므로 SKU×월 행 수가 독립 표본 수는 아니다. 시점별 모든 SKU의 미래 정답을 함께 차단한다.
-- 각 학습은 정답 목표 기간이 분기 시작 전에 종료한 자료만 쓴다. 특징은 과거 가격만 사용한다. 결측 특징의 중앙값은 해당 학습 집합에서만 구하고 결측 표시자를 추가한다. 가격·목표를 이월하거나 보간하지 않는다. 주가·ETH의 미래 값은 사용하지 않는다.
-- 현재 조회한 이력의 회고 검증이다. 당시 공개됐던 수집본을 복원한 실시간 검증은 아니다. 공급 단절·품절과 결측의 연관, 소스의 사후 수정은 통제하지 못했다.
+- 국내 아카이브 26건 중 25건은 별도 참고용, 1건은 일반·현금 가격 충돌로 격리했다. 월간 minPrice와 이어 붙이지 않는다.
+- 신규 해외 8계열 원문 3,065점과 기존 6계열의 가격 정의·국가·통화를 분리한다. 국내는 최대 완료 월 22개이며 연간 SARIMA를 제외했다.
+- 국내 최신 목표는 2026-09→2026-12 월간 버킷이며 2026-10-23 현재 결제 가격에서 3개월 뒤의 국내 가격을 예측한 것이 아니다.
 
-Brier는 세 방향의 제곱오차 합(0~2), 기준은 같은 학습 자료의 발생 빈도(+1 보정)다. 낮을수록 좋다. 가격 변화의 점 예측은 학습 구간 방향별 변화율 중앙값을 확률로 가중한 값이며 별도 회귀가 아니다. MAE 단위는 변화율의 %p다.
+## 재현·감사
 
-| 계열 | 최종 시험 n | 서로 다른 원점 / 비중첩 시간 | 모형 Brier | 기준 Brier | 변화율 MAE / 유지 MAE |
-|---|---:|---:|---:|---:|---:|
-| US · AMD Ryzen 5 3600 | 56 | 56 / 6 | 0.6613 | 0.6645 | 35.9%p / 35.8%p |
-| US · Crucial DDR4-3200 16GB CT16G4DFRA32A | 20 | 20 / 3 | 1.2232 | 0.5741 | 40.5%p / 14.7%p |
-| US · Samsung 970 EVO Plus 1TB | 53 | 53 / 6 | 0.6240 | 0.7041 | 21.7%p / 22.1%p |
-| US · EVGA RTX 3090 FTW3 Ultra 24G-P5-3987-KR | 0 | 0 / 0 | — | — | — / — |
-| IN · NVIDIA GeForce RTX 3070 8GB (Amazon.in listing) | 0 | 0 / 0 | — | — | — / — |
-| US · EVGA RTX 3080 FTW3 Ultra Gaming (Renewed) | 23 | 23 / 4 | 1.1482 | 0.6770 | 23.4%p / 10.0%p |
-| US · Samsung 990 Pro SSD 1TB PCIe 4.0 NVMe M.2 | 32 | 32 / 3 | 1.2832 | 0.5699 | 55.2%p / 47.8%p |
-| US · WD_Black SN850X 1TB NVMe SSD (WDS100T2X0E) | 52 | 52 / 5 | 0.7765 | 0.6233 | 36.0%p / 37.7%p |
-| US · SK Hynix Platinum P41 1TB PCIe NVMe Gen4 M.2 2280 | 20 | 20 / 5 | 1.3060 | 0.7345 | 50.0%p / 47.8%p |
-| US · Crucial T500 1TB PCIe Gen4 NVMe Gaming SSD with heatsink | 0 | 0 / 0 | — | — | — / — |
-| IN · AMD Ryzen 5 9600X 3.9 GHz | 0 | 0 / 0 | — | — | — / — |
-| US · Gigabyte RTX 4060 Eagle OC 8G GV-N4060EAGLE OC-8GD | 0 | 0 / 0 | — | — | — / — |
-| IN · Crucial 16GB DDR5-5600 CL46 CT16G56C46U5 desktop | 0 | 0 / 0 | — | — | — / — |
-| IN · Crucial Pro 16GB DDR4-3200 CP16G4DFRA32A single module | 0 | 0 / 0 | — | — | — / — |
-| KR · Ryzen 5 7500F | 7 | 7 / 3 | 1.3522 | 0.9611 | 24.2%p / 9.0%p |
-| KR · Core i5-14400F | 7 | 7 / 3 | 0.9462 | 0.7733 | 16.1%p / 5.0%p |
-| KR · Ryzen 5 7600 | 7 | 7 / 3 | 0.2540 | 0.4733 | 12.8%p / 9.0%p |
-| KR · Ryzen 5 9600X | 7 | 7 / 3 | 1.4976 | 0.9785 | 22.0%p / 7.8%p |
-| KR · MSI RTX 4060 8GB | 7 | 7 / 3 | 1.2425 | 0.7611 | 22.4%p / 6.1%p |
-| KR · MSI RTX 5070 Ti 16GB | 7 | 7 / 3 | 0.6762 | 0.5733 | 18.8%p / 11.2%p |
-| KR · PALIT 5070 Ti 16GB | 1 | 1 / 1 | 0.5193 | 1.0068 | 24.6%p / 20.3%p |
-| KR · MSI 5070 Ti GAMING TRIO | 7 | 7 / 3 | 1.3115 | 0.8386 | 22.3%p / 10.5%p |
-| KR · GIGABYTE 5070 Ti GAMING OC | 7 | 7 / 3 | 1.1874 | 0.8305 | 19.4%p / 5.9%p |
-| KR · GALAX 5070 Ti BLACK 2X | 5 | 5 / 2 | 0.5782 | 0.6574 | 14.9%p / 11.7%p |
-| KR · MSI RTX 5060 Ti 16GB | 7 | 7 / 3 | 0.9943 | 0.7386 | 21.3%p / 12.1%p |
-| KR · MSI RTX 5060 8GB | 7 | 7 / 3 | 1.2642 | 0.8386 | 22.4%p / 11.1%p |
-| KR · SAPPHIRE RX 9060 XT 16GB | 7 | 7 / 3 | 0.7291 | 0.6509 | 16.5%p / 11.0%p |
-| KR · 삼성 DDR4-3200 16GB | 7 | 7 / 3 | 1.1508 | 0.7229 | 24.8%p / 16.0%p |
-| KR · 삼성 DDR5-5600 16GB | 7 | 7 / 3 | 0.3092 | 0.3616 | 13.9%p / 13.9%p |
-| KR · 삼성 990 PRO 1TB | 7 | 7 / 3 | 0.7742 | 0.6683 | 22.5%p / 17.9%p |
-| KR · SK하이닉스 P41 1TB | 7 | 7 / 3 | 0.7843 | 0.5948 | 25.4%p / 20.2%p |
-| KR · TeamGroup DDR4-3200 Elite 서린 16GB | 6 | 6 / 2 | 1.8096 | 0.8947 | 22.4%p / 5.0%p |
-| KR · Crucial DDR5-5600 CL46 대원 16GB | 7 | 7 / 3 | 0.5897 | 0.4657 | 16.6%p / 17.0%p |
-| KR · WD BLACK SN850X 1TB | 7 | 7 / 3 | 1.0637 | 0.5923 | 43.3%p / 38.3%p |
-| KR · Crucial T500 대원 1TB | 7 | 7 / 3 | 0.3664 | 0.4045 | 19.7%p / 19.9%p |
+`python scripts/build_forecast.py` → `python scripts/compare_forecast_models.py` → `python scripts/write_forecast_report.py`. 별도 허가 원본이 필요한 오프라인 절차다. 공개 집계만으로 원모델을 재학습할 수 없다.
 
-전체 예측·정답 행은 **394건**이다. 제품과 시기를 공유하므로 독립 표본으로 합산하지 않는다.
-
-미국 Ryzen 3600은 Brier 0.6613 대 기준 0.6645로 거의 차이가 없고, 개선 95% 블록 구간은 0을 포함한다. 미국 970 EVO Plus는 Brier가 약 11.4% 개선됐지만 세 방향의 검증 수가 8/4/41개로 불균형하며 보정의 평균 차이가 약 27.3%p다. 국내 7500F는 7회(비중첩 3개)에서 Brier가 약 40.7% 나빴고, 변화율 MAE는 24.2%p 대 유지 기준 9.0%p다. 이 결과로 매수·대기를 권하지 않는다.
-
-공개 조건은 점수·로그손실 개선, 3개월 시간 블록의 95% 개선 하한 >0, 보정 차이 ≤10%p, 세 클래스 각각 10개, 주간 52/월간 12개 원점 및 비중첩 시간 8개다. 2025~2026년 최종 평가 범위 자체도 8개의 3개월 구간을 충분히 담지 못한다. 학습·선택에 쓴 옛 자료를 독립 평가로 재사용해 이를 채우지 않았다. 낮은 Brier만으로 확률 보정이나 안정성을 입증하지 않는다.
-
-## 대시보드 반영과 미해결 범위
-
-- `#forecast`: 35개 가격 계열 선택, 실험 확률, 정확한 원점·목표, 학습 마감, Brier·로그손실·MAE, 보정 점 그래프, 실제/예측 변화 그래프, 미관측을 유지한 장기 가격, 국내 아카이브 별도 점 그래프, 전체 예측·선택·제외 내역 다운로드.
-- `#domestic`: 3개월 계획은 새 검증 결과를 우선한다. 실패한 모형이나 단순 단기 추세로 지금 사거나 대기하라고 권하지 않는다. 견적 이상·희소 판매처·오래된 데이터의 확인은 우선한다.
-- 국내 최신 예측은 2026-09 완료 버킷 → 2026-12 버킷이다. **2026-10-23부터 3개월 뒤인 2027-01의 국내 가격 예측이 아니다.** 현재 배송 포함 3몰 중앙값의 미래 견적으로 환산하지 않았다. 해외 모형의 확률도 국내로 이전하지 않았다.
-- 따라서 사용자가 원한 실용적 현재 국내 3개월 구매 신호는 아직 검증하지 못했다. 동일 가격 정의로 더 긴 국내 주간 이력과 시간상 독립된 검증 기간이 필요하다. 자동 수집·정기 재학습은 이번에 설치하지 않았다.
-
-## 재현과 감사 자료
-
-Python 3.12에서 `pip install -r requirements-analysis.txt`, `python scripts/build_forecast.py`, `python scripts/write_forecast_report.py` 순으로 실행한다. 저장 원본을 읽는 오프라인 분석으로 네트워크 조회가 필요 없다. 신규 수집기는 기존 원본을 덮어쓰지 않는 별도 스냅샷을 사용한다.
-
-- `forecast_predictions.csv`: 최종 평가의 모든 원점·목표·학습 마감·확률·기준 확률·정답.
-- `forecast_selection_predictions.csv`: 선택 이전 후보별 예측과 선택 가능 여부. 후보·온도별 손실은 JSON의 selection.candidates.
-- `forecast_weekly.csv`: 주/월 원가격 그리드. 파일의 frequency 열로 구분하며 결측은 빈칸.
-- `forecast_metrics.csv`: 계열별 점수·추천 사용 실패 이유.
-- `forecast_domestic_archives.csv`: 25개 참고 관측 + 1개 격리. 격리 행은 일반가 칸을 비우고 원문 추출값을 별도 열에 보존.
-- `excluded_observations.csv`: USD $5 미만 오류, 21개 부분월, 다른 가격 정의의 아카이브 및 충돌 사유. $5 하한 없이 재실행한 CPU 민감도도 JSON에 보존.
-- `forecast.json`: 확률·모든 최종 사례·보정 구간·입력 SHA-256. 원본/다운로드 복사본 일치와 미래 차단은 자동 테스트로 검사.
-
-방법 근거: [시계열 교차 검증](https://otexts.com/fpp3/toolbox.html#time-series-cross-validation), [scikit-learn 확률 보정](https://scikit-learn.org/stable/modules/calibration.html). 자세한 고정 기준은 `docs/forecast_protocol.md`.
+- 상세 비교 규약: `docs/forecast_protocol.md`; 결과 설명: `docs/model_comparison.md`.
+- 공개 통계: `data/public/model_comparison.json`, `data/public/model_comparison_metrics.csv`.
+- 비공개 연구 감사: `data/analysis/2026-10-24/model_comparison/candidate_predictions.json`, SKU별 적합 기록과 원본 해시.
+- `forecast_predictions.csv`, `forecast_metrics.csv`, `forecast.json`은 새 선택 모델을 반영했다. 최초 두 후보의 결과는 `legacy_forecast.json`에 보존했다.
+- 최초 두 후보 선택 감사는 `forecast_selection_predictions.csv`; 확장 후보 선택 옵션·온도 점수는 공개 JSON의 `selection.options`에 있다.

@@ -4,10 +4,10 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#163b35">
-  <meta name="description" content="공개 제출용 ETH 참고 대시보드. Coin Metrics Community Data 기반 2020-2022 일별 시계열과 예측 검증 요약만 제공한다.">
-  <title>공개 ETH 추이 대시보드 — Codyssey M1-1</title>
-  <link rel="stylesheet" href="./styles.css">
-  <script type="module" src="./public-view.js"></script>
+  <meta name="description" content="PC 부품의 ARIMA·SARIMA·ETS 3개월 예측 검증과 공개 ETH 자료. 같은 원점의 점수·실제 표본·데이터 한계를 확인합니다.">
+  <title>PC 부품 예측 검증 대시보드 — Codyssey M1-1</title>
+  <link rel="stylesheet" href="./styles.css?v=20261024-model-comparison">
+  <script type="module" src="./public-view.js?v=20261024-model-comparison"></script>
 </head>
 <body>
   <a class="skip" href="#main">본문으로 건너뛰기</a>
@@ -17,6 +17,7 @@
     <nav aria-label="공개 화면">
       <a href="#trend" data-tab-link="trend" class="active"><span aria-hidden="true">~</span>공개 ETH 추이</a>
       <a href="#forecast" data-tab-link="forecast"><span aria-hidden="true">O</span>예측 검증 요약</a>
+      <a href="#comparison" data-tab-link="comparison"><span aria-hidden="true">M</span>모형 비교</a>
     </nav>
     <div class="sidebar-note">
       <p><span class="status-dot" aria-hidden="true"></span>저장 JSON, 실시간 아님</p>
@@ -29,8 +30,8 @@
     <main id="main" tabindex="-1">
       <div class="page-head">
         <div>
-          <div class="eyebrow">PUBLIC SUBMISSION, 2020-2022</div>
-          <h1>공개 ETH 추이와 예측 검증 요약</h1>
+          <div class="eyebrow">공개 제출판 · ETH 2020–2022 / 가격 예측 검증 2023–2026</div>
+          <h1>PC 부품 예측 검증과 공개 ETH 자료</h1>
           <p class="subtitle">이 화면은 재배포 가능한 자료만 보여줍니다. 2020–2022년 Coin Metrics 저장 자료와 2026-10-23까지의 부품 예측 검증 요약을 구분해 확인하세요.</p>
         </div>
         <span class="pill" id="edition-pill">edition: public-submission</span>
@@ -45,6 +46,7 @@
       <div class="tabs" role="tablist" aria-label="공개 대시보드 탭">
         <button role="tab" id="tab-trend" aria-selected="true" aria-controls="panel-trend" data-tab="trend">공개 ETH 추이</button>
         <button role="tab" id="tab-forecast" aria-selected="false" aria-controls="panel-forecast" data-tab="forecast" tabindex="-1">예측 검증 요약</button>
+        <button role="tab" id="tab-comparison" aria-selected="false" aria-controls="panel-comparison" data-tab="comparison" tabindex="-1">모형 비교</button>
       </div>
       <section id="panel-trend" role="tabpanel" aria-labelledby="tab-trend">
         <div class="controls">
@@ -96,6 +98,38 @@
           <div class="panel-inner"><table class="mini" id="forecast-table"><caption>대표 예시 3개, 오차 지표와 표본 크기</caption><thead><tr><th scope="col">예시</th><th scope="col">n</th><th scope="col">비중첩 구간</th><th scope="col">Brier (기준)</th><th scope="col">변화율 MAE (유지)</th><th scope="col">ECE</th></tr></thead><tbody><tr><td colspan="6">불러오는 중</td></tr></tbody></table>
           <p class="muted small">읽는 법: Brier는 확률 예측 오차, MAE는 평균 절대 오차이며 괄호 안은 단순 기준값이다. ECE는 보정 오차다. n과 겹치지 않는 시간 구간 수(nonoverlapN)가 작으면 한두 개 예측이 바뀌어도 결과가 크게 흔들리므로, 이 표는 우열 선언이 아니라 한계 공유용이다.</p></div>
           <div class="panel-foot">전체 모형별 집계 점수와 REPORT는 공개합니다. 원가격·사례별 정답·예측 행은 공개하지 않습니다. 이 검증 요약은 위 ETH 자료로 새로 학습한 결과가 아닙니다.</div>
+        </div>
+      </section>
+      <section id="panel-comparison" role="tabpanel" aria-labelledby="tab-comparison" hidden>
+        <div class="kpis">
+          <div class="kpi"><div class="kpi-label">비교 계열 수</div><div class="kpi-number" id="mc-series-n">-</div><div class="kpi-detail">공통원점 기준 집계 지표만</div></div>
+          <div class="kpi"><div class="kpi-label">선택 변경</div><div class="kpi-number" id="mc-changed">-</div><div class="kpi-detail">빈 선택은 기존 모형 유지</div></div>
+          <div class="kpi"><div class="kpi-label">통과 / 공통 테스트 행</div><div class="kpi-number" id="mc-passed">-</div><div class="kpi-detail" id="mc-common-detail">불러오는 중</div></div>
+        </div>
+        <div class="panel">
+          <div class="panel-head"><div><h2>모형 비교</h2><p class="panel-subtitle">과거 선택과 회고 테스트 최저를 구분해 표시합니다. 점수 없음은 대시/미산출이며 0으로 채우지 않습니다. MAE는 %p, Brier와 확률은 무단위입니다.</p></div><span class="pill">집계 지표만</span></div>
+          <div class="panel-inner">
+            <div class="mc-controls">
+              <label class="control">모형
+                <select id="mc-model">
+                  <option value="all">전체 모형 요약</option>
+                  <option value="logistic">다항 로지스틱</option>
+                  <option value="forest">랜덤 포레스트</option>
+                  <option value="arima">ARIMA</option>
+                  <option value="sarima">SARIMA</option>
+                  <option value="ets">ETS</option>
+                  <option value="baseline">기준(과거 빈도·유지)</option>
+                </select>
+              </label>
+              <label class="control">계열
+                <select id="mc-series"><option value="all">전체 계열</option></select>
+              </label>
+            </div>
+            <p class="muted" id="mc-note">모형 비교 자료를 불러오는 중입니다.</p>
+            <div class="table-scroll"><table class="mini" id="mc-table"><caption>모형별 집계 지표 (공통원점 기준, 원시 가격 없음)</caption><thead><tr><th scope="col">계열</th><th scope="col">모형</th><th scope="col">상태</th><th scope="col">선택 n · LogLoss</th><th scope="col">테스트 Brier</th><th scope="col">LogLoss</th><th scope="col">MAE(%p)</th><th scope="col">가격구간 80/95%(n)</th><th scope="col">공통 n / 비중첩</th><th scope="col">전체 n(기존 범위)</th><th scope="col">실패·사유</th></tr></thead><tbody><tr><td colspan="11">불러오는 중</td></tr></tbody></table></div>
+            <p class="muted small">원시 가격 재구성 없음 · 가격 차트 없음 · 집계 지표만 표시합니다. 회고 테스트 최저는 사후 조회이며 선택 근거가 아닙니다. 80/95% 가격구간은 원분포 구간이며 검증된 확률이 아닙니다.</p>
+          </div>
+          <div class="panel-inner"><h2>한계</h2><ul class="muted" id="mc-limitations"><li>불러오는 중</li></ul></div>
         </div>
       </section>
       <section class="panel" aria-label="출처와 라이선스">

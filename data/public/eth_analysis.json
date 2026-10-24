@@ -48,6 +48,6 @@
   "inputs_sha256": {
     "data/processed/2026-10-22/crypto/eth_daily.csv": "bc7d0dcebf8c22f686516309230f4688a1e8b4a933500074b42bc9083eea00ea",
     "data/processed/2026-10-22/crypto/eth_weekly.csv": "d322455caac3dbccd89cbc986e71e9d69d9671cf31b56249dd25f73b8cd437a8",
-    "data/analysis/2026-10-23/forecast/forecast_metrics.csv": "52e7185bd794af2ffeb491cccb277b92964ad8404c04ffe8d608de6b4666d967"
+    "data/analysis/2026-10-23/forecast/forecast_metrics.csv": "eb8a519cbe6e685ef850f3e67f7d27f426d68d6df56f608a0db0457c2d344271"
   }
 }

@@ -59,9 +59,9 @@ Coin Metrics ETH 자료는 **CC BY-NC 4.0** 조건으로 제공한다. 2020\~202
 
 ## 4. 예측 결과는 얼마나 믿을 수 있는가?
 
-![대표 3계열의 모형 오차와 단순 기준 비교](docs/assets/figures/04_forecast_validation.png)
+![대표 3계열의 5후보·기준 Brier·변화율 MAE와 공통 평가 원점](docs/assets/public/04_model_comparison.png)
 
-Brier와 변화율 MAE는 **낮을수록 좋다.** 미국 SSD는 Brier가 약 11.4% 개선돼도 방향별 표본과 보정 조건을 통과하지 못했다. 국내 7500F도 기준보다 나빴다. 성공한 확률 모형처럼 표현하지 않고 [35계열 집계 점수](data/analysis/2026-10-23/forecast/forecast_metrics.csv)와 표본 한계를 공개한다.
+Brier와 변화율 MAE는 **낮을수록 좋다.** 분류 2종에 시계열 3종(ARIMA·SARIMA·ETS)을 더해 같은 공통 원점에서 비교한다. 대표 3계열의 선택 모형은 Ryzen 5 3600 ARIMA T4.0(공통 37, Brier 0.6658/기준 0.7031), 970 EVO Plus SARIMA T2.0(공통 53, 0.5875/0.7041), 7500F 로지스틱 T1.0 유지(공통 7, 1.3522/0.9611)다. 선택 변경은 35계열 중 2개뿐이고 추천 사용 기준 통과는 0개다. 성공한 확률 모형처럼 표현하지 않고 [모형 비교 상세](docs/model_comparison.md)와 [35계열 집계 점수](data/analysis/2026-10-23/forecast/forecast_metrics.csv), 표본 한계를 공개한다.
 
 ## 5. 실행·검증 범위
 
@@ -71,11 +71,12 @@ Brier와 변화율 MAE는 **낮을수록 좋다.** 미국 SSD는 Brier가 약 11
 python3.12 -m venv .venv
 .venv/bin/python -m pip install -r requirements-analysis.txt
 .venv/bin/python -m unittest discover -s tests -p test_eth_mining.py -v
+.venv/bin/python -m unittest discover -s tests -p test_model_comparison.py -v
 .venv/bin/python scripts/verify_public_submission.py
-(cd dashboard && node --test tests/forecast-view.test.mjs)
+(cd dashboard && node --test tests/forecast-view.test.mjs tests/model-comparison.test.mjs)
 ```
 
-공개판에서 실행하는 검사는 ETH 원본 해시·산식·머지 경계와 공개 파일 범위, 화면 표현 규칙이다(ETH 6개·JavaScript 8개 통과). 원래 전체 스냅샷에서는 Python 151개·JavaScript 43개를 통과했지만, **원본을 제외한 이 저장소에서 전체 151·43개가 실행된다고 주장하지 않는다.** 자세한 범위와 재생성 명령은 [재현 안내](docs/reproduction.md)에 있다.
+공개판에서 실행하는 Python 검사는 ETH 원본 해시·산식·머지 경계와 공개 집계 검증이다(ETH 6개 + 합성/집계 비교 36개). 전체 스냅샷에서는 Python 191개(기존 151 + 모형 비교 36 + 아티팩트 4)를 통과했지만, **원본 저장 후보 행을 쓰는 아티팩트 4개와 연구 복사본 대조 1건은 공개판 실행 범위가 아니다.** 화면 표현 규칙 JavaScript 전체 55개도 통과했다. 공개판에서 실행 가능한 화면 검사는 20개다. 자세한 범위와 재생성 명령은 [재현 안내](docs/reproduction.md)에 있다.
 
 ## 6. 파일과 권리
 

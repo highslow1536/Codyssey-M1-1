@@ -124,7 +124,7 @@ def make():
     dashboard = {"edition": "public-submission", "asOf": "2026-10-24", "source": SOURCE,
                  "series": records,
                  "forecast": {"series": len(metrics), "passed": sum(r["passed"].lower() in ("true", "1") for r in metrics),
-                              "predictionRows": 394, "examples": examples}}
+                              "predictionRows": sum(int(row['n']) for row in metrics), "examples": examples}}
     (OUT / "dashboard.json").write_text(json.dumps(dashboard, ensure_ascii=False, indent=2, allow_nan=False) + "\n")
     stats = {"source": SOURCE, "daily_n": 1096, "weekly_n": 156, "weekly_return_n": 155,
              "moving_average_n": int(ma.notna().sum()), "proxy_valid_n": 988,

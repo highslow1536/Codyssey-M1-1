@@ -1,5 +1,6 @@
 import {lineChart} from './charts.js?v=20261023-forecast';
 import {escapeHTML as esc, finite, num, pct} from './model.js';
+import {attachModelComparison} from './model-comparison-view.js?v=20261023-modelcmp';
 export var CLASS_LABELS = ['하락3%초과', '보합±3%', '상승3%초과'];
 function fmtPrice(v, currency) {
   if (!finite(v)) return '확인 필요';
@@ -235,6 +236,7 @@ export function renderForecast(main, data, state) {
   }
   html += '</section>';
   var lims = Array.isArray(s.limitations) ? s.limitations : [];
+  html += '<section class="panel section-block" id="model-comparison" data-series="' + esc(s.id) + '"><div class="panel-head"><div><h2>모형 비교</h2><p class="panel-subtitle">과거 선택 vs 회고 테스트 최저 · 공통원점 기준</p></div><span class="pill">집계 지표만</span></div><div class="panel-inner" data-mc-body><p class="f-muted">모형 비교를 불러오는 중입니다…</p></div></section>';
   var topLims = data && Array.isArray(data.limitations) ? data.limitations : [];
   if (lims.length || topLims.length) {
     html += '<details class="f-method"><summary>한계와 주의점</summary><div><p>' +
@@ -248,6 +250,7 @@ export function renderForecast(main, data, state) {
     '<div class="download-list">' + downloadLink('forecast_predictions.csv', '예측 CSV') + downloadLink('forecast_weekly.csv', '가격 입력 CSV · 주/월') + downloadLink('forecast_metrics.csv', '검증지표 CSV') + downloadLink('forecast_report.md','검증 결과 보고서') + downloadLink('forecast_selection_predictions.csv','모형 선택 구간 CSV') + downloadLink('excluded_observations.csv','제외 내역 CSV') + downloadLink('forecast_domestic_archives.csv','국내 과거 스냅샷 CSV') + '<a class="button" href="./data/downloads/forecast.json" download>전체 JSON ↓</a></div>' +
     '<p class="f-muted">예측 CSV에는 원점·목표·학습 마감일·세 확률·실제 결과가 담겨 있습니다.</p></div></details>';
   main.innerHTML = html;
+  try { if (main && main.querySelector) attachModelComparison(main, state); } catch (e) {}
   var hEl = main.querySelector ? main.querySelector('#forecast-history') : null;
   if (hEl) {
     try {

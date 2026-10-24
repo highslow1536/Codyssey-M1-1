@@ -44,6 +44,17 @@
 .f-grid .data-table{min-width:560px;}
 .f-probs-compact strong{font-size:21px;}
 .f-probs-compact{margin-bottom:16px;}
+.mc-table{min-width:760px;}
+.mc-table{min-width:920px;}
+tr.mc-row-focus td{background:#fffbe8;}
+.mc-badge{display:inline-block;border:1px solid #dfe7e2;background:#f3f5ee;color:#5c6d67;border-radius:20px;padding:1px 8px;font-size:11px;white-space:nowrap;}
+.mc-badge.mc-sel{background:#dff2e4;color:#1c5c34;border-color:#bfe0cc;font-weight:700;}
+.mc-badge.mc-best{background:#fff7e0;color:#5f4300;border-color:#e7d9b8;font-weight:700;}
+.mc-id{font-size:11px;color:#8b9684;}
+.mc-fail{color:#8b9584;font-size:12px;}
+tr.mc-row-sel td{background:#f4faf6;}
+#model-comparison .f-control{max-width:320px;margin:12px 0;}
+#model-comparison .table-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch;}
 @media (max-width:1280px){.f-grid{grid-template-columns:minmax(0,1fr);}}
 @media (max-width: 720px){
 .f-grid{grid-template-columns:minmax(0,1fr);}

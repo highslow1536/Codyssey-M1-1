@@ -127,7 +127,7 @@ def verify(root):
     fc = public['forecast']
     require(len(metrics) == fc['series'] == 35, 'Forecast series mismatch')
     require(sum(row['passed'].lower() in {'true', '1'} for row in metrics) == fc['passed'] == 0, 'Forecast gate mismatch')
-    require(sum(int(row['n']) for row in metrics) == fc['predictionRows'] == 394, 'Forecast evaluation rows mismatch')
+    require(sum(int(row['n']) for row in metrics) == fc['predictionRows'], 'Forecast evaluation rows mismatch')
     for example in fc['examples']:
         row = next(r for r in metrics if r['id'] == example['id'])
         for key in ('n', 'nonoverlapN', 'brier', 'baselineBrier', 'mae', 'naiveMae', 'ece'):
@@ -153,8 +153,32 @@ def verify(root):
             links += 1
             images += match[0].startswith('!')
     report = files['REPORT.md'].read_text()
-    require(len(re.findall(r'!\[', report)) == 13, 'Report image count should be 8 analysis + 2 explanatory + 3 UI')
-    print(f'PASS: {len(entries)} manifest files; {links} local Markdown links ({images} images); ETH 1096/156/155; proxies 988+108; forecast 35/0/394')
+    require(len(re.findall(r'!\[', report)) == 15, 'Report image count should be original 13 + 2 model comparison figures')
+    comparison = read_json(root, 'data/public/model_comparison.json')
+    require(len(comparison['series']) == comparison['summary']['series'] == len(metrics), 'Comparison series mismatch')
+    require(comparison['summary']['commonTestRows'] == sum(s['common']['testN'] for s in comparison['series']), 'Common test n mismatch')
+    require(comparison['summary']['selectionChanged'] == sum(s['selection']['candidate'] != s['incumbent']['candidate'] for s in comparison['series']), 'Selected model count mismatch')
+    prohibited = {'price', 'points', 'backtests', 'actualChange', 'predictedChange', 'probabilities', 'logMean', 'logVariance'}
+    def check_aggregate(value):
+        if isinstance(value, dict):
+            require(not prohibited.intersection(value), 'Reconstructive per-origin data in public comparison')
+            for item in value.values():
+                check_aggregate(item)
+        elif isinstance(value, list):
+            for item in value:
+                check_aggregate(item)
+    check_aggregate(comparison)
+    for series in comparison['series']:
+        for model in series['models']:
+            ev = model['evaluation']
+            require(ev['n'] in (0, series['common']['testN']), 'Candidates evaluated on different sample sizes')
+            if ev['n']:
+                require((ev['from'], ev['to']) == (series['common']['from'], series['common']['to']), 'Candidate evaluation range mismatch')
+        metric = next(m for m in metrics if m['id'] == series['id'])
+        require(series['selectedAllEvaluation']['n'] == int(metric['n']), 'Selected full evaluation n mismatch')
+        if series['selection']['status'] != 'past_validation_only':
+            require(series['selection']['candidate'] == series['incumbent']['candidate'], 'Test-only replacement')
+    print(f'PASS: {len(entries)} manifest files; {links} local Markdown links ({images} images); ETH 1096/156/155; proxies 988+108; forecast 35/0/{fc["predictionRows"]}; model comparison {comparison["summary"]["commonTestRows"]} common rows')
 
 
 if __name__ == '__main__':

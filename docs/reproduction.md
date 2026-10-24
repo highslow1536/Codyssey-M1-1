@@ -27,6 +27,8 @@ python3.12 -m venv .venv
 .venv/bin/python -m unittest discover -s tests -p test_eth_mining.py -v
 .venv/bin/python scripts/verify_public_submission.py
 (cd dashboard && node --test tests/forecast-view.test.mjs)
+(cd dashboard && node --test tests/model-comparison.test.mjs)
+.venv/bin/python -m unittest discover -s tests -p test_model_comparison.py -v
 ```
 
 ETH 검사는 6개로 원본 SHA-256, 일·주 그리드, 수익 대용 산식, 전환일·종료 뒤의 빈칸, 변화율 경계를 확인한다. JavaScript 검사는 실제 가격 파일을 읽지 않고 가상 시험 입력으로 화면의 확률·검증 표현 규칙을 확인한다. 시험용 가상 값은 실제 관측·분석 결과에 사용하지 않는다.
@@ -54,3 +56,19 @@ ETH 검사는 6개로 원본 SHA-256, 일·주 그리드, 수익 대용 산식, 
 - 공개 패키지 작성 코드: `scripts/build_public_submission.py`, 문서 템플릿: `publication/templates/*.in`
 
 재수집이 필요한 경우 먼저 제공자 허가를 확인한다. 자동 수집이 제한된 출처를 이 실행 절차에서 조회하지 않는다. 제외 원본을 GitHub 이력이나 ZIP·앱 JSON에 다시 포함하지 않는다.
+
+## 6. ARIMA·SARIMA·ETS 비교 재현
+
+공개본에서는 `data/public/model_comparison.json`의 집계와 테스트용 가상 시계열로 비교 코드·확률 산식·미래 차단을 검증할 수 있다. 가상 값은 실제 결과를 생성하는 데 사용하지 않았다. `scripts/plot_model_comparison.py`와 `scripts/write_model_comparison_report.py`는 공개 집계만 읽어 비교 그림·보고서를 재생성한다.
+
+실제 35개 계열의 재학습은 허가된 원가격 입력 복원 후 다음 순서로 실행한다.
+
+```bash
+.venv/bin/python scripts/build_forecast.py
+.venv/bin/python scripts/compare_forecast_models.py
+.venv/bin/python scripts/write_forecast_report.py
+```
+
+`statsmodels==0.14.6`을 고정했다. 비교 스크립트는 원본 가격을 네트워크에서 재수집하지 않는다. 최초 두 후보 결과를 `data/analysis/2026-10-24/model_comparison/legacy_forecast.json`에 보존하고, 새 선택을 전체 앱의 `forecast.json`·지표·예측 CSV에 반영한다. 후보별 원점 예측·캐시는 공개 제외하며 SHA-256 목록에만 기록한다. 재실행 캐시 키는 코드와 입력 그리드의 해시다.
+
+2023–2024년으로 모형·온도를 선택하고 2025–2026년은 공통 원점 회고 비교에 사용한다. 이미 관찰한 기간이므로 새로운 홀드아웃 성능이라고 표현하지 않는다. [확장 규약](forecast_protocol.md) · [검증 결과와 한계](model_comparison.md)

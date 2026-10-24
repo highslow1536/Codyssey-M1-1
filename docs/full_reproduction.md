@@ -142,3 +142,8 @@ python3 -m http.server 8766 --bind 127.0.0.1 --directory dashboard/dist
 앱의 `analysis-bundle.zip`은 기존 분석의 보조 다운로드다. 루트 `README.md`·`REPORT.md`와 모든 분석 코드·최근 자료를 담은 전체 과제 제출본이 아니며, 이번 문서 점검에서 다시 내보내지 않았다. **과제 제출은 프로젝트 파일을 기준으로 하고 이 ZIP만 제출하지 않는다.** 포함 범위는 [제출 체크표](submission_checklist.md)를 따른다.
 
 수치 재현은 같은 입력 해시·설정을 전제로 CSV/JSON의 날짜·제품 식별자·가격·결측·표본 수·예측·점수를 비교한다. JSON의 `run_date_kst`·`generated_date_kst` 같은 실행일과 그림 메타데이터는 수치와 구분한다. 내보낸 다운로드 CSV는 해당 실행에서 생성한 원본 CSV의 바이트 복사본이다.
+
+
+## 2026-10-24 ARIMA·SARIMA·ETS 확장 비교
+
+허가된 원본을 복원한 연구 환경에서는 기존 build_forecast.py 뒤에 compare_forecast_models.py와 write_forecast_report.py를 실행한다. 공개 집계만으로 실제 가격 모형을 재학습할 수는 없다. 공개 집계의 그림·상세 설명은 plot_model_comparison.py와 write_model_comparison_report.py로 다시 생성한다. [고정 규약](forecast_protocol.md), [결과와 한계](model_comparison.md)를 함께 확인한다.
