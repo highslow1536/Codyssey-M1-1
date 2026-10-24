@@ -1,6 +1,7 @@
 {
   "edition": "public-submission",
-  "date": "2026-10-24",
+  "date": "2026-10-25",
+  "rightsReviewDate": "2026-10-24",
   "repository": "https://github.com/highslow1536/Codyssey-M1-1",
   "files": [
     {
@@ -11,14 +12,14 @@
     },
     {
       "path": "README.md",
-      "bytes": 8974,
-      "sha256": "ad3eef7e718bc3a51441b9082540b2d6f8fbf4b37b2cbccf058422d07202da32",
+      "bytes": 10278,
+      "sha256": "39fa8bfc1c58d126d885c3b7b9aa95b4cfbdee8fc84f1c1379f7132067ba797a",
       "basis": "project-authored code or public-edition documentation"
     },
     {
       "path": "REPORT.md",
-      "bytes": 29824,
-      "sha256": "ea5d0107ab02e231b37ce80a77c2157b94c00c5ee9d3d32a62860a9299487efd",
+      "bytes": 35886,
+      "sha256": "a0b278a8b1c47a019989edb1e452e49729cf743954e37065db190b2831d01688",
       "basis": "project-authored code or public-edition documentation"
     },
     {
@@ -299,8 +300,8 @@
     },
     {
       "path": "data/analysis/2026-10-22/gpu_mining/REPORT.md",
-      "bytes": 19268,
-      "sha256": "d4a0d3789d31c8d3cd524bc026c9da4c490b4786e3ad2dbe3b4e1e347a36c7b3",
+      "bytes": 19314,
+      "sha256": "2ae098d35d3732f121f68829d84099c56e7a8187ea3f203fe17c35b0633526c5",
       "basis": "project-authored code or public-edition documentation"
     },
     {
@@ -359,8 +360,8 @@
     },
     {
       "path": "data/excluded_inventory.csv",
-      "bytes": 123936,
-      "sha256": "a444852c1c483e14ddf5cd0a231805f22b59fefb41464c6e603fe1d18d37e08d",
+      "bytes": 135342,
+      "sha256": "d40717102d642f147c8502e0b97b332d96740dc6a09f03cb3bb0b404f1b5682b",
       "basis": "project-authored code or public-edition documentation"
     },
     {
@@ -421,13 +422,37 @@
       "path": "data/public/model_comparison.json",
       "bytes": 939655,
       "sha256": "49e0ab2f6d1cd72dd0ed1f9118497b23194f3f38d14b5ec6f574d84e44696450",
-      "basis": "project-authored non-reconstructive model validation aggregates; not Coin Metrics ETH data"
+      "basis": "project-authored non-reconstructive analysis and validation aggregates; not Coin Metrics ETH data"
     },
     {
       "path": "data/public/model_comparison_metrics.csv",
       "bytes": 31928,
       "sha256": "db7ba718d509d2a11c2788bee11c2d509c6d07395c23e62d2aaa1000237830df",
-      "basis": "project-authored non-reconstructive model validation aggregates; not Coin Metrics ETH data"
+      "basis": "project-authored non-reconstructive analysis and validation aggregates; not Coin Metrics ETH data"
+    },
+    {
+      "path": "data/public/recent_analysis.json",
+      "bytes": 313159,
+      "sha256": "21f7886d4a252dc9a6f659b9ee6e38b8e0968b8e310ba7346410231356e59395",
+      "basis": "project-authored non-reconstructive analysis and validation aggregates; not Coin Metrics ETH data"
+    },
+    {
+      "path": "data/public/recent_correlations.csv",
+      "bytes": 91871,
+      "sha256": "47b9ec8abebb18eda2a224eefe57fc69eb5ec345675ff0ca36a531b76f910c13",
+      "basis": "project-authored non-reconstructive analysis and validation aggregates; not Coin Metrics ETH data"
+    },
+    {
+      "path": "data/public/recent_coverage.csv",
+      "bytes": 2839,
+      "sha256": "b7890c73650ae48f290c4134dd6552a365193c019299334ad9e1e0625eaf9a19",
+      "basis": "project-authored non-reconstructive analysis and validation aggregates; not Coin Metrics ETH data"
+    },
+    {
+      "path": "data/public/source_freshness.json",
+      "bytes": 12558,
+      "sha256": "614b1ced56b330ee28a5bed68c11644070c68392b797a3a12798678ecdb9e988",
+      "basis": "project-authored non-reconstructive analysis and validation aggregates; not Coin Metrics ETH data"
     },
     {
       "path": "data/references_omitted.json",
@@ -437,8 +462,8 @@
     },
     {
       "path": "data/source_catalog.json",
-      "bytes": 4071,
-      "sha256": "bb8c1f42f4c592ef0fef99cbceba9526dffb50f8b4a58f29e9af2a12d063428c",
+      "bytes": 4111,
+      "sha256": "fb5e6e314b67a1b89cd29f522afb8a099570123d569979d29d1149569c20176b",
       "basis": "project-authored code or public-edition documentation"
     },
     {
@@ -547,25 +572,37 @@
       "path": "docs/assets/public/04_model_comparison.png",
       "bytes": 172735,
       "sha256": "bb5158924aadb1c3733c275a476d1e091b68da19eecffa8ad17c58ef8ce84257",
-      "basis": "project-authored non-reconstructive model validation aggregates; not Coin Metrics ETH data"
+      "basis": "project-authored non-reconstructive analysis and validation aggregates; not Coin Metrics ETH data"
     },
     {
       "path": "docs/assets/public/04_model_comparison.svg",
       "bytes": 230807,
       "sha256": "c578a6a0c2b3e978632c0624af38c654c82badd35bbf4e114cd8d21704a85790",
-      "basis": "project-authored non-reconstructive model validation aggregates; not Coin Metrics ETH data"
+      "basis": "project-authored non-reconstructive analysis and validation aggregates; not Coin Metrics ETH data"
     },
     {
       "path": "docs/assets/public/05_model_coverage.png",
       "bytes": 332000,
       "sha256": "55fcf02544a86d2c92aa1df235315d49b6e89dd526f8f89bc7e2fd29dfdcce0b",
-      "basis": "project-authored non-reconstructive model validation aggregates; not Coin Metrics ETH data"
+      "basis": "project-authored non-reconstructive analysis and validation aggregates; not Coin Metrics ETH data"
     },
     {
       "path": "docs/assets/public/05_model_coverage.svg",
       "bytes": 319678,
       "sha256": "ca424d57120203d74bd23a8c872b0430064141f9e0e0d285cafec358c5c62d66",
-      "basis": "project-authored non-reconstructive model validation aggregates; not Coin Metrics ETH data"
+      "basis": "project-authored non-reconstructive analysis and validation aggregates; not Coin Metrics ETH data"
+    },
+    {
+      "path": "docs/assets/public/06_recent_analysis.png",
+      "bytes": 389907,
+      "sha256": "7bd78080088b97a62324560bc9c15063599f85de0b98e28d509aef41391b9ce2",
+      "basis": "project-authored non-reconstructive analysis and validation aggregates; not Coin Metrics ETH data"
+    },
+    {
+      "path": "docs/assets/public/06_recent_analysis.svg",
+      "bytes": 357849,
+      "sha256": "8de6a7d409495c8a4c54c310c0ccbb665c330144b7ee2b0a5efb1e4d7d8b163c",
+      "basis": "project-authored non-reconstructive analysis and validation aggregates; not Coin Metrics ETH data"
     },
     {
       "path": "docs/assets/public/public_01_trend.png",
@@ -587,8 +624,8 @@
     },
     {
       "path": "docs/data_redistribution.md",
-      "bytes": 13444,
-      "sha256": "3ea5085c8a94e9144bd039172f80fa45a5c50e33857010067457510d8caa0ed9",
+      "bytes": 13975,
+      "sha256": "29acdd6dd0537742d70da1cd99cc4d9827eb211b689a169e96b765397bc6ca10",
       "basis": "project-authored code or public-edition documentation"
     },
     {
@@ -623,8 +660,8 @@
     },
     {
       "path": "docs/full_reproduction.md",
-      "bytes": 12506,
-      "sha256": "ae434c693e3bf5000ea1c47b43938d3a2453078b9b58732d67b807d46eba695f",
+      "bytes": 13487,
+      "sha256": "2f25ce641668b701156458148f0a327c82b52829fffab9be008928c8da98e427",
       "basis": "project-authored code or public-edition documentation"
     },
     {
@@ -652,9 +689,15 @@
       "basis": "project-authored code or public-edition documentation"
     },
     {
+      "path": "docs/recent_analysis.md",
+      "bytes": 8071,
+      "sha256": "cdec684846ddbda8d6f9d42aa4ce63a67508c7b8f4990ae2beef6f1f655acf46",
+      "basis": "project-authored code or public-edition documentation"
+    },
+    {
       "path": "docs/reproduction.md",
-      "bytes": 5553,
-      "sha256": "115bbe80dbe3aa80171e78b538782d9f477e47392d7eecf70b19be2138db5aa0",
+      "bytes": 6650,
+      "sha256": "f5bbd5f4f316824d012c1a5a2db29634e5e954547eb552a88a94ce07637bb67d",
       "basis": "project-authored code or public-edition documentation"
     },
     {
@@ -665,20 +708,20 @@
     },
     {
       "path": "docs/submission_checklist.md",
-      "bytes": 4968,
-      "sha256": "7626ad6340faa2a9dca8be09db262957a77e782a960bb689bee73f682b320947",
+      "bytes": 5225,
+      "sha256": "4b194587968ba62efa97c08dfc103173cfe62531e00775e12b8ab6838f13012f",
       "basis": "project-authored code or public-edition documentation"
     },
     {
       "path": "publication/templates/README.md.in",
-      "bytes": 8974,
-      "sha256": "ad3eef7e718bc3a51441b9082540b2d6f8fbf4b37b2cbccf058422d07202da32",
+      "bytes": 10278,
+      "sha256": "39fa8bfc1c58d126d885c3b7b9aa95b4cfbdee8fc84f1c1379f7132067ba797a",
       "basis": "project-authored code or public-edition documentation"
     },
     {
       "path": "publication/templates/REPORT.md.in",
-      "bytes": 29824,
-      "sha256": "ea5d0107ab02e231b37ce80a77c2157b94c00c5ee9d3d32a62860a9299487efd",
+      "bytes": 35886,
+      "sha256": "a0b278a8b1c47a019989edb1e452e49729cf743954e37065db190b2831d01688",
       "basis": "project-authored code or public-edition documentation"
     },
     {
@@ -707,8 +750,8 @@
     },
     {
       "path": "publication/templates/data/analysis/2026-10-22/gpu_mining/REPORT.md.in",
-      "bytes": 18460,
-      "sha256": "195d5b2f81d1b4540881bd3991ee427d8b92ec1257baff4534a758eaa285eabd",
+      "bytes": 18506,
+      "sha256": "b50f853bc72e7ed1e8e59b102863e1bf78d55e932238406cd32a92f8764332d4",
       "basis": "project-authored code or public-edition documentation"
     },
     {
@@ -743,14 +786,14 @@
     },
     {
       "path": "publication/templates/docs/reproduction.md.in",
-      "bytes": 5553,
-      "sha256": "115bbe80dbe3aa80171e78b538782d9f477e47392d7eecf70b19be2138db5aa0",
+      "bytes": 6650,
+      "sha256": "f5bbd5f4f316824d012c1a5a2db29634e5e954547eb552a88a94ce07637bb67d",
       "basis": "project-authored code or public-edition documentation"
     },
     {
       "path": "publication/templates/docs/submission_checklist.md.in",
-      "bytes": 4968,
-      "sha256": "7626ad6340faa2a9dca8be09db262957a77e782a960bb689bee73f682b320947",
+      "bytes": 5225,
+      "sha256": "4b194587968ba62efa97c08dfc103173cfe62531e00775e12b8ab6838f13012f",
       "basis": "project-authored code or public-edition documentation"
     },
     {
@@ -821,14 +864,20 @@
     },
     {
       "path": "scripts/build_public_submission.py",
-      "bytes": 12844,
-      "sha256": "8e4fbf4322a88e488c46f6c6df0114d91935c70a6a835760bf2218166a66631b",
+      "bytes": 13044,
+      "sha256": "2f9c8630dc4ab7e7c12f1e6e568d413d1169bbcb0759ef30b36bea919e9b5602",
       "basis": "project-authored code or public-edition documentation"
     },
     {
       "path": "scripts/build_recent_dashboard.py",
       "bytes": 14719,
       "sha256": "fd43c05cae6cd87c0cec3f152a94e0edb32829d66e112ef11b4ed4cb34dc1350",
+      "basis": "project-authored code or public-edition documentation"
+    },
+    {
+      "path": "scripts/build_recent_report.py",
+      "bytes": 15284,
+      "sha256": "6cb98a556c1fc5f968273e8f8bfa3d45dcbe91d30315eafea99793f7893b10d0",
       "basis": "project-authored code or public-edition documentation"
     },
     {
@@ -910,6 +959,12 @@
       "basis": "project-authored code or public-edition documentation"
     },
     {
+      "path": "scripts/plot_recent_report.py",
+      "bytes": 3971,
+      "sha256": "3fe8a4bd603b01c39447e81c87a1f8ebb7ba6835c24b104aa3b512c8afa155be",
+      "basis": "project-authored code or public-edition documentation"
+    },
+    {
       "path": "scripts/plot_report_recent_prices.py",
       "bytes": 4091,
       "sha256": "b44791e97a79eac27a3e8e3308bdf852f2cf9fb0060e982e2b09ed29bd8c2dce",
@@ -964,9 +1019,15 @@
       "basis": "project-authored code or public-edition documentation"
     },
     {
+      "path": "scripts/refresh_report_sources.py",
+      "bytes": 7706,
+      "sha256": "c22e094475ff06b84c3f3a9b3a780fa275322debd3cb5bee286c00536f5b5ad1",
+      "basis": "project-authored code or public-edition documentation"
+    },
+    {
       "path": "scripts/verify_public_submission.py",
-      "bytes": 10792,
-      "sha256": "ebe7fa810fdd77d3d453aac81fad1c9d57ee55b748344759538319ec4d2f48c3",
+      "bytes": 12105,
+      "sha256": "7a2a365ea0a35c177b50b8f8835f969e4a46285981b99edc52f761a7bb71cb56",
       "basis": "project-authored code or public-edition documentation"
     },
     {
@@ -1081,6 +1142,12 @@
       "path": "tests/test_price_preprocessing.py",
       "bytes": 8027,
       "sha256": "b620e40e45721277982d741a0c9e202e17ebedd1d63958a60c25d01ac5b6183d",
+      "basis": "project-authored code or public-edition documentation"
+    },
+    {
+      "path": "tests/test_recent_report.py",
+      "bytes": 3477,
+      "sha256": "8e111a2ef805ee5fec904000b58f01f30c5a73b1b12e43c7e178c9176b804ec1",
       "basis": "project-authored code or public-edition documentation"
     },
     {

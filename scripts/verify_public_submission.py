@@ -153,7 +153,24 @@ def verify(root):
             links += 1
             images += match[0].startswith('!')
     report = files['REPORT.md'].read_text()
-    require(len(re.findall(r'!\[', report)) == 15, 'Report image count should be original 13 + 2 model comparison figures')
+    report_images = re.findall(r'!\[[^\]]*\]\(([^)]+)\)', report)
+    require(len(report_images) == 16, 'Report must retain the existing 15 figures and add one recent analysis figure')
+    require('docs/assets/public/06_recent_analysis.png' in report_images,
+            'Recent analysis figure absent from REPORT')
+    recent = read_json(root, 'data/public/recent_analysis.json')
+    require(recent['firstWeek'] == '2023-01-06' and recent['lastWeek'] == '2026-10-23',
+            'Recent analysis range mismatch')
+    require(len(recent['parts']) == 14 and len(recent['markets']) == 7 and recent['calendarWeeks'] == 199,
+            'Recent coverage dimensions mismatch')
+    require(len(recent['correlations']) == 14*7*17, 'Recent correlation dimension mismatch')
+    for s in recent['parts'] + recent['markets']:
+        c = s['coverage']
+        require(c['total'] == recent['calendarWeeks'] and c['observed'] + c['beforeFirstObservation'] + c['missingAfterFirst'] == c['total'],
+                'Recent coverage does not reconcile')
+        require(0 <= c['returns'] < c['observed'], 'Invalid recent return n')
+    fresh = read_json(root, 'data/public/source_freshness.json')
+    require(len(fresh['records']) == 29 and all(r['status'] == 'ok' for r in fresh['records']),
+            'Fresh source availability mismatch')
     comparison = read_json(root, 'data/public/model_comparison.json')
     require(len(comparison['series']) == comparison['summary']['series'] == len(metrics), 'Comparison series mismatch')
     require(comparison['summary']['commonTestRows'] == sum(s['common']['testN'] for s in comparison['series']), 'Common test n mismatch')
@@ -168,6 +185,8 @@ def verify(root):
             for item in value:
                 check_aggregate(item)
     check_aggregate(comparison)
+    check_aggregate(recent)
+    check_aggregate(fresh)
     for series in comparison['series']:
         for model in series['models']:
             ev = model['evaluation']
@@ -178,7 +197,7 @@ def verify(root):
         require(series['selectedAllEvaluation']['n'] == int(metric['n']), 'Selected full evaluation n mismatch')
         if series['selection']['status'] != 'past_validation_only':
             require(series['selection']['candidate'] == series['incumbent']['candidate'], 'Test-only replacement')
-    print(f'PASS: {len(entries)} manifest files; {links} local Markdown links ({images} images); ETH 1096/156/155; proxies 988+108; forecast 35/0/{fc["predictionRows"]}; model comparison {comparison["summary"]["commonTestRows"]} common rows')
+    print(f'PASS: {len(entries)} manifest files; {links} local Markdown links ({images} images); ETH 1096/156/155; proxies 988+108; forecast 35/0/{fc["predictionRows"]}; model comparison {comparison["summary"]["commonTestRows"]} common rows; recent 14 parts/7 markets/199 weeks; 29 source checks')
 
 
 if __name__ == '__main__':

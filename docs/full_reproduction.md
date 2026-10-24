@@ -147,3 +147,15 @@ python3 -m http.server 8766 --bind 127.0.0.1 --directory dashboard/dist
 ## 2026-10-24 ARIMA·SARIMA·ETS 확장 비교
 
 허가된 원본을 복원한 연구 환경에서는 기존 build_forecast.py 뒤에 compare_forecast_models.py와 write_forecast_report.py를 실행한다. 공개 집계만으로 실제 가격 모형을 재학습할 수는 없다. 공개 집계의 그림·상세 설명은 plot_model_comparison.py와 write_model_comparison_report.py로 다시 생성한다. [고정 규약](forecast_protocol.md), [결과와 한계](model_comparison.md)를 함께 확인한다.
+
+## 2026-10-25 최근 동향 재수집·분석
+
+원래 예측 벤치마크 입력·결과를 바꾸지 않고 새 경로를 사용한다. 수집기는 같은 날짜의 manifest가 있으면 덮어쓰기를 거부한다.
+
+```bash
+.venv/bin/python scripts/refresh_report_sources.py --as-of 2026-10-25 --fetch
+.venv/bin/python scripts/build_recent_report.py --as-of 2026-10-25
+.venv/bin/python -m unittest discover -s tests -p test_recent_report.py -v
+```
+
+입력은 `data/verification/2026-10-25/report_refresh/`, 원가격 주간 CSV·비공개 곡선은 `data/analysis/2026-10-25/recent/`에 보존한다. 공개 출력은 `data/public/recent_analysis.json`, `recent_coverage.csv`, `recent_correlations.csv`, `source_freshness.json`과 `docs/recent_analysis.md`다. `scripts/plot_recent_report.py`는 공개 집계만으로 그림을 재생성한다. 수집일·실제 관측일·주간 날짜를 구분하고 10월 24일 호가는 아직 끝나지 않은 다음 주로 남긴다.

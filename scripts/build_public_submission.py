@@ -80,8 +80,9 @@ def digest(p):
 
 def classify(rel):
     if rel.startswith(('data/public/model_comparison', 'docs/assets/public/04_model_comparison',
-                       'docs/assets/public/05_model_coverage')):
-        return 'project-authored non-reconstructive model validation aggregates; not Coin Metrics ETH data'
+                       'docs/assets/public/05_model_coverage', 'data/public/recent_',
+                       'data/public/source_freshness', 'docs/assets/public/06_recent_analysis')):
+        return 'project-authored non-reconstructive analysis and validation aggregates; not Coin Metrics ETH data'
     if "crypto/" in rel or rel.startswith("docs/assets/public/0") or rel.startswith("data/public/"):
         return "Coin Metrics ETH / CC BY-NC 4.0 or documented aggregate"
     if rel in SAFE_TABLES or Path(rel).suffix in (".png", ".svg"):
@@ -166,7 +167,7 @@ def assemble(output):
             parsed = urlsplit(value)
             if not parsed.username and not re.search(r"(?:token|signature|api_key|secret|password)=", parsed.query, re.I):
                 urls.add(urlunsplit(parsed))
-    (output / "data/source_catalog.json").write_text(json.dumps({"checked": "2026-10-24", "note": "Source URLs only; access is not a redistribution license.", "urls": sorted(urls)}, ensure_ascii=False, indent=2) + "\n")
+    (output / "data/source_catalog.json").write_text(json.dumps({"checked": "2026-10-25", "note": "Source URLs only; access is not a redistribution license. Rights review remains dated 2026-10-24.", "urls": sorted(urls)}, ensure_ascii=False, indent=2) + "\n")
 
     # Missing source links become an explicit access note, never a fake CSV.
     link_pattern = re.compile(r"(!?)\[([^\]]*)\]\(([^\s)]+)(?:\s+\"[^\"]*\")?\)")
@@ -204,7 +205,7 @@ def assemble(output):
             if SECRET.search(content):
                 raise ValueError(f"Credential-shaped content detected: {rel}")
         files.append({"path": rel, "bytes": p.stat().st_size, "sha256": digest(p), "basis": classify(rel)})
-    marker.write_text(json.dumps({"edition": "public-submission", "date": "2026-10-24", "repository": "https://github.com/highslow1536/Codyssey-M1-1", "files": files}, ensure_ascii=False, indent=2) + "\n")
+    marker.write_text(json.dumps({"edition": "public-submission", "date": "2026-10-25", "rightsReviewDate": "2026-10-24", "repository": "https://github.com/highslow1536/Codyssey-M1-1", "files": files}, ensure_ascii=False, indent=2) + "\n")
     print(f"Public edition: {len(files)} files; {len(excluded)} excluded inventory entries; {len(redirects)} references explained")
 
 
