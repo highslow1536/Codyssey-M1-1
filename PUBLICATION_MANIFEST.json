@@ -12,14 +12,14 @@
     },
     {
       "path": "README.md",
-      "bytes": 10278,
-      "sha256": "39fa8bfc1c58d126d885c3b7b9aa95b4cfbdee8fc84f1c1379f7132067ba797a",
+      "bytes": 10404,
+      "sha256": "d00a89878223b033b3b28fdf124278c42c4193c5ab2f03a0c23945a11576d2c6",
       "basis": "project-authored code or public-edition documentation"
     },
     {
       "path": "REPORT.md",
-      "bytes": 35886,
-      "sha256": "a0b278a8b1c47a019989edb1e452e49729cf743954e37065db190b2831d01688",
+      "bytes": 38276,
+      "sha256": "f5d69a0dd1910f6827e753e2099d852e6dea11b9ac450f4e5507135b20e70661",
       "basis": "project-authored code or public-edition documentation"
     },
     {
@@ -480,8 +480,8 @@
     },
     {
       "path": "docs/assets/README.md",
-      "bytes": 2645,
-      "sha256": "f99ff9421e58fd70796193f54d8863ad53f1e2104d7068372acce66a9b67d8ac",
+      "bytes": 3286,
+      "sha256": "77137002bd4c10ee8e40b618de43e19227d7c7473a432303983e2a97aad12db2",
       "basis": "project-authored code or public-edition documentation"
     },
     {
@@ -605,6 +605,30 @@
       "basis": "project-authored non-reconstructive analysis and validation aggregates; not Coin Metrics ETH data"
     },
     {
+      "path": "docs/assets/public/07_report_summary.png",
+      "bytes": 261031,
+      "sha256": "e21a218fa0ad48812f465baacd8423ece19d1ee1f0867309b1cbbc9cd3f3461b",
+      "basis": "project-authored non-reconstructive analysis and validation aggregates; not Coin Metrics ETH data"
+    },
+    {
+      "path": "docs/assets/public/07_report_summary.svg",
+      "bytes": 252731,
+      "sha256": "892a5d4c4f0e7d1d1141c72b41725a1db6d6f7c809aa6c87a0853ad2826f19eb",
+      "basis": "project-authored non-reconstructive analysis and validation aggregates; not Coin Metrics ETH data"
+    },
+    {
+      "path": "docs/assets/public/08_missing_values_guide.png",
+      "bytes": 247106,
+      "sha256": "adf3925eb3e4a22548de13d72bf1e8e0ccd71e3db583c75802cbd561e59102bb",
+      "basis": "project-authored non-reconstructive analysis and validation aggregates; not Coin Metrics ETH data"
+    },
+    {
+      "path": "docs/assets/public/08_missing_values_guide.svg",
+      "bytes": 236227,
+      "sha256": "e5f2f11ecab915cfd86c88e1a18d5c19ed5591d51e22b69ad80760de51ac655a",
+      "basis": "project-authored non-reconstructive analysis and validation aggregates; not Coin Metrics ETH data"
+    },
+    {
       "path": "docs/assets/public/public_01_trend.png",
       "bytes": 172927,
       "sha256": "12a5a71ac51b9422a6505cbd19ea12b6a9631151d8aa938833dcbc19f2e429ea",
@@ -708,20 +732,20 @@
     },
     {
       "path": "docs/submission_checklist.md",
-      "bytes": 5225,
-      "sha256": "4b194587968ba62efa97c08dfc103173cfe62531e00775e12b8ab6838f13012f",
+      "bytes": 5294,
+      "sha256": "1140ebafba5133177b0f967ba0e5d3f334f9d6c3b69509a9e61336aa9bcd7225",
       "basis": "project-authored code or public-edition documentation"
     },
     {
       "path": "publication/templates/README.md.in",
-      "bytes": 10278,
-      "sha256": "39fa8bfc1c58d126d885c3b7b9aa95b4cfbdee8fc84f1c1379f7132067ba797a",
+      "bytes": 10404,
+      "sha256": "d00a89878223b033b3b28fdf124278c42c4193c5ab2f03a0c23945a11576d2c6",
       "basis": "project-authored code or public-edition documentation"
     },
     {
       "path": "publication/templates/REPORT.md.in",
-      "bytes": 35886,
-      "sha256": "a0b278a8b1c47a019989edb1e452e49729cf743954e37065db190b2831d01688",
+      "bytes": 38276,
+      "sha256": "f5d69a0dd1910f6827e753e2099d852e6dea11b9ac450f4e5507135b20e70661",
       "basis": "project-authored code or public-edition documentation"
     },
     {
@@ -756,8 +780,8 @@
     },
     {
       "path": "publication/templates/docs/assets/README.md.in",
-      "bytes": 2645,
-      "sha256": "f99ff9421e58fd70796193f54d8863ad53f1e2104d7068372acce66a9b67d8ac",
+      "bytes": 3286,
+      "sha256": "77137002bd4c10ee8e40b618de43e19227d7c7473a432303983e2a97aad12db2",
       "basis": "project-authored code or public-edition documentation"
     },
     {
@@ -792,8 +816,8 @@
     },
     {
       "path": "publication/templates/docs/submission_checklist.md.in",
-      "bytes": 5225,
-      "sha256": "4b194587968ba62efa97c08dfc103173cfe62531e00775e12b8ab6838f13012f",
+      "bytes": 5294,
+      "sha256": "1140ebafba5133177b0f967ba0e5d3f334f9d6c3b69509a9e61336aa9bcd7225",
       "basis": "project-authored code or public-edition documentation"
     },
     {
@@ -864,8 +888,8 @@
     },
     {
       "path": "scripts/build_public_submission.py",
-      "bytes": 13044,
-      "sha256": "2f9c8630dc4ab7e7c12f1e6e568d413d1169bbcb0759ef30b36bea919e9b5602",
+      "bytes": 13153,
+      "sha256": "810c8ffc082c9c4e76714894fe35ffa267f3190eca071e1ec6301f621c889b36",
       "basis": "project-authored code or public-edition documentation"
     },
     {
@@ -965,6 +989,12 @@
       "basis": "project-authored code or public-edition documentation"
     },
     {
+      "path": "scripts/plot_report_reader_guide.py",
+      "bytes": 6626,
+      "sha256": "885a3b5565d05196425b450fb97ac7de816e10b7f0adbe63e8210943c705cf09",
+      "basis": "project-authored code or public-edition documentation"
+    },
+    {
       "path": "scripts/plot_report_recent_prices.py",
       "bytes": 4091,
       "sha256": "b44791e97a79eac27a3e8e3308bdf852f2cf9fb0060e982e2b09ed29bd8c2dce",
@@ -1026,8 +1056,8 @@
     },
     {
       "path": "scripts/verify_public_submission.py",
-      "bytes": 12105,
-      "sha256": "7a2a365ea0a35c177b50b8f8835f969e4a46285981b99edc52f761a7bb71cb56",
+      "bytes": 12291,
+      "sha256": "a6a921043fa20f586e5f06595b29e21eed3ec12a90d745b02e0eff82cad89543",
       "basis": "project-authored code or public-edition documentation"
     },
     {

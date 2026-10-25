@@ -154,9 +154,11 @@ def verify(root):
             images += match[0].startswith('!')
     report = files['REPORT.md'].read_text()
     report_images = re.findall(r'!\[[^\]]*\]\(([^)]+)\)', report)
-    require(len(report_images) == 16, 'Report must retain the existing 15 figures and add one recent analysis figure')
+    require(len(report_images) == 18, 'Report must retain the existing 16 figures and add two reader guides')
     require('docs/assets/public/06_recent_analysis.png' in report_images,
             'Recent analysis figure absent from REPORT')
+    require({'docs/assets/public/07_report_summary.png', 'docs/assets/public/08_missing_values_guide.png'} <= set(report_images),
+            'Summary or missing-value guide absent from REPORT')
     recent = read_json(root, 'data/public/recent_analysis.json')
     require(recent['firstWeek'] == '2023-01-06' and recent['lastWeek'] == '2026-10-23',
             'Recent analysis range mismatch')

@@ -8,7 +8,7 @@
 
 ## 평가자가 확인할 순서
 
-1. [REPORT](REPORT.md): 분석 질문 5개, 자료·전처리·분석·시각화·인사이트·한계·AI 로그.
+1. [REPORT의 30초 요약](REPORT.md#0-30초-요약-그래서-지금-사도-될까) → [결측 처리 표](REPORT.md#4-전처리와-분석-방법) → [최종 결론](REPORT.md#8-결론과-한계). 상세 점수는 펼쳐서 확인한다.
 2. [제출 체크표](docs/submission_checklist.md): PDF 필수 요건과 근거, 원본 제외로 인한 재현 제한.
 3. [최근 분석 집계](data/public/recent_analysis.json): 14개 부품·7개 시장의 실제 관측 수와 변화율 상관. 과거 [공개 ETH 자료](data/processed/2026-10-22/crypto/eth_daily.csv)는 일별 1,096점으로 별도 제공.
 4. 아래 명령으로 공개 대시보드를 열어 연도·지표를 바꾸고 실제 n과 예측 검증 요약 확인.

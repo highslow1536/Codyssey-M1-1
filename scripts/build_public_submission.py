@@ -81,7 +81,8 @@ def digest(p):
 def classify(rel):
     if rel.startswith(('data/public/model_comparison', 'docs/assets/public/04_model_comparison',
                        'docs/assets/public/05_model_coverage', 'data/public/recent_',
-                       'data/public/source_freshness', 'docs/assets/public/06_recent_analysis')):
+                       'data/public/source_freshness', 'docs/assets/public/06_recent_analysis',
+                       'docs/assets/public/07_report_summary', 'docs/assets/public/08_missing_values_guide')):
         return 'project-authored non-reconstructive analysis and validation aggregates; not Coin Metrics ETH data'
     if "crypto/" in rel or rel.startswith("docs/assets/public/0") or rel.startswith("data/public/"):
         return "Coin Metrics ETH / CC BY-NC 4.0 or documented aggregate"
