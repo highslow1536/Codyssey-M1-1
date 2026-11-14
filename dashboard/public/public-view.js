@@ -1,6 +1,6 @@
 'use strict';
 var DATA_URL = '../../data/public/dashboard.json';
-var RECENT_URL = '../../data/public/recent_analysis.json';
+var MARKET_URL = '../../data/public/market_price_snapshot.json';
 var MC_URL = '../../data/public/model_comparison.json';
 var mc = { data: null, model: 'all', series: 'all' };
 var MERGE_DATE = '2022-09-15';
@@ -57,40 +57,33 @@ function selectTab(name, updateUrl) {
 
 function fmtChange(change) {
   if (!Number.isFinite(change)) return '미산출';
-  return (change > 0 ? '+' : change < 0 ? '−' : '') + (Math.abs(change) * 100).toFixed(2) + '%';
+  return (change > 0 ? '+' : change < 0 ? '−' : '') + Math.abs(change).toFixed(1) + '%';
 }
 
-function renderRecent(data) {
-  var parts = data.parts;
-  var valid = parts.filter(function(p) { return Number.isFinite(p.coverage.recent13WeekChange); }).length;
-  var picks = { 'B0BLTH3KWV__amazon-in': 'overview-ddr5', 'B0CGQ3YCV9__amazon-in': 'overview-ddr4' };
-  Object.keys(picks).forEach(function(id) {
-    var p = parts.find(function(part) { return part.id === id; });
-    var change = p ? p.coverage.recent13WeekChange : null;
-    var value = el(picks[id]);
+function renderMarket(data) {
+  ['gpu', 'cpu'].forEach(function(id) {
+    var change = data.indices.find(function(index) { return index.id === id; }).change30dPct;
+    var value = el('overview-' + id);
     value.textContent = fmtChange(change);
-    if (change > 0) value.classList.add('up');
-    if (change < 0) value.classList.add('down');
+    value.classList.toggle('up', change > 0);
+    value.classList.toggle('down', change < 0);
   });
-  el('overview-coverage').textContent = data.lastWeek + ' 종료 주 기준 · ' + fmtInt(parts.length) +
-    '개 제품 중 ' + fmtInt(valid) + '개만 13주 변화 산출';
-  el('overview-period').textContent = data.firstWeek + ' ~ ' + data.lastWeek + ' (' +
-    fmtInt(data.calendarWeeks) + '주) · 재조회 ' + data.asOf;
-  el('overview-parts').innerHTML = parts.map(function(p) {
-    return '<tr><th scope="row">' + esc(p.shortName) + '<small>' +
-      esc((p.region === 'IN' ? '인도' : p.region === 'US' ? '미국' : p.region) + ' · ' + p.category) +
-      '</small></th><td class="num">' + fmtInt(p.coverage.observed) + ' / ' + fmtInt(p.coverage.total) +
-      '</td><td class="num">' + fmtChange(p.coverage.recent13WeekChange) + '</td></tr>';
+  el('market-observed').textContent = data.observedOn;
+  el('market-retrieved').textContent = data.retrievedAt.slice(0, 10);
+  el('overview-parts').innerHTML = data.indices.map(function(index) {
+    return '<tr><th scope="row">' + esc(index.label) + '</th><td class="num">' +
+      fmtChange(index.change7dPct) + '</td><td class="num">' + fmtChange(index.change30dPct) +
+      '</td><td class="num">' + fmtInt(index.measured) + '</td></tr>';
   }).join('');
 }
 
-function loadRecent() {
-  fetch(RECENT_URL, { cache: 'no-store' }).then(function(res) {
+function loadMarket() {
+  fetch(MARKET_URL, { cache: 'no-store' }).then(function(res) {
     if (!res.ok) throw new Error('HTTP ' + res.status);
     return res.json();
-  }).then(renderRecent).catch(function() {
+  }).then(renderMarket).catch(function() {
     el('overview-coverage').textContent = '가격 분석 집계를 불러오지 못했습니다.';
-    el('overview-parts').innerHTML = '<tr><td colspan="3">페이지를 새로 고쳐 주세요.</td></tr>';
+    el('overview-parts').innerHTML = '<tr><td colspan="4">페이지를 새로 고쳐 주세요.</td></tr>';
   });
 }
 
@@ -263,8 +256,8 @@ function renderForecast(fc) {
   el('f-rows').textContent = fmtInt(fc.predictionRows);
   el('overview-passed').textContent = fmtInt(fc.passed) + ' / ' + fmtInt(fc.series);
   el('overview-forecast-title').textContent = fc.passed === 0 ? '구매 추천은 보류' : '구매 추천 기준을 검증했습니다';
-  el('overview-forecast-note').textContent = '평가 ' + fmtInt(fc.predictionRows) +
-    '행 · 평가 기간이 겹쳐 독립 표본 수와 다름';
+  el('overview-forecast-note').textContent = '검증 기준 2026-10-23 · 평가 ' +
+    fmtInt(fc.predictionRows) + '행(기간 중첩 포함)';
   var cards = el('forecast-cards');
   var table = el('forecast-table').querySelector('tbody');
   var ex = fc.examples || [];
@@ -503,7 +496,7 @@ document.addEventListener('DOMContentLoaded', function() {
     if (ev.key === 'Escape') { hideTip(); }
   });
 
-  loadRecent();
+  loadMarket();
   initMc();
   fetch(DATA_URL, { cache: 'no-store' }).then(function(res) {
     if (!res.ok) throw new Error('HTTP ' + res.status);

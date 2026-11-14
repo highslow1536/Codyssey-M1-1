@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "source": "Pricify",
+  "sourceUrl": "https://pricify.ai/indices",
+  "observedOn": "2026-11-11",
+  "observationTimezone": "America/New_York",
+  "retrievedAt": "2026-11-14T21:11:52+09:00",
+  "comparisonDays": 30,
+  "indices": [
+    {"id": "gpu", "label": "GPU", "change7dPct": 2.2, "change30dPct": 10.6, "measured": 269},
+    {"id": "cpu", "label": "CPU", "change7dPct": -1.4, "change30dPct": -1.9, "measured": 93},
+    {"id": "ddr5", "label": "DDR5 RAM", "change7dPct": -0.5, "change30dPct": 2.7, "measured": 637},
+    {"id": "ddr4", "label": "DDR4 RAM", "change7dPct": -0.5, "change30dPct": 1.4, "measured": 363},
+    {"id": "nvme", "label": "NVMe SSD", "change7dPct": -1.1, "change30dPct": 0.1, "measured": 298}
+  ]
+}
