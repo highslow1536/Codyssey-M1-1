@@ -20,7 +20,6 @@ button:focus-visible,a:focus-visible,select:focus-visible,[tabindex]:focus-visib
 .workspace-label span{font-size:9px;margin-left:7px;background:#34564a;padding:3px 6px;border-radius:4px;color:#d8e4cc}
 .sidebar nav{display:grid;gap:8px;margin:26px -10px}
 .sidebar nav a{padding:12px 15px;border-radius:7px;display:flex;align-items:center;gap:13px;color:#becfc3;font-size:13px;text-decoration:none}
-.sidebar nav a span{font-size:21px;width:22px;line-height:1}
 .sidebar nav a:hover{background:#244a40}
 .sidebar nav a.active{background:#dbe6b7;color:#224339;font-weight:650}
 .sidebar-note{margin-top:35px;font-size:10px;color:#b9c7b8}
@@ -28,8 +27,7 @@ button:focus-visible,a:focus-visible,select:focus-visible,[tabindex]:focus-visib
 .status-dot{display:inline-block;width:6px;height:6px;background:#91b971;border-radius:50%;margin-right:7px;vertical-align:2px}
 .sidebar-bottom{margin-top:auto;border-top:1px solid #36554a;padding-top:21px}
 .sidebar-bottom>span{font-size:8px;letter-spacing:1.6px;color:#a1b6a8}
-.sidebar-bottom strong{display:block;font-size:24px;font-weight:400;letter-spacing:1px;margin:5px 0 12px}
-.sidebar-bottom small{color:#91ac9a;font-size:10px;line-height:1.9}
+.sidebar-bottom a{display:block;margin-top:8px;color:#d8e4cc;font-size:13px}
 .workspace{margin-left:226px}
 .topbar{min-height:72px;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 40px;font-size:11px;background:#f9faf6;flex-wrap:wrap}
 .topbar-right{display:flex;gap:25px;align-items:center;flex-wrap:wrap}
@@ -40,14 +38,38 @@ main{max-width:1100px;margin:auto;padding:33px 40px 45px;min-height:calc(100vh -
 .eyebrow{font-size:9px;color:#7d8d71;letter-spacing:2px;font-weight:650;text-transform:uppercase;margin-bottom:6px}
 h1{font-size:29px;letter-spacing:-1.3px;font-weight:650;line-height:1.45;margin:0 0 7px}
 h2{font-size:16px;letter-spacing:-.4px;margin:0 0 8px;font-weight:650}
-.subtitle{color:var(--muted);font-size:12px}
+.subtitle{color:#52675c;font-size:15px;margin:0;word-break:keep-all;overflow-wrap:break-word}
 .subtitle code,.panel-foot code{background:#f1f3ec;padding:1px 6px;border-radius:4px;font-size:11px}
 .pill{display:inline-flex;align-items:center;border:1px solid var(--line);background:#f3f5ee;color:#6c7b61;border-radius:20px;padding:3px 9px;font-size:9px;white-space:nowrap}
-.notice{background:#fff;border:1px solid #e7d9b8;border-left:5px solid var(--amber);border-radius:var(--radius);padding:16px 20px;font-size:12px;color:#5c5545;margin-bottom:20px;line-height:1.9}
-.notice strong{color:#7a5c22}
-.tabs{display:flex;gap:4px;background:#ecefe5;border-radius:10px;padding:4px;margin-bottom:20px;max-width:520px}
-.tabs button{flex:1;border:0;background:none;padding:10px 12px;border-radius:7px;color:#7b8575;font-size:12px}
+.tabs{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:4px;background:#e8ede4;border-radius:10px;padding:4px;margin-bottom:18px;max-width:570px}
+.tabs button{min-height:44px;border:0;background:none;padding:6px;border-radius:7px;color:#4f6356;font-size:13px;cursor:pointer;word-break:keep-all}
 .tabs button[aria-selected="true"]{color:#315143;background:#fff;box-shadow:0 1px 4px rgba(26,67,35,.1);font-weight:650}
+.overview-grid{display:grid;grid-template-columns:1.32fr 1fr;gap:14px;margin-bottom:14px}
+.overview-card{min-width:0;padding:22px;border:1px solid var(--line);border-radius:16px;word-break:keep-all;overflow-wrap:break-word}
+.overview-market{background:linear-gradient(135deg,#13372d,#215145);border-color:#315f52;color:#f2f8ef}
+.overview-forecast{background:#f8f3e6;border-color:#e8ddc5;color:#403622}
+.section-kicker{margin:0 0 6px;font-size:12px;font-weight:730;letter-spacing:.035em;color:#725322}
+.overview-market .section-kicker{color:#b7e5c7}
+.overview-card h2{margin:0;font-size:clamp(19px,2vw,25px);line-height:1.35;font-weight:750}
+.overview-context{margin:5px 0 14px;color:#d4e8dc;font-size:12px}
+.price-pair{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin:0}
+.price-pair>div{padding:9px 12px;border-radius:10px;border:1px solid #53786b;background:#ffffff0c}
+.price-pair dt{font-size:12px;font-weight:600;color:#f5f9f4}
+.price-pair dd{margin:4px 0 0;font-size:clamp(19px,2.75vw,34px);font-weight:750;line-height:1.25;letter-spacing:-.04em;font-variant-numeric:tabular-nums}
+.price-pair .up{color:#c5f3bd}
+.price-pair .down{color:#d1e4ff}
+.overview-note{margin:10px 0 0;color:#655941;font-size:12px}
+.overview-market .overview-note{color:#d4e8dc}
+.forecast-result{display:flex;gap:12px;align-items:center;margin-top:8px}
+.forecast-result strong{font-size:clamp(29px,4vw,42px);line-height:1.15;color:#5d3f16;letter-spacing:-.055em;font-variant-numeric:tabular-nums}
+.forecast-result span{font-size:12px;color:#655941;line-height:1.4}
+.overview-action{display:inline-flex;align-items:center;gap:6px;min-height:44px;color:#563911;font-size:13px;font-weight:700}
+.coverage-panel summary{min-height:44px;padding:11px 18px;cursor:pointer;font-weight:650;color:#234f41}
+.coverage-panel .panel-inner{padding-top:0}
+.coverage-table th,.coverage-table td{white-space:normal}
+.coverage-table td.num,.coverage-table thead th{white-space:nowrap}
+.coverage-table tbody th{background:#fff;color:var(--ink);overflow-wrap:anywhere}
+.coverage-table small{display:block;color:#52675c;font-weight:500}
 .controls{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:13px 17px;margin-bottom:19px}
 .control-group{display:flex;gap:12px;align-items:center;flex-wrap:wrap}
 .control-label{font-size:10px;color:#829078}
@@ -104,17 +126,34 @@ footer{border-top:1px solid var(--line);padding:18px 40px;font-size:10px;color:#
   .cards{grid-template-columns:1fr}
 }
 @media (max-width:860px){
-  .sidebar{position:static;width:auto;padding:22px 20px}
-  .sidebar nav{grid-template-columns:1fr 1fr;margin:16px 0}
-  .sidebar-note{display:none}
-  .sidebar-bottom{margin-top:16px;border-top:1px solid #36554a}
+  .sidebar,.topbar{display:none}
   .workspace{margin-left:0}
   main{padding:22px 18px 34px}
-  .topbar{padding:12px 18px}
-  h1{font-size:23px}
-  .kpis{grid-template-columns:1fr}
+  h1{font-size:26px}
+  .kpis{grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+  .kpi{padding:12px;min-height:0}
+  .kpi-number{font-size:23px}
+  .kpi-number.small{font-size:15px}
+}
+@media (max-width:600px){
+  main{padding:17px 12px 28px}
+  .page-head{margin-bottom:14px}
+  .subtitle{font-size:13px}
+  .tabs{margin-bottom:12px}
+  .tabs button{font-size:12px}
+  .overview-grid{grid-template-columns:minmax(0,1fr);gap:10px;margin-bottom:10px}
+  .overview-card{padding:14px}
+  .price-pair>div{padding:8px}
+  .price-pair dd{font-size:24px}
+  .panel-head,.panel-inner{padding-left:14px;padding-right:14px}
+  .controls{padding:10px;gap:8px}
+  .segmented button{min-height:40px;padding-inline:12px}
+  select{min-height:44px}
+  .mc-controls select{min-width:0}
+  footer{padding:12px}
 }
 .table-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
+#forecast-table{min-width:510px}
 #mc-table{min-width:1020px}
 #mc-table caption{text-align:left;font-weight:650;margin-bottom:8px;color:#405637}
 .mc-controls{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:12px}
