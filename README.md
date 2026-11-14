@@ -4,7 +4,7 @@
 
 **결론:** 같은 RTX 5070 Ti에서도 배송 포함 견적이 22.6% 차이 났습니다. 3개월 예측은 35개 가격 계열 모두 구매 추천 기준을 통과하지 못했습니다.
 
-[**분석 보고서**](REPORT.md#0-30초-요약-그래서-지금-사도-될까) · [**대시보드 둘러보기**](#1-바로-실행하기) · [**데이터와 재현**](docs/reproduction.md) · [**과제 제출 체크표**](docs/submission_checklist.md)
+[**공개 대시보드 바로 열기**](https://highslow1536.github.io/Codyssey-M1-1/) · [**분석 보고서**](REPORT.md#0-30초-요약-그래서-지금-사도-될까) · [**데이터와 재현**](docs/reproduction.md) · [**과제 제출 체크표**](docs/submission_checklist.md)
 
 ![PC Parts Observatory: 가격 기록에서 제품·시장 비교와 3개월 예측 검증까지](docs/assets/public/readme-cover.svg)
 
@@ -22,18 +22,13 @@
 
 ## 1. 바로 실행하기
 
+**[GitHub Pages에서 대시보드 열기](https://highslow1536.github.io/Codyssey-M1-1/)** — 설치나 로그인 없이 브라우저에서 바로 볼 수 있습니다.
+
 ![공개 대시보드에서 세 제품의 예측 오차와 단순 기준 점수를 비교하는 실제 화면](docs/assets/public/public_03_validation.png)
 
 공개 화면에서 **ETH 추이**의 연도와 지표를 바꿔 보고, **예측 검증 요약**에서 제품별 오차와 기준 점수를 비교할 수 있습니다. [화면 예시와 조작 순서](REPORT.md#부록-a-공개-대시보드-화면과-조작-시나리오)
 
-1. GitHub에서 **Code → Download ZIP**으로 저장소를 내려받아 압축을 풉니다.
-2. 터미널에서 압축을 푼 폴더로 이동해 아래 명령을 실행합니다. 화면을 보는 데 추가 라이브러리는 필요 없습니다.
-
-   ```bash
-   python3 -m http.server 8766 --bind 127.0.0.1
-   ```
-
-3. 브라우저에서 [공개 대시보드 열기](http://127.0.0.1:8766/dashboard/public/)를 누릅니다. 종료는 터미널에서 `Ctrl+C`입니다.
+로컬에서 실행하는 방법은 [공개판 재현 안내](docs/reproduction.md#1-화면-보기)를 참고하세요.
 
 ## 어떻게 만들었나요?
 

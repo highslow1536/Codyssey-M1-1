@@ -12,14 +12,14 @@
     },
     {
       "path": "README.md",
-      "bytes": 5619,
-      "sha256": "fa00625cab7090532dffef9d9d9bb89a2f6468fe1cd251e5f3ed0af0d83d6d76",
+      "bytes": 5470,
+      "sha256": "1834569567696bdac78a800620a4bead314e655939a15e72bac9b073a6878723",
       "basis": "project-authored code or public-edition documentation"
     },
     {
       "path": "REPORT.md",
-      "bytes": 38276,
-      "sha256": "f5d69a0dd1910f6827e753e2099d852e6dea11b9ac450f4e5507135b20e70661",
+      "bytes": 38282,
+      "sha256": "916f97aab5d2cbc362e643d1e1a4f2635b42fa9d3c1030f4f8c7967066cc65c1",
       "basis": "project-authored code or public-edition documentation"
     },
     {
@@ -42,8 +42,8 @@
     },
     {
       "path": "dashboard/README.md",
-      "bytes": 2224,
-      "sha256": "bce4b7e9269dd9753ad3db9fe1697761c1a1d6c3b3c0c00f8d8b85cb571f9442",
+      "bytes": 2279,
+      "sha256": "e77fd89bde808d7be1eaa0151c381cd617ffacbe41050d2fc0e2a2adda4454a3",
       "basis": "project-authored code or public-edition documentation"
     },
     {
@@ -150,14 +150,14 @@
     },
     {
       "path": "dashboard/public/index.html",
-      "bytes": 14225,
-      "sha256": "c5587842a59101d0da30cd4b5fe676f6c01a0418699dd907b1bba25dc588e42f",
+      "bytes": 14218,
+      "sha256": "c221387c0358dab7e4b7e3b0f100f90b477213b510803f65bcdc2268f2934a50",
       "basis": "project-authored code or public-edition documentation"
     },
     {
       "path": "dashboard/public/public-view.js",
-      "bytes": 22018,
-      "sha256": "090e4c0f21d3a4b1e963fb2edf5a74d76ab1f56f5c27622926a35ab6fbe6ad34",
+      "bytes": 22054,
+      "sha256": "740f966119a1b9c6d43aca0bf100a46a2108b3a91ad8628478170bf4165105c0",
       "basis": "project-authored code or public-edition documentation"
     },
     {
@@ -678,8 +678,8 @@
     },
     {
       "path": "docs/forecast_deployment.md",
-      "bytes": 1190,
-      "sha256": "01a4b8b801dbca392282a7ea614a23a41711121abdc88b0ec3c57c956901e2e3",
+      "bytes": 1556,
+      "sha256": "efb60e74e1f2ce15f11c4b32b706c47fa43531248a65770a3e2b811c1a2eb1fe",
       "basis": "project-authored code or public-edition documentation"
     },
     {
@@ -726,8 +726,8 @@
     },
     {
       "path": "docs/reproduction.md",
-      "bytes": 6650,
-      "sha256": "f5bbd5f4f316824d012c1a5a2db29634e5e954547eb552a88a94ce07637bb67d",
+      "bytes": 6823,
+      "sha256": "dbdd1ade8c6fd819b7058dbd016d9cf024e1f6b35a374fecd828c6caf67a3668",
       "basis": "project-authored code or public-edition documentation"
     },
     {
@@ -738,20 +738,20 @@
     },
     {
       "path": "docs/submission_checklist.md",
-      "bytes": 5294,
-      "sha256": "1140ebafba5133177b0f967ba0e5d3f334f9d6c3b69509a9e61336aa9bcd7225",
+      "bytes": 5325,
+      "sha256": "36e6a1051ce61c0c23edf0f9e3bdf24f8585208d5201a23f848a8d456141ae85",
       "basis": "project-authored code or public-edition documentation"
     },
     {
       "path": "publication/templates/README.md.in",
-      "bytes": 5619,
-      "sha256": "fa00625cab7090532dffef9d9d9bb89a2f6468fe1cd251e5f3ed0af0d83d6d76",
+      "bytes": 5470,
+      "sha256": "1834569567696bdac78a800620a4bead314e655939a15e72bac9b073a6878723",
       "basis": "project-authored code or public-edition documentation"
     },
     {
       "path": "publication/templates/REPORT.md.in",
-      "bytes": 38276,
-      "sha256": "f5d69a0dd1910f6827e753e2099d852e6dea11b9ac450f4e5507135b20e70661",
+      "bytes": 38282,
+      "sha256": "916f97aab5d2cbc362e643d1e1a4f2635b42fa9d3c1030f4f8c7967066cc65c1",
       "basis": "project-authored code or public-edition documentation"
     },
     {
@@ -762,8 +762,8 @@
     },
     {
       "path": "publication/templates/dashboard/README.md.in",
-      "bytes": 1983,
-      "sha256": "bf2892d3a57c91b5ef278c037c2eb8adcbc386f92361fa8a73e60248f86dcbcd",
+      "bytes": 2038,
+      "sha256": "097743ed0bc90b7ed5059d77458e7d2be0fa18c7e5fb3ff283ece35083d422de",
       "basis": "project-authored code or public-edition documentation"
     },
     {
@@ -804,8 +804,8 @@
     },
     {
       "path": "publication/templates/docs/forecast_deployment.md.in",
-      "bytes": 949,
-      "sha256": "ae59e15407ecb779d62ca38b82bd346c70d18a037acd6f197807221f2cd59689",
+      "bytes": 1315,
+      "sha256": "dc401e4ff5b18bcdac66e7ec906711ee85b938d10aa3a2f7abb3da3f8c073475",
       "basis": "project-authored code or public-edition documentation"
     },
     {
@@ -816,14 +816,14 @@
     },
     {
       "path": "publication/templates/docs/reproduction.md.in",
-      "bytes": 6650,
-      "sha256": "f5bbd5f4f316824d012c1a5a2db29634e5e954547eb552a88a94ce07637bb67d",
+      "bytes": 6823,
+      "sha256": "dbdd1ade8c6fd819b7058dbd016d9cf024e1f6b35a374fecd828c6caf67a3668",
       "basis": "project-authored code or public-edition documentation"
     },
     {
       "path": "publication/templates/docs/submission_checklist.md.in",
-      "bytes": 5294,
-      "sha256": "1140ebafba5133177b0f967ba0e5d3f334f9d6c3b69509a9e61336aa9bcd7225",
+      "bytes": 5325,
+      "sha256": "36e6a1051ce61c0c23edf0f9e3bdf24f8585208d5201a23f848a8d456141ae85",
       "basis": "project-authored code or public-edition documentation"
     },
     {
@@ -884,6 +884,12 @@
       "path": "scripts/build_forecast.py",
       "bytes": 34034,
       "sha256": "894f3ef92791a04805aa727367518bc5da38c1ad13d85bc7a194dc8efd753689",
+      "basis": "project-authored code or public-edition documentation"
+    },
+    {
+      "path": "scripts/build_pages_site.py",
+      "bytes": 1559,
+      "sha256": "b94408acde088bbca1bf1dbb801b9991afad01448a2b2be648faf0ca2320a853",
       "basis": "project-authored code or public-edition documentation"
     },
     {

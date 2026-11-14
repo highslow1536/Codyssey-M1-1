@@ -2,7 +2,7 @@
 
 # 대시보드 소스와 공개 실행판
 
-공개 자료로 바로 실행하는 화면은 **public/** 이다. 루트에서 HTTP 서버를 실행하고 `/dashboard/public/`을 연다. ETH 일별 1,096점과 별도 부품 모형의 집계 점수만 읽는다. [루트 README](../README.md) · [REPORT](../REPORT.md)
+[GitHub Pages에서 공개 대시보드 열기](https://highslow1536.github.io/Codyssey-M1-1/). 로컬에서는 저장소 루트에서 HTTP 서버를 실행하고 `/dashboard/public/`을 연다. ETH 일별 1,096점과 별도 부품 모형의 집계 점수만 읽는다. [루트 README](../README.md) · [REPORT](../REPORT.md)
 
 `dist/`에는 원래 전체 대시보드의 HTML·CSS·JavaScript를 보존했다. `index.full.html`은 부품 가격·주가·벤치마크·예측 JSON이 필요한 원래 진입점이다. 데이터 재배포 조건으로 그 JSON·CSV·ZIP은 공개하지 않았다. `dist/index.html`은 설명 없이 오류를 내는 대신 공개 화면으로 안내한다.
 

@@ -4,6 +4,8 @@
 
 기존 Sites 대시보드의 새 버전 원격 배포는 서버 연결·게시 오류로 성공을 확인하지 못했다. 이 공개 제출본은 해당 서비스의 비공개 연결·인증·프로젝트 설정에 의존하지 않는다. 운영 식별자와 인증 파일은 공개하지 않는다.
 
-이번 산출물의 제출 대상은 **[GitHub 저장소](https://github.com/highslow1536/Codyssey-M1-1)** 다. 저장소 공개가 웹 대시보드 호스팅 완료를 뜻하지 않는다. 화면은 루트에서 `python3 -m http.server 8766 --bind 127.0.0.1`을 실행한 뒤 `/dashboard/public/`에서 확인한다.
+과제 산출물은 [GitHub 저장소](https://github.com/highslow1536/Codyssey-M1-1)에 제출했다. [GitHub Pages 공개 대시보드](https://highslow1536.github.io/Codyssey-M1-1/)에서는 로그인이나 설치 없이 ETH 추이와 예측 검증 요약·모형 비교를 볼 수 있다.
 
-과제의 대시보드 제출 선택지 중 실제 화면 세트와 필터·기간 변경 시나리오를 [REPORT 부록 A](../REPORT.md#부록-a-공개-대시보드-화면과-조작-시나리오)에 제공한다. 별도 원격 배포는 이 제출 방식의 필수 조건이 아니다.
+GitHub Pages는 `gh-pages` 브랜치 루트에서 제공한다. 배포 준비는 공개판 루트에서 `python3 scripts/build_pages_site.py --output /tmp/codyssey-pages`으로 한다. 비어 있는 새 디렉터리를 사용한다. 이 명령은 공개 패키지를 검사한 뒤 앱 파일 3개, 앱에 필요한 공개 JSON 2개, 루트 안내 파일만 복사한다. 변경 시 이 결과를 기존 `gh-pages` 브랜치에 반영한다.
+
+과제에서 선택한 스크린샷·조작 시나리오 방식은 [REPORT 부록 A](../REPORT.md#부록-a-공개-대시보드-화면과-조작-시나리오)에 남겨 두었다. 전체 연구용 대시보드는 별도로 보존한다.

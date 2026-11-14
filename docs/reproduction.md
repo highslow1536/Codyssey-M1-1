@@ -4,7 +4,7 @@
 
 ## 1. 화면 보기
 
-루트에서 실행한다. Python 표준 라이브러리만 사용한다.
+[GitHub Pages](https://highslow1536.github.io/Codyssey-M1-1/)에서 설치나 로그인 없이 확인할 수 있다. 로컬에서 실행하려면 저장소 루트에서 아래 명령을 실행한다. Python 표준 라이브러리만 사용한다.
 
 ```bash
 python3 -m http.server 8766 --bind 127.0.0.1

@@ -464,6 +464,6 @@ document.addEventListener('DOMContentLoaded', function() {
     if (data.forecast) renderForecast(data.forecast);
   }).catch(function(err) {
     el('load-status').textContent = '공개 자료를 불러오지 못했습니다 (' + err.message + ').';
-    showError('저장소 전체를 받은 뒤 루트에서 HTTP 서버를 실행해 /dashboard/public/ 을 열어 주세요. data/public/dashboard.json 파일도 함께 필요합니다.');
+    showError('공개 데이터를 불러오지 못했습니다. 페이지를 새로 고쳐 주세요. 로컬 실행 중이라면 저장소 루트에서 HTTP 서버를 실행하고 /dashboard/public/ 을 열어 주세요.');
   });
 });
