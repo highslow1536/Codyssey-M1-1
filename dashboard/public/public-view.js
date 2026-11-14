@@ -1,5 +1,6 @@
 'use strict';
 var DATA_URL = '../../data/public/dashboard.json';
+var RECENT_URL = '../../data/public/recent_analysis.json';
 var MC_URL = '../../data/public/model_comparison.json';
 var mc = { data: null, model: 'all', series: 'all' };
 var MERGE_DATE = '2022-09-15';
@@ -37,7 +38,7 @@ function esc(s) {
   return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 }
 
-function selectTab(name) {
+function selectTab(name, updateUrl) {
   var tabs = document.querySelectorAll('[role="tab"]');
   tabs.forEach(function(t) {
     var on = t.getAttribute('data-tab') === name;
@@ -46,10 +47,51 @@ function selectTab(name) {
     el('panel-' + t.getAttribute('data-tab')).hidden = !on;
   });
   document.querySelectorAll('[data-tab-link]').forEach(function(a) {
-    if (a.getAttribute('data-tab-link') === name) { a.classList.add('active'); }
-    else { a.classList.remove('active'); }
+    var on = a.getAttribute('data-tab-link') === name && a.closest('nav');
+    a.classList.toggle('active', Boolean(on));
+    if (on) a.setAttribute('aria-current', 'true');
+    else a.removeAttribute('aria-current');
   });
-  if (location.hash !== '#' + name) { history.replaceState(null, '', '#' + name); }
+  if (updateUrl !== false && location.hash !== '#' + name) history.replaceState(null, '', '#' + name);
+}
+
+function fmtChange(change) {
+  if (!Number.isFinite(change)) return '미산출';
+  return (change > 0 ? '+' : change < 0 ? '−' : '') + (Math.abs(change) * 100).toFixed(2) + '%';
+}
+
+function renderRecent(data) {
+  var parts = data.parts;
+  var valid = parts.filter(function(p) { return Number.isFinite(p.coverage.recent13WeekChange); }).length;
+  var picks = { 'B0BLTH3KWV__amazon-in': 'overview-ddr5', 'B0CGQ3YCV9__amazon-in': 'overview-ddr4' };
+  Object.keys(picks).forEach(function(id) {
+    var p = parts.find(function(part) { return part.id === id; });
+    var change = p ? p.coverage.recent13WeekChange : null;
+    var value = el(picks[id]);
+    value.textContent = fmtChange(change);
+    if (change > 0) value.classList.add('up');
+    if (change < 0) value.classList.add('down');
+  });
+  el('overview-coverage').textContent = data.lastWeek + ' 종료 주 기준 · ' + fmtInt(parts.length) +
+    '개 제품 중 ' + fmtInt(valid) + '개만 13주 변화 산출';
+  el('overview-period').textContent = data.firstWeek + ' ~ ' + data.lastWeek + ' (' +
+    fmtInt(data.calendarWeeks) + '주) · 재조회 ' + data.asOf;
+  el('overview-parts').innerHTML = parts.map(function(p) {
+    return '<tr><th scope="row">' + esc(p.shortName) + '<small>' +
+      esc((p.region === 'IN' ? '인도' : p.region === 'US' ? '미국' : p.region) + ' · ' + p.category) +
+      '</small></th><td class="num">' + fmtInt(p.coverage.observed) + ' / ' + fmtInt(p.coverage.total) +
+      '</td><td class="num">' + fmtChange(p.coverage.recent13WeekChange) + '</td></tr>';
+  }).join('');
+}
+
+function loadRecent() {
+  fetch(RECENT_URL, { cache: 'no-store' }).then(function(res) {
+    if (!res.ok) throw new Error('HTTP ' + res.status);
+    return res.json();
+  }).then(renderRecent).catch(function() {
+    el('overview-coverage').textContent = '가격 분석 집계를 불러오지 못했습니다.';
+    el('overview-parts').innerHTML = '<tr><td colspan="3">페이지를 새로 고쳐 주세요.</td></tr>';
+  });
 }
 
 function filteredSeries() {
@@ -219,6 +261,10 @@ function renderForecast(fc) {
   el('f-series').textContent = fmtInt(fc.series);
   el('f-passed').textContent = fmtInt(fc.passed);
   el('f-rows').textContent = fmtInt(fc.predictionRows);
+  el('overview-passed').textContent = fmtInt(fc.passed) + ' / ' + fmtInt(fc.series);
+  el('overview-forecast-title').textContent = fc.passed === 0 ? '구매 추천은 보류' : '구매 추천 기준을 검증했습니다';
+  el('overview-forecast-note').textContent = '평가 ' + fmtInt(fc.predictionRows) +
+    '행 · 평가 기간이 겹쳐 독립 표본 수와 다름';
   var cards = el('forecast-cards');
   var table = el('forecast-table').querySelector('tbody');
   var ex = fc.examples || [];
@@ -410,10 +456,16 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
   document.querySelectorAll('[data-tab-link]').forEach(function(a) {
-    a.addEventListener('click', function() { selectTab(a.getAttribute('data-tab-link')); });
+    a.addEventListener('click', function(event) {
+      if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+      event.preventDefault();
+      var tab = a.getAttribute('data-tab-link');
+      selectTab(tab);
+      el('tab-' + tab).focus();
+    });
   });
   var h = (location.hash || '').replace('#', '');
-  if (h === 'forecast' || h === 'trend' || h === 'comparison') selectTab(h);
+  if (['overview', 'forecast', 'comparison', 'trend'].includes(h)) selectTab(h, false);
 
   el('year-seg').querySelectorAll('button').forEach(function(b) {
     b.addEventListener('click', function() {
@@ -451,19 +503,19 @@ document.addEventListener('DOMContentLoaded', function() {
     if (ev.key === 'Escape') { hideTip(); }
   });
 
+  loadRecent();
   initMc();
   fetch(DATA_URL, { cache: 'no-store' }).then(function(res) {
     if (!res.ok) throw new Error('HTTP ' + res.status);
     return res.json();
   }).then(function(data) {
     state.data = data;
-    if (data.edition) el('edition-pill').textContent = 'edition: ' + data.edition;
-    if (data.asOf) el('asof-side').textContent = String(data.asOf).replace(/-/g, '.');
     el('load-status').textContent = '데이터: ' + DATA_URL + ' 로드 완료, ' + fmtInt((data.series || []).length) + '행, 기준일 ' + (data.asOf || '-');
     render();
     if (data.forecast) renderForecast(data.forecast);
   }).catch(function(err) {
     el('load-status').textContent = '공개 자료를 불러오지 못했습니다 (' + err.message + ').';
+    el('overview-forecast-note').textContent = '예측 검증 집계를 불러오지 못했습니다.';
     showError('공개 데이터를 불러오지 못했습니다. 페이지를 새로 고쳐 주세요. 로컬 실행 중이라면 저장소 루트에서 HTTP 서버를 실행하고 /dashboard/public/ 을 열어 주세요.');
   });
 });

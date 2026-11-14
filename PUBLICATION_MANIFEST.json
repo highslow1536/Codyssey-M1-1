@@ -12,14 +12,14 @@
     },
     {
       "path": "README.md",
-      "bytes": 5470,
-      "sha256": "1834569567696bdac78a800620a4bead314e655939a15e72bac9b073a6878723",
+      "bytes": 5619,
+      "sha256": "15aad282500a7065058f767324772022a8808576a9706264d58af03a0b5a89f5",
       "basis": "project-authored code or public-edition documentation"
     },
     {
       "path": "REPORT.md",
-      "bytes": 38282,
-      "sha256": "916f97aab5d2cbc362e643d1e1a4f2635b42fa9d3c1030f4f8c7967066cc65c1",
+      "bytes": 38499,
+      "sha256": "ecedba76d41c83b286306ed3d617d6667eb431f1bbae1c84aaf6b333e382f249",
       "basis": "project-authored code or public-edition documentation"
     },
     {
@@ -42,8 +42,8 @@
     },
     {
       "path": "dashboard/README.md",
-      "bytes": 2279,
-      "sha256": "e77fd89bde808d7be1eaa0151c381cd617ffacbe41050d2fc0e2a2adda4454a3",
+      "bytes": 2385,
+      "sha256": "f36f209724649401aa4162946d841a3f9d4fbf1e1b322053a321418047ba9089",
       "basis": "project-authored code or public-edition documentation"
     },
     {
@@ -150,20 +150,20 @@
     },
     {
       "path": "dashboard/public/index.html",
-      "bytes": 14218,
-      "sha256": "c221387c0358dab7e4b7e3b0f100f90b477213b510803f65bcdc2268f2934a50",
+      "bytes": 16676,
+      "sha256": "e57a199899d46e2575af9d482270192e7d8e3eca607df793a23186757851b46a",
       "basis": "project-authored code or public-edition documentation"
     },
     {
       "path": "dashboard/public/public-view.js",
-      "bytes": 22054,
-      "sha256": "740f966119a1b9c6d43aca0bf100a46a2108b3a91ad8628478170bf4165105c0",
+      "bytes": 24749,
+      "sha256": "6cecc3db55bb653901a50ad797b944384a5507dc2a4b80ed42589314c6ae1de3",
       "basis": "project-authored code or public-edition documentation"
     },
     {
       "path": "dashboard/public/styles.css",
-      "bytes": 9853,
-      "sha256": "0d5c9a43b6d11a850c511dd09d8ac5c8099b0cf116c20525ea8680c312529a2c",
+      "bytes": 12270,
+      "sha256": "250c6b5d0113d6efa564d385b63a12f5f2320fa5434d844e9b9516bb821e0d32",
       "basis": "project-authored code or public-edition documentation"
     },
     {
@@ -678,8 +678,8 @@
     },
     {
       "path": "docs/forecast_deployment.md",
-      "bytes": 1556,
-      "sha256": "efb60e74e1f2ce15f11c4b32b706c47fa43531248a65770a3e2b811c1a2eb1fe",
+      "bytes": 1634,
+      "sha256": "dfa8317e37cf1ef82889b915551a316202f048b4826c8a83c276d718f9c4b4a9",
       "basis": "project-authored code or public-edition documentation"
     },
     {
@@ -744,14 +744,14 @@
     },
     {
       "path": "publication/templates/README.md.in",
-      "bytes": 5470,
-      "sha256": "1834569567696bdac78a800620a4bead314e655939a15e72bac9b073a6878723",
+      "bytes": 5619,
+      "sha256": "15aad282500a7065058f767324772022a8808576a9706264d58af03a0b5a89f5",
       "basis": "project-authored code or public-edition documentation"
     },
     {
       "path": "publication/templates/REPORT.md.in",
-      "bytes": 38282,
-      "sha256": "916f97aab5d2cbc362e643d1e1a4f2635b42fa9d3c1030f4f8c7967066cc65c1",
+      "bytes": 38499,
+      "sha256": "ecedba76d41c83b286306ed3d617d6667eb431f1bbae1c84aaf6b333e382f249",
       "basis": "project-authored code or public-edition documentation"
     },
     {
@@ -762,8 +762,8 @@
     },
     {
       "path": "publication/templates/dashboard/README.md.in",
-      "bytes": 2038,
-      "sha256": "097743ed0bc90b7ed5059d77458e7d2be0fa18c7e5fb3ff283ece35083d422de",
+      "bytes": 2144,
+      "sha256": "f77e786aa371e6fd4e7ed9d443d0f018f700932a3ea2b7afcbdac2df905222ff",
       "basis": "project-authored code or public-edition documentation"
     },
     {
@@ -804,8 +804,8 @@
     },
     {
       "path": "publication/templates/docs/forecast_deployment.md.in",
-      "bytes": 1315,
-      "sha256": "dc401e4ff5b18bcdac66e7ec906711ee85b938d10aa3a2f7abb3da3f8c073475",
+      "bytes": 1393,
+      "sha256": "d727afa1e37233fb9e8b1778e7847e974b6fd2db1542f8dbe656c5b57676beaf",
       "basis": "project-authored code or public-edition documentation"
     },
     {
@@ -888,8 +888,8 @@
     },
     {
       "path": "scripts/build_pages_site.py",
-      "bytes": 1559,
-      "sha256": "b94408acde088bbca1bf1dbb801b9991afad01448a2b2be648faf0ca2320a853",
+      "bytes": 1597,
+      "sha256": "3075909634922fb8dc12307a97d3c784b1e7efd042b7c1e83753cbc9160e099a",
       "basis": "project-authored code or public-edition documentation"
     },
     {

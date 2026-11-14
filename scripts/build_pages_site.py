@@ -1,4 +1,4 @@
-"""Stage just the public dashboard and its two data dependencies for GitHub Pages."""
+"""Stage the public dashboard and its public data dependencies for GitHub Pages."""
 
 import argparse
 from pathlib import Path
@@ -13,6 +13,7 @@ FILES = (
     'dashboard/public/public-view.js',
     'data/public/dashboard.json',
     'data/public/model_comparison.json',
+    'data/public/recent_analysis.json',
 )
 
 INDEX = """<!doctype html>
