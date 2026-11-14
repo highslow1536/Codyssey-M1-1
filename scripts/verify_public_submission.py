@@ -4,6 +4,7 @@ No network calls; no changes to data or manifest; failures return nonzero.
 """
 import argparse
 import csv
+from datetime import datetime, time
 import hashlib
 import json
 import math
@@ -11,6 +12,7 @@ from pathlib import Path
 import re
 import sys
 from urllib.parse import unquote, urlsplit
+from zoneinfo import ZoneInfo
 
 IGNORED_DIRS = {'.git', '.venv', '__pycache__', '.mplconfig'}
 RAW_ALLOW = {
@@ -173,6 +175,36 @@ def verify(root):
     fresh = read_json(root, 'data/public/source_freshness.json')
     require(len(fresh['records']) == 29 and all(r['status'] == 'ok' for r in fresh['records']),
             'Fresh source availability mismatch')
+    snapshot = read_json(root, 'data/public/market_price_snapshot.json')
+    require(set(snapshot) == {'schemaVersion', 'source', 'sourceUrl', 'observedOn',
+                              'observationTimezone', 'retrievedAt', 'comparisonDays', 'indices'},
+            'Market price data must contain only summary fields')
+    require(snapshot['schemaVersion'] == 1 and snapshot['source'] == 'Pricify' and
+            snapshot['sourceUrl'] == 'https://pricify.ai/indices' and
+            snapshot['observationTimezone'] == 'America/New_York' and snapshot['comparisonDays'] == 30,
+            'Unexpected market price source or period')
+    observed = date.fromisoformat(snapshot['observedOn'])
+    retrieved = datetime.fromisoformat(snapshot['retrievedAt'])
+    require(retrieved.utcoffset() == retrieved.astimezone(ZoneInfo('Asia/Seoul')).utcoffset() and
+            datetime.combine(observed, time.max, ZoneInfo(snapshot['observationTimezone'])) < retrieved,
+            'Retrieval must be recorded in KST after the observation day closed')
+    require([r['id'] for r in snapshot['indices']] == ['gpu', 'cpu', 'ddr5', 'ddr4', 'nvme'],
+            'Unexpected market price categories')
+    def percent(value):
+        return ('+' if value > 0 else '−' if value < 0 else '') + f'{abs(value):.1f}%'
+    guide = files['docs/market_price_snapshot.md'].read_text()
+    readme = files['README.md'].read_text()
+    for row in snapshot['indices']:
+        require(set(row) == {'id', 'label', 'change7dPct', 'change30dPct', 'measured'} and
+                all(type(row[k]) in {float, int} and math.isfinite(row[k]) for k in ('change7dPct', 'change30dPct')) and
+                type(row['measured']) is int and row['measured'] > 0,
+                'Market index entries must contain only aggregate changes and product counts')
+        cells = f"| {row['label']} | {percent(row['change7dPct'])} | {percent(row['change30dPct'])} | {row['measured']} |"
+        require(cells in guide.replace('**', ''), f"Market summary table disagreement: {row['id']}")
+    require(all(day in doc for doc in (readme, guide)
+                for day in (observed.isoformat(), retrieved.date().isoformat())) and
+            all(percent(row['change30dPct']) in readme for row in snapshot['indices'][:2]),
+            'README and market summary dates or headline values disagree')
     comparison = read_json(root, 'data/public/model_comparison.json')
     require(len(comparison['series']) == comparison['summary']['series'] == len(metrics), 'Comparison series mismatch')
     require(comparison['summary']['commonTestRows'] == sum(s['common']['testN'] for s in comparison['series']), 'Common test n mismatch')
@@ -199,7 +231,7 @@ def verify(root):
         require(series['selectedAllEvaluation']['n'] == int(metric['n']), 'Selected full evaluation n mismatch')
         if series['selection']['status'] != 'past_validation_only':
             require(series['selection']['candidate'] == series['incumbent']['candidate'], 'Test-only replacement')
-    print(f'PASS: {len(entries)} manifest files; {links} local Markdown links ({images} images); ETH 1096/156/155; proxies 988+108; forecast 35/0/{fc["predictionRows"]}; model comparison {comparison["summary"]["commonTestRows"]} common rows; recent 14 parts/7 markets/199 weeks; 29 source checks')
+    print(f'PASS: {len(entries)} manifest files; {links} local Markdown links ({images} images); ETH 1096/156/155; proxies 988+108; forecast 35/0/{fc["predictionRows"]}; model comparison {comparison["summary"]["commonTestRows"]} common rows; October 14 parts/7 markets/199 weeks; 29 source checks; Pricify {len(snapshot["indices"])} indices observed {observed}, retrieved {retrieved.date()}')
 
 
 if __name__ == '__main__':

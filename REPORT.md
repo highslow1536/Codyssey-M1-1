@@ -1,6 +1,8 @@
 # PC 부품 가격 추이와 구매 시점 판단을 위한 데이터 분석
 
-**제출 보고서 · 공개판** · 최근 재수집·문서 갱신 2026-10-25 · 주간 분석 10-23까지 · 예측 입력 10-23 고정 · 권리 점검 10-24 · [README](README.md) · [GitHub 저장소](https://github.com/highslow1536/Codyssey-M1-1)
+**제출 보고서 · 공개판** · 10월 제품 자료 재수집 2026-10-25 · 주간 분석 10-23까지 · 예측 입력 10-23 고정 · 권리 점검 10-24 · [README](README.md) · [GitHub 저장소](https://github.com/highslow1536/Codyssey-M1-1)
+
+> **11월 후속 집계:** [미국 PC 부품 가격 동향](docs/market_price_snapshot.md) · 실제 가격 관측일 **2026-11-11 (미국 동부)** · 자료 수집일 **2026-11-14 (한국)**. 이 지수는 아래 10월 제품 호가나 예측 검증과 별도 자료다.
 
 ## 0. 30초 요약: 그래서 지금 사도 될까?
 
@@ -344,7 +346,7 @@ Python 3.12.14와 [고정 의존성](requirements-analysis.txt)을 사용했다.
 
 확장 비교 후 연구 환경에서 Python 191개(10-24 확정)·JavaScript 55개 검사를 통과했고, 10-25 최근 보고서 검사 8개를 더해 전체 199개가 통과했다. 공개판에서는 ETH 6개·모형 비교 36개·최근 보고서 8개 중 연구 복사본 대조 1건을 제외하고 실행한다(공개 유효 49 통과+1 스킵). 공개 화면 JavaScript 20개를 실행할 수 있다. 35계열 예측 모형 비교는 10-23 입력으로 고정했다. 10-25 재수집은 최근 동향 분석을 갱신한 것이며 새 미래 기간의 예측 성과가 아니다. [제출 체크표](docs/submission_checklist.md)에 실행 범위를 구분한다.
 
-전체 분석 코드와 원래 앱 소스는 유지한다. 공개 대시보드는 [최근 부품 분석 집계](data/public/recent_analysis.json), [공개 ETH와 검증 요약](data/public/dashboard.json), [모형 비교 집계](data/public/model_comparison.json)를 읽는다. [공개 파일 manifest](PUBLICATION_MANIFEST.json)에 SHA-256·크기·분류를 남기며, [제외 목록](data/excluded_inventory.csv)에는 값 대신 경로·해시·이유만 기록한다. 과제 PDF 원문은 저작권이 있어 저장소에 포함하지 않았다.
+전체 분석 코드와 원래 앱 소스는 유지한다. 공개 대시보드는 [미국 부품 지수 집계](data/public/market_price_snapshot.json), [공개 ETH와 검증 요약](data/public/dashboard.json), [모형 비교 집계](data/public/model_comparison.json)를 읽는다. [공개 파일 manifest](PUBLICATION_MANIFEST.json)에 SHA-256·크기·분류를 남기며, [제외 목록](data/excluded_inventory.csv)에는 값 대신 경로·해시·이유만 기록한다. 과제 PDF 원문은 저작권이 있어 저장소에 포함하지 않았다.
 
 ## 11. AI 사용 로그
 

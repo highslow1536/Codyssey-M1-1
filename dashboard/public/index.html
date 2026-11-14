@@ -6,8 +6,8 @@
   <meta name="theme-color" content="#163b35">
   <meta name="description" content="최근 PC 부품 가격의 변화를 비교하고 3개월 예측을 구매에 쓸 수 있는지 확인합니다.">
   <title>PC 부품 가격 관측소 — 공개 대시보드</title>
-  <link rel="stylesheet" href="./styles.css?v=20261114-overview">
-  <script type="module" src="./public-view.js?v=20261114-overview"></script>
+  <link rel="stylesheet" href="./styles.css?v=20261114-market">
+  <script type="module" src="./public-view.js?v=20261114-market"></script>
 </head>
 <body>
   <a class="skip" href="#main">본문으로 건너뛰기</a>
@@ -47,13 +47,16 @@
         <div class="overview-grid">
           <article class="overview-card overview-market" aria-labelledby="overview-market-title">
             <p class="section-kicker">01 · 최근 부품 가격 분석</p>
-            <h2 id="overview-market-title">같은 RAM, 다른 가격 방향</h2>
-            <p class="overview-context">인도 판매처의 두 제품 · 마지막 13주 호가 변화</p>
+            <h2 id="overview-market-title">미국 부품 가격 동향</h2>
+            <p class="overview-context">Pricify 미국 소매 신품 지수 · 최근 30일 변화</p>
             <dl class="price-pair">
-              <div><dt>Crucial DDR5 16GB</dt><dd id="overview-ddr5">—</dd></div>
-              <div><dt>Crucial Pro DDR4 16GB</dt><dd id="overview-ddr4">—</dd></div>
+              <div><dt>GPU</dt><dd id="overview-gpu">—</dd></div>
+              <div><dt>CPU</dt><dd id="overview-cpu">—</dd></div>
             </dl>
-            <p id="overview-coverage" class="overview-note" role="status">가격 분석 집계를 불러오는 중입니다.</p>
+            <div id="overview-coverage" class="overview-note" role="status">
+              <p>실제 가격 관측일 <strong id="market-observed">—</strong> <span>(미국 동부)</span></p>
+              <p>자료 수집일 <strong id="market-retrieved">—</strong> <span>(한국)</span></p>
+            </div>
           </article>
           <article class="overview-card overview-forecast" aria-labelledby="overview-forecast-title">
             <p class="section-kicker">02 · 3개월 예측 검증</p>
@@ -64,18 +67,18 @@
           </article>
         </div>
         <details class="panel coverage-panel">
-          <summary>제품별 관측 범위와 가격 변화 보기</summary>
+          <summary>부품 5개 지수와 관측 제품 수 보기</summary>
           <div class="panel-inner">
-            <p class="muted" id="overview-period"></p>
-            <div class="table-scroll" tabindex="0" role="region" aria-label="제품별 공개 집계 표">
+            <div class="table-scroll" tabindex="0" role="region" aria-label="부품별 가격 지수 집계 표">
               <table class="mini coverage-table">
-                <caption>제품별 실제 관측 수 · 마지막 13주 변화</caption>
-                <thead><tr><th scope="col">부품</th><th scope="col">관측 주</th><th scope="col">13주 변화</th></tr></thead>
-                <tbody id="overview-parts"><tr><td colspan="3">집계를 불러오는 중입니다.</td></tr></tbody>
+                <caption>미국 소매 신품 지수 변화율</caption>
+                <thead><tr><th scope="col">부품</th><th scope="col">7일</th><th scope="col">30일</th><th scope="col">제품 수</th></tr></thead>
+                <tbody id="overview-parts"><tr><td colspan="4">집계를 불러오는 중입니다.</td></tr></tbody>
               </table>
             </div>
-            <p class="muted">양 끝 주에 호가가 모두 있을 때만 변화율을 계산했습니다. 미국·인도의 개별 판매 호가이며 국내 가격이나 전체 시장을 대표하지 않습니다.</p>
-            <a href="https://github.com/highslow1536/Codyssey-M1-1/blob/main/docs/recent_analysis.md">최근 분석 방법과 주가·ETH 상관 결과 ↗</a>
+            <p class="muted">제품 수는 관측일에 지수에 반영된 제품 수입니다. 미국 소매 신품 호가 집계이므로 국내 실거래가로 해석할 수 없습니다.</p>
+            <p class="muted">출처: <a href="https://pricify.ai/indices">Pricify 가격 지수 ↗</a> · 공개 집계에서 5개 지수를 골라 표시</p>
+            <a href="https://github.com/highslow1536/Codyssey-M1-1/blob/main/docs/recent_analysis.md">별도 기록: 10월 해외 14개 상품·주가 분석 ↗</a>
           </div>
         </details>
       </section>

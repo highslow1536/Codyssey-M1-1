@@ -13,7 +13,7 @@ FILES = (
     'dashboard/public/public-view.js',
     'data/public/dashboard.json',
     'data/public/model_comparison.json',
-    'data/public/recent_analysis.json',
+    'data/public/market_price_snapshot.json',
 )
 
 INDEX = """<!doctype html>

@@ -12,6 +12,10 @@
 
 `data/public/dashboard.json`의 ETH 시계열과 부품 모형의 자체 집계 통계는 서로 다른 출처다. 모형 통계를 Coin Metrics가 만들었다고 표시하지 않는다.
 
+## Pricify 가격 지수
+
+[Pricify (pricify.ai) 가격 지수](https://pricify.ai/indices)의 인용 안내에 따라 공개 표에서 7일·30일 변화율과 제품 수만 골라 한국어 표와 JSON으로 옮겼다. 숫자나 기준일은 변경하지 않았다. 별도로 제공되는 [Pricify 공개 저장소](https://github.com/pricify-ai/pc-hardware-prices)의 데이터에는 [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)이 적용된다. 이 프로젝트는 상품별 가격이나 일별 지수 원본을 싣지 않는다. [인용 범위와 날짜](docs/market_price_snapshot.md).
+
 ## 프로젝트 코드·문서·자체 통계
 
 프로젝트에서 작성한 코드·설명·도표·UI와 분석 통계다. **별도 오픈소스 라이선스는 지정하지 않았다.** 공개 열람·과제 평가와 제3자의 자유로운 재라이선스·상업 이용 허가는 구분한다. GitHub 서비스 이용에 따른 권리는 해당 약관을 따른다.

@@ -79,6 +79,8 @@ def digest(p):
 
 
 def classify(rel):
+    if rel == 'data/public/market_price_snapshot.json':
+        return 'attributed Pricify published index changes and observation counts; no product-level prices'
     if rel.startswith(('data/public/model_comparison', 'docs/assets/public/04_model_comparison',
                        'docs/assets/public/05_model_coverage', 'data/public/recent_',
                        'data/public/source_freshness', 'docs/assets/public/06_recent_analysis',

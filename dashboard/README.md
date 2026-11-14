@@ -2,7 +2,7 @@
 
 # 대시보드 소스와 공개 실행판
 
-[GitHub Pages에서 공개 대시보드 열기](https://highslow1536.github.io/Codyssey-M1-1/). 로컬에서는 저장소 루트에서 HTTP 서버를 실행하고 `/dashboard/public/`을 연다. 첫 화면에는 최근 부품 가격 변화율과 관측 주 수, 3개월 예측 검증 결과가 나온다. **ETH 추이** 탭에서 공개 ETH 일별 1,096점을 볼 수 있다. [루트 README](../README.md) · [REPORT](../REPORT.md)
+[GitHub Pages에서 공개 대시보드 열기](https://highslow1536.github.io/Codyssey-M1-1/). 로컬에서는 저장소 루트에서 HTTP 서버를 실행하고 `/dashboard/public/`을 연다. 첫 화면에는 [미국 소매 지수 변화율과 관측 제품 수](../docs/market_price_snapshot.md), 3개월 예측 검증 결과가 나온다. **ETH 추이** 탭에서 공개 ETH 일별 1,096점을 볼 수 있다. [루트 README](../README.md) · [REPORT](../REPORT.md)
 
 `dist/`에는 원래 전체 대시보드의 HTML·CSS·JavaScript를 보존했다. `index.full.html`은 부품 가격·주가·벤치마크·예측 JSON이 필요한 원래 진입점이다. 데이터 재배포 조건으로 그 JSON·CSV·ZIP은 공개하지 않았다. `dist/index.html`은 설명 없이 오류를 내는 대신 공개 화면으로 안내한다.
 

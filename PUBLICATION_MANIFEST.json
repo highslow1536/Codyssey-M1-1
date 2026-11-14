@@ -12,20 +12,20 @@
     },
     {
       "path": "README.md",
-      "bytes": 5619,
-      "sha256": "15aad282500a7065058f767324772022a8808576a9706264d58af03a0b5a89f5",
+      "bytes": 5840,
+      "sha256": "7387fba0a7c14f3815c86b4009aa0fe9e4593be4352c043a36d0ee3d7fa5e7a3",
       "basis": "project-authored code or public-edition documentation"
     },
     {
       "path": "REPORT.md",
-      "bytes": 38499,
-      "sha256": "ecedba76d41c83b286306ed3d617d6667eb431f1bbae1c84aaf6b333e382f249",
+      "bytes": 38777,
+      "sha256": "6d82a9e50213d8bf9391a367f4a6b84bc805d50476c63d487ac465bcf76877e9",
       "basis": "project-authored code or public-edition documentation"
     },
     {
       "path": "RIGHTS.md",
-      "bytes": 2526,
-      "sha256": "ca5a7c813c34fa47a230c88a3c1a3b2eb4fbf320860f61ed954b55aaaa9f82c8",
+      "bytes": 3131,
+      "sha256": "de2dc4bb3b384d1869c99ee272649f9fdf3bdea54c2ed46326f823fb4cb87311",
       "basis": "project-authored code or public-edition documentation"
     },
     {
@@ -42,8 +42,8 @@
     },
     {
       "path": "dashboard/README.md",
-      "bytes": 2385,
-      "sha256": "f36f209724649401aa4162946d841a3f9d4fbf1e1b322053a321418047ba9089",
+      "bytes": 2424,
+      "sha256": "8242166f149621f8f5068aa426f6d205064acd00116ee595e65ccd1dfd2c8702",
       "basis": "project-authored code or public-edition documentation"
     },
     {
@@ -150,20 +150,20 @@
     },
     {
       "path": "dashboard/public/index.html",
-      "bytes": 16676,
-      "sha256": "e57a199899d46e2575af9d482270192e7d8e3eca607df793a23186757851b46a",
+      "bytes": 16908,
+      "sha256": "b5da09d33299b3c691349c9590cff05c3cdc9d4df6287e6ac6032c36a083a6e9",
       "basis": "project-authored code or public-edition documentation"
     },
     {
       "path": "dashboard/public/public-view.js",
-      "bytes": 24749,
-      "sha256": "6cecc3db55bb653901a50ad797b944384a5507dc2a4b80ed42589314c6ae1de3",
+      "bytes": 24161,
+      "sha256": "0c88b3837e194e141f0840adfb2607c015b521fd3d8a43cd82197ef2a2583476",
       "basis": "project-authored code or public-edition documentation"
     },
     {
       "path": "dashboard/public/styles.css",
-      "bytes": 12270,
-      "sha256": "250c6b5d0113d6efa564d385b63a12f5f2320fa5434d844e9b9516bb821e0d32",
+      "bytes": 12320,
+      "sha256": "9105b50f977d85ea26deebc92a3d096c264d21b82c8991d52d8aa75fb1357964",
       "basis": "project-authored code or public-edition documentation"
     },
     {
@@ -419,6 +419,12 @@
       "basis": "Coin Metrics ETH / CC BY-NC 4.0 or documented aggregate"
     },
     {
+      "path": "data/public/market_price_snapshot.json",
+      "bytes": 745,
+      "sha256": "7a8fa08ea15e8b59d539e2008b8525e187aca7e78e68be2d8a6b784bcdb35ef3",
+      "basis": "attributed Pricify published index changes and observation counts; no product-level prices"
+    },
+    {
       "path": "data/public/model_comparison.json",
       "bytes": 939655,
       "sha256": "49e0ab2f6d1cd72dd0ed1f9118497b23194f3f38d14b5ec6f574d84e44696450",
@@ -462,8 +468,8 @@
     },
     {
       "path": "data/source_catalog.json",
-      "bytes": 4111,
-      "sha256": "fb5e6e314b67a1b89cd29f522afb8a099570123d569979d29d1149569c20176b",
+      "bytes": 4275,
+      "sha256": "838f4c13670feb075cb80d885e59371c3ef94cc23e962f6f7828e93b9bcf4e67",
       "basis": "project-authored code or public-edition documentation"
     },
     {
@@ -707,6 +713,12 @@
       "basis": "project-authored code or public-edition documentation"
     },
     {
+      "path": "docs/market_price_snapshot.md",
+      "bytes": 2575,
+      "sha256": "49a7ee467196482c2c2e74b3600ba56217609077cfdea5c9a8016899f83b4194",
+      "basis": "project-authored code or public-edition documentation"
+    },
+    {
       "path": "docs/model_comparison.md",
       "bytes": 16571,
       "sha256": "67eecf6961ab645e575fb43c8e177597459cad228bd9d213cb677185aade78c3",
@@ -744,26 +756,26 @@
     },
     {
       "path": "publication/templates/README.md.in",
-      "bytes": 5619,
-      "sha256": "15aad282500a7065058f767324772022a8808576a9706264d58af03a0b5a89f5",
+      "bytes": 5840,
+      "sha256": "7387fba0a7c14f3815c86b4009aa0fe9e4593be4352c043a36d0ee3d7fa5e7a3",
       "basis": "project-authored code or public-edition documentation"
     },
     {
       "path": "publication/templates/REPORT.md.in",
-      "bytes": 38499,
-      "sha256": "ecedba76d41c83b286306ed3d617d6667eb431f1bbae1c84aaf6b333e382f249",
+      "bytes": 38777,
+      "sha256": "6d82a9e50213d8bf9391a367f4a6b84bc805d50476c63d487ac465bcf76877e9",
       "basis": "project-authored code or public-edition documentation"
     },
     {
       "path": "publication/templates/RIGHTS.md.in",
-      "bytes": 2285,
-      "sha256": "357a3a3675810016bf714de516ca7b8a2c655e5d1c08f1168d7ecd285e8712a4",
+      "bytes": 2890,
+      "sha256": "485f4a39fecf7930c3132d6e754304561c269c9d9fc0e70e9f0d9f2bbdb5c30a",
       "basis": "project-authored code or public-edition documentation"
     },
     {
       "path": "publication/templates/dashboard/README.md.in",
-      "bytes": 2144,
-      "sha256": "f77e786aa371e6fd4e7ed9d443d0f018f700932a3ea2b7afcbdac2df905222ff",
+      "bytes": 2183,
+      "sha256": "0e00390e996797a0cc14b5029a83303cac4b4c82bb44f3f93f39e65890206590",
       "basis": "project-authored code or public-edition documentation"
     },
     {
@@ -888,8 +900,8 @@
     },
     {
       "path": "scripts/build_pages_site.py",
-      "bytes": 1597,
-      "sha256": "3075909634922fb8dc12307a97d3c784b1e7efd042b7c1e83753cbc9160e099a",
+      "bytes": 1603,
+      "sha256": "413b60e18e4ae8f4aae97f52337649ea3d60c86417a9382b554ba583571ea983",
       "basis": "project-authored code or public-edition documentation"
     },
     {
@@ -900,8 +912,8 @@
     },
     {
       "path": "scripts/build_public_submission.py",
-      "bytes": 13153,
-      "sha256": "810c8ffc082c9c4e76714894fe35ffa267f3190eca071e1ec6301f621c889b36",
+      "bytes": 13317,
+      "sha256": "9fb3053ed68a90d245589c2812d04cfb18143495f56fd145171bdf76bf4c94f6",
       "basis": "project-authored code or public-edition documentation"
     },
     {
@@ -1068,8 +1080,8 @@
     },
     {
       "path": "scripts/verify_public_submission.py",
-      "bytes": 12291,
-      "sha256": "a6a921043fa20f586e5f06595b29e21eed3ec12a90d745b02e0eff82cad89543",
+      "bytes": 14800,
+      "sha256": "00da8305a012a62b2f0165d1ce32663cb490aa58c2388fbf8c000e088f731858",
       "basis": "project-authored code or public-edition documentation"
     },
     {

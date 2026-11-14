@@ -60,6 +60,9 @@ h2{font-size:16px;letter-spacing:-.4px;margin:0 0 8px;font-weight:650}
 .price-pair .down{color:#d1e4ff}
 .overview-note{margin:10px 0 0;color:#655941;font-size:12px}
 .overview-market .overview-note{color:#d4e8dc}
+.overview-note p{margin:0}
+.overview-note p + p{margin-top:2px}
+.overview-market .overview-note span{font-size:11px}
 .forecast-result{display:flex;gap:12px;align-items:center;margin-top:8px}
 .forecast-result strong{font-size:clamp(29px,4vw,42px);line-height:1.15;color:#5d3f16;letter-spacing:-.055em;font-variant-numeric:tabular-nums}
 .forecast-result span{font-size:12px;color:#655941;line-height:1.4}
@@ -69,7 +72,6 @@ h2{font-size:16px;letter-spacing:-.4px;margin:0 0 8px;font-weight:650}
 .coverage-table th,.coverage-table td{white-space:normal}
 .coverage-table td.num,.coverage-table thead th{white-space:nowrap}
 .coverage-table tbody th{background:#fff;color:var(--ink);overflow-wrap:anywhere}
-.coverage-table small{display:block;color:#52675c;font-weight:500}
 .controls{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:13px 17px;margin-bottom:19px}
 .control-group{display:flex;gap:12px;align-items:center;flex-wrap:wrap}
 .control-label{font-size:10px;color:#829078}
