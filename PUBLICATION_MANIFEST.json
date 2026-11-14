@@ -12,8 +12,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 10404,
-      "sha256": "d00a89878223b033b3b28fdf124278c42c4193c5ab2f03a0c23945a11576d2c6",
+      "bytes": 5619,
+      "sha256": "fa00625cab7090532dffef9d9d9bb89a2f6468fe1cd251e5f3ed0af0d83d6d76",
       "basis": "project-authored code or public-edition documentation"
     },
     {
@@ -647,6 +647,12 @@
       "basis": "original non-reconstructive statistics or explanatory figure"
     },
     {
+      "path": "docs/assets/public/readme-cover.svg",
+      "bytes": 3376,
+      "sha256": "4eaa5f22ebe579072aaa3c44f45606f332187fba7a4b87e4bd3c8a13641b6a82",
+      "basis": "original non-reconstructive statistics or explanatory figure"
+    },
+    {
       "path": "docs/data_redistribution.md",
       "bytes": 13975,
       "sha256": "29acdd6dd0537742d70da1cd99cc4d9827eb211b689a169e96b765397bc6ca10",
@@ -738,8 +744,8 @@
     },
     {
       "path": "publication/templates/README.md.in",
-      "bytes": 10404,
-      "sha256": "d00a89878223b033b3b28fdf124278c42c4193c5ab2f03a0c23945a11576d2c6",
+      "bytes": 5619,
+      "sha256": "fa00625cab7090532dffef9d9d9bb89a2f6468fe1cd251e5f3ed0af0d83d6d76",
       "basis": "project-authored code or public-edition documentation"
     },
     {
