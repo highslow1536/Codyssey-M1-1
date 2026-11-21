@@ -18,8 +18,8 @@
     },
     {
       "path": "REPORT.md",
-      "bytes": 38777,
-      "sha256": "6d82a9e50213d8bf9391a367f4a6b84bc805d50476c63d487ac465bcf76877e9",
+      "bytes": 38839,
+      "sha256": "cd59203ee29bc768686ef8c8fb15f09117de02e4fb2140d367a462ed95a652e5",
       "basis": "project-authored code or public-edition documentation"
     },
     {
@@ -762,8 +762,8 @@
     },
     {
       "path": "publication/templates/REPORT.md.in",
-      "bytes": 38777,
-      "sha256": "6d82a9e50213d8bf9391a367f4a6b84bc805d50476c63d487ac465bcf76877e9",
+      "bytes": 38839,
+      "sha256": "cd59203ee29bc768686ef8c8fb15f09117de02e4fb2140d367a462ed95a652e5",
       "basis": "project-authored code or public-edition documentation"
     },
     {
