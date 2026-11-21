@@ -13,13 +13,13 @@
     {
       "path": "README.md",
       "bytes": 9672,
-      "sha256": "40635439cf8106bc952f0b8d756e0db7a38eab679faa10a13ed6724f4a4b26a6",
+      "sha256": "97799978192d50b13aa47f38061e01bd9b5a8c96a9b2e14e7148b89067a34048",
       "basis": "project-authored code or public-edition documentation"
     },
     {
       "path": "REPORT.md",
       "bytes": 38839,
-      "sha256": "cd59203ee29bc768686ef8c8fb15f09117de02e4fb2140d367a462ed95a652e5",
+      "sha256": "886f4af0514ec2554d5b332ec0ee11765c1846be42fb943168dfc5f5cf930046",
       "basis": "project-authored code or public-edition documentation"
     },
     {
@@ -757,13 +757,13 @@
     {
       "path": "publication/templates/README.md.in",
       "bytes": 9672,
-      "sha256": "40635439cf8106bc952f0b8d756e0db7a38eab679faa10a13ed6724f4a4b26a6",
+      "sha256": "97799978192d50b13aa47f38061e01bd9b5a8c96a9b2e14e7148b89067a34048",
       "basis": "project-authored code or public-edition documentation"
     },
     {
       "path": "publication/templates/REPORT.md.in",
       "bytes": 38839,
-      "sha256": "cd59203ee29bc768686ef8c8fb15f09117de02e4fb2140d367a462ed95a652e5",
+      "sha256": "886f4af0514ec2554d5b332ec0ee11765c1846be42fb943168dfc5f5cf930046",
       "basis": "project-authored code or public-edition documentation"
     },
     {
