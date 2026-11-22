@@ -35,6 +35,8 @@ button:focus-visible,a:focus-visible,select:focus-visible,[tabindex]:focus-visib
 .plain-link{color:#6d796b;font-size:11px}
 main{max-width:1100px;margin:auto;padding:33px 40px 45px;min-height:calc(100vh - 140px)}
 .page-head{display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:26px;gap:20px;flex-wrap:wrap}
+.structure-link{display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:8px 14px;border:1px solid #cbdaca;border-radius:8px;background:#fff;color:#244e41;font-weight:700;white-space:nowrap;text-decoration:none}
+.structure-link:hover{background:#e8f1e6;border-color:#b8caba}
 .eyebrow{font-size:9px;color:#7d8d71;letter-spacing:2px;font-weight:650;text-transform:uppercase;margin-bottom:6px}
 h1{font-size:29px;letter-spacing:-1.3px;font-weight:650;line-height:1.45;margin:0 0 7px}
 h2{font-size:16px;letter-spacing:-.4px;margin:0 0 8px;font-weight:650}
