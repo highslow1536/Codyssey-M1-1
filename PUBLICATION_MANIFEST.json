@@ -12,8 +12,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 11410,
-      "sha256": "96b4ed40191face676b8e717e590209a9b5616210f5d87685bfd822cc14065e6",
+      "bytes": 11628,
+      "sha256": "573b2f2e8d9c040405413e1edae9944489de38f6bbf3ca06237c7d26421ea8fc",
       "basis": "project-authored code or public-edition documentation"
     },
     {
@@ -150,8 +150,8 @@
     },
     {
       "path": "dashboard/public/index.html",
-      "bytes": 16908,
-      "sha256": "b5da09d33299b3c691349c9590cff05c3cdc9d4df6287e6ac6032c36a083a6e9",
+      "bytes": 17069,
+      "sha256": "7f8fd1908f7de2c5bd5184e73552d2360ff6d5fc6d22162d023e0df1a4780058",
       "basis": "project-authored code or public-edition documentation"
     },
     {
@@ -162,8 +162,8 @@
     },
     {
       "path": "dashboard/public/styles.css",
-      "bytes": 12320,
-      "sha256": "9105b50f977d85ea26deebc92a3d096c264d21b82c8991d52d8aa75fb1357964",
+      "bytes": 12609,
+      "sha256": "2f99978946d6be5679f1f7d19bec48b7e2ee8c2f092a44a34530d350710500ab",
       "basis": "project-authored code or public-edition documentation"
     },
     {
@@ -635,6 +635,12 @@
       "basis": "project-authored non-reconstructive analysis and validation aggregates; not Coin Metrics ETH data"
     },
     {
+      "path": "docs/assets/public/floorplan-preview.png",
+      "basis": "original non-reconstructive statistics or explanatory figure",
+      "bytes": 256072,
+      "sha256": "9005938cad3ec18714f0494f19e96d38e91998462e6f9042e405ad86f0c2fc6b"
+    },
+    {
       "path": "docs/assets/public/public_01_trend.png",
       "bytes": 172927,
       "sha256": "12a5a71ac51b9422a6505cbd19ea12b6a9631151d8aa938833dcbc19f2e429ea",
@@ -756,8 +762,8 @@
     },
     {
       "path": "publication/templates/README.md.in",
-      "bytes": 11410,
-      "sha256": "96b4ed40191face676b8e717e590209a9b5616210f5d87685bfd822cc14065e6",
+      "bytes": 11628,
+      "sha256": "573b2f2e8d9c040405413e1edae9944489de38f6bbf3ca06237c7d26421ea8fc",
       "basis": "project-authored code or public-edition documentation"
     },
     {

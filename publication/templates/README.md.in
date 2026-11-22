@@ -8,6 +8,8 @@
 
 [**공개 대시보드 바로 열기**](https://highslow1536.github.io/Codyssey-M1-1/) · [**코드 구조 지도**](https://highslow1536.github.io/Codyssey-M1-1/floorplan/) · [**분석 보고서**](REPORT.md#0-30초-요약-그래서-지금-사도-될까) · [**데이터와 재현**](docs/reproduction.md) · [**과제 제출 체크표**](docs/submission_checklist.md)
 
+[![데이터 수집·예측 검증·공개 대시보드의 연결을 보여주는 코드 구조 지도 미리보기](docs/assets/public/floorplan-preview.png)](https://highslow1536.github.io/Codyssey-M1-1/floorplan/)
+
 ![PC Parts Observatory: 가격 기록에서 제품·시장 비교와 3개월 예측 검증까지](docs/assets/public/readme-cover.svg)
 
 | **199주** | **21개** | **모델 5종 · 35계열** | **1,096일** |
