@@ -6,7 +6,7 @@
 
 **11월 동향:** 미국 소매 신품 지수는 30일 동안 GPU **+10.6%**, CPU **−1.9%**로 엇갈렸습니다. 3개월 예측은 별도 검증에서 35개 가격 계열 모두 구매 추천 기준을 통과하지 못했습니다.
 
-[**공개 대시보드 바로 열기**](https://highslow1536.github.io/Codyssey-M1-1/) · [**분석 보고서**](REPORT.md#0-30초-요약-그래서-지금-사도-될까) · [**데이터와 재현**](docs/reproduction.md) · [**과제 제출 체크표**](docs/submission_checklist.md)
+[**공개 대시보드 바로 열기**](https://highslow1536.github.io/Codyssey-M1-1/) · [**코드 구조 지도**](https://highslow1536.github.io/Codyssey-M1-1/floorplan/) · [**분석 보고서**](REPORT.md#0-30초-요약-그래서-지금-사도-될까) · [**데이터와 재현**](docs/reproduction.md) · [**과제 제출 체크표**](docs/submission_checklist.md)
 
 ![PC Parts Observatory: 가격 기록에서 제품·시장 비교와 3개월 예측 검증까지](docs/assets/public/readme-cover.svg)
 
