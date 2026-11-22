@@ -12,8 +12,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 11204,
-      "sha256": "8878322a4be56f58d318a6ea4ec14242b6cc50dcb0b788afe0ceadbaa274661d",
+      "bytes": 11323,
+      "sha256": "eed5a75be09a42fbb3aa6c2cdbd3b3c0e07a43afc46ab21b5c908f908b776969",
       "basis": "project-authored code or public-edition documentation"
     },
     {
@@ -756,8 +756,8 @@
     },
     {
       "path": "publication/templates/README.md.in",
-      "bytes": 11204,
-      "sha256": "8878322a4be56f58d318a6ea4ec14242b6cc50dcb0b788afe0ceadbaa274661d",
+      "bytes": 11323,
+      "sha256": "eed5a75be09a42fbb3aa6c2cdbd3b3c0e07a43afc46ab21b5c908f908b776969",
       "basis": "project-authored code or public-edition documentation"
     },
     {
